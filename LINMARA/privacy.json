@@ -1,0 +1,221 @@
+{
+  'en': {
+    'flag_pre_consensi': {
+      'a': 'consenso_third_party_communication',
+      'b': 'consenso_communication'
+    },
+    'flag_consensi': {
+      'a': 'consenso_profiling',
+      'c': 'consenso_privacy_acknowledgement',
+      'b': 'consenso_direct_marketing'
+    },
+    'sezione_10': {
+      'righe': [
+        ''
+      ]
+    },
+    'sezione_9': {
+      'righe': [
+        'We may carry out statistical analysis on aggregated data. The data thereby collected will be kept in a centralised and secured database for the time ',
+        'necessary to achieve the specific purposes of collection or to further process them for compatible purposes; afterwards, data related to your profile will ',
+        'be deleted or permanently anonymised. In order to provide you with the same personalised service worldwide and keep you updated about us, we may ',
+        'use our affiliates as well as other business partners operating our points of sale and local distributors in your country or abroad, acting as data ',
+        'processors, to collect, use and disclose the data as instructed by us. The personal data will therefore be accessible to authorized staff of points of ',
+        'sale and of the websites of your country and based on where you purchase: the data may therefore be accessible also in countries where the data ',
+        'protection legislation differs from the one applicable in your country. We have taken steps to ensure that these communications are carried out in ',
+        'compliance with European data protection standards. Our customer database is stored in Italy and for customer data from your country, it is stored also ',
+        'in your country and is managed by our Customer Relationship Managers and marketing team in Italy and abroad, and in your country by the local Customer ',
+        'Relationship Managers and marketing team. ',
+        'You may access your personal data or request that your personal data is updated, amended or deleted, or exercise any other rights under the applicable ',
+        'data protection law by sending an email to infoprivacy@maxmara.com or regular mail at the address below, at any time and free of charge. You may ',
+        'also contact us to object to your personal data being kept in our data base and used for profiling purposes, or to request that we no longer contact you ',
+        'for marketing purposes (to unsubscribe from our marketing communications, you can also use the "unsubscribe" tool that you will find in any of our ',
+        'communications). You also have the right to contact our Data Protection Officer emailing to dpo@mmfg.it and lodge a complaint with the supervisory ',
+        'authority in Italy or in your country if you believe that we have not processed your personal data correctly. ',
+        'For all the purposes above, Max Mara Fashion Group Srl, with registered address in Via Pietro Giannone, 10 - 10122 Turin (Italy) acts as data ',
+        'controller in accordance with the General Data Protection Regulation (Regulation (EU) 2016/679). ',
+        'Further details on the processing of your personal data are available at cn.maxmara.com '
+      ]
+    },
+    'sezione_8': {
+      'righe': [
+
+      ]
+    },
+    'sezione_5': {
+      'righe': [
+        'We recognise the importance of protecting your personal data and we are committed to offering you personalized services and keeping in touch with ',
+        'you. To this end, we will collect, use and disclose the data that you are free to provide us, and only with your consent, for the following purposes: '
+      ]
+    },
+    'sezione_4': {
+      'riga_1': '<u>Information notice</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'to send you - by mail, email, SMS, MMS, phone and other digital communication channels - newsletters, invitations to our events, surveys and ',
+      'riga_2': 'market researches, marketing and advertising communications, promotions, discounts and information on other initiatives for registered customers ',
+      'riga_3': 'regarding our products and services that may be of interest to you, based on your preferences expressed during your purchases or when visiting our websites.'
+    },
+    'sezione_6': {
+      'riga_1': 'to analyse your contacts with us (e.g. purchases, usage of the customer service and other pieces of information we may obtain through your ',
+      'riga_2': 'interaction with the staff of our point of sales, participation at our events, your purchasing habits, lifestyle and/or preferences expressed at sales points ',
+      'riga_3': 'or on our websites), process and combine the collected data also for profiling you individually or by cluster, in order to understand how we can provide ',
+      'riga_4': 'you with a better service. '
+    },
+    'sezione_1': {
+      'righe': [
+        'We would like to get to know you better in order to keep you updated about our personalised products and services. If you wish, you can register',
+        'by filling in this form and selecting the consent options.',
+        'Please read carefully our privacy notice on the back of this card.',
+        ''
+      ]
+    },
+    'sezione_3': {
+      'consenso_singolo': [
+        'I agree with the Privacy Policy'
+      ],
+      'riga_singola': [
+
+      ],
+      'righe_pre_flags': {
+        'righe_flag_a': [
+          'With regard to the sharing of my personal information  with third parties/Max Mara’s affiliated companies, as described in paragraphs 2 and 13 of the Privacy Policy:'
+        ],
+        'righe_flag_b': [
+          'With regard to the cross-border transfer of my personal information, as described in paragraphs 6 and 13 of the privacy policy:'
+        ]
+      },
+      'righe_flags': {
+        'righe_flag_a': [
+          'Sending me (by post, email, text message, picture message, telephone and other digital communication channels)',
+          'newsletters, event invitations, surveys and market research, commercial and advertising communications, promotions, discounts and',
+          'information about other initiatives regarding its products and services that may be of interest to me,',
+          'based on the preferences expressed during purchases or visits to its websites'
+        ],
+        'righe_flag_c': [
+        ],
+        'righe_flag_b': [
+          'Sending me the above-mentioned communications (by post, email, text message, picture message, telephone and other digital communication channels) without personalising them'
+        ]
+      },
+      'righe': [
+        'Max Mara may use my information, including any that may be acquired during any future purchases and contacts',
+        '(e.g. participation in events, use of customer services or surveys), directly or with the assistance of affiliated companies',
+        'and/or its partners acting in accordance with its instructions, for the purpose of:'
+      ]
+    },
+    'sezione_2': {
+
+    },
+    'language': 'en',
+    'footer': 'Release4: 2022-Apr-26',
+    'sezione_7_bis': {
+      'riga_1': 'Upon signing this declaration,You agree to have my past transaction and personal data, if applicable, transferred to Max Mara Fashion Group S.r.l. ',
+      'riga_2': 'by Fairmax Trading (Shanghai) Co. Ltd due to the changeover in business operations. '
+    }
+  },
+  'zh': {
+    'flag_pre_consensi': {
+      'a': 'consenso_third_party_communication',
+      'b': 'consenso_communication'
+    },
+    'flag_consensi': {
+      'a': 'consenso_profiling',
+      'c': 'consenso_privacy_acknowledgement',
+      'b': 'consenso_direct_marketing'
+    },
+    'sezione_10': {
+      'righe': [
+        ''
+      ]
+    },
+    'sezione_9': {
+      'righe': [
+        '我们可对汇总数据进行统计分析。该等收集的数据将被保存在一个集中且有保障的数据库中,用于实现数据收集目的或进一步处理以达到',
+        '其他相关目的;在此之后,与您档案相关的数据将被删除或永久匿名化。为了在全球范围内向您提供同样的个性化服务并向您更新我们资',
+        '料,我们可通过我们关联公司、其他业务合作伙伴运营我们的销售点,以及贵国或者海外经销商以数据处理方的身份在我们指示下收集、',
+        '使用和披露数据。因此,销售点授权员工将可访问个人数据,同时基于您的采购地点,贵国网站的这些数据在数据保护法与贵国适用的立',
+        '法不同的国家也可被访问。我们已采取措施来确保这些信息流通符合欧洲数据保护标准。我们客户数据库存储在意大利同时对于来自贵国',
+        '的客户数据,它会储存于贵国,在境内将由我们位于意大利以及海外的客户关系经理以及市场营销团队进行管理,在贵国将由我们当地的',
+        '客户关系经理以及市场营销团队进行管理。在任何时候,您可免费访问您的个人数据或者通过向 infoprivacy@maxmara.com 或者如下列明',
+        '的常规邮箱地址发送邮件来要求对您的个人数据进行更新、修订或删除,或行使适用的数据保护法下赋予的任何其他权利。您同样可以联',
+        '系我们以拒绝将您的个人数据保存在我们的数据库中用于分析,或者要求我们不再出于营销目的联系您(如果您想取消我们的营销沟通,',
+        '您也可以使用“退订”工具。该等“退订”工具在我们的任何通信中都有涉及)。如果您认为我们未正确处理您的个人数据,您同样有权通过向',
+        '邮箱地址dpo@mmfg.it联系我们的数据保护官及向意大利或者贵国监管机构提出申诉。',
+        '对于以上所有目的,Max Mara Fashion Group S.r.l (其注册地址为: Via Pietro Giannone 10 - 10122 Turin (Italy))根据一般性数据保护 ',
+        '规定(规定(EU)2016/679),作为信息控制方。 ',
+        '更多关于处理您个人数据的细节请访问 cn.maxmara.com'
+      ]
+    },
+    'sezione_8': {
+      'righe': [
+
+      ]
+    },
+    'sezione_5': {
+      'righe': [
+        '我们意识到保护您个人数据的重要性且我们承诺向您提供个性化的服务并和您保持联系。出于该目的,我们将在获取您同意的情况下出于',
+        '以下目的收集、使用和披露您免费提供给我们的数据,并仅在征得您同意的情况下,用于下列目的: '
+      ]
+    },
+    'sezione_4': {
+      'riga_1': '<u>信息公告</u>'
+    },
+    'sezione_7': {
+      'riga_1': '通过邮件、电子邮件、短信、彩信、电话和其他数字通信渠道向您发送简讯、我们活动邀请函、市场调与研究、市场营销和广告传播、 ',
+      'riga_2': '促销、打折以及根据您作为注册客户在购买或访问我们的网站时所表达的喜好向您提供您可能感兴趣的我们产品和服务的其他信息。 ',
+      'riga_3': ''
+    },
+    'sezione_6': {
+      'riga_1': '分析您与我们的联系情况(比如,采购、使用客户服务以及其他我们可通过您与我们销售点工作人员互动参加我们活动或者在销售点或我',
+      'riga_2': '们的网站表达的采购习惯、生活方式和/或偏好来获取的其他信息),处理并组合收集的数据并单独或按群集对您进行分析以理解我们如何 ',
+      'riga_3': '为您提供更好的服务。'
+    },
+    'sezione_1': {
+      'righe': [
+        '我们希望更好地了解您以便使您了解我们的个性化产品和服务。如果您有意愿,请通过填写本表格并选择同意按键来进行注册。请您仔细',
+        '阅读本卡片正面的我们的隐私政策。'
+      ]
+    },
+    'sezione_3': {
+      'consenso_singolo': [
+        '我同意隐私政策'
+      ],
+      'riga_singola': [
+
+      ],
+      'righe_pre_flags': {
+        'righe_flag_a': [
+          '就隐私政策第2 段和第13段所述将我的个人信息分享给第三方和/或Max Mara的关联公司'
+        ],
+        'righe_flag_b': [
+          '就隐私政策第6段和第13段所述的跨境转移我的个人信息'
+        ]
+      },
+      'righe_flags': {
+        'righe_flag_a': [
+          '基于购买或访问网站时表达的偏好，通过邮寄、电子邮件、短信、图片信息、电话和其他数字通信渠道向我发送通讯',
+          '、活动邀请、调查和市场研究、商业和广告信息、促销、折扣减价以及我可能感兴趣的有关其产品和服务的其他活动的信息，'
+        ],
+        'righe_flag_c': [
+        ],
+        'righe_flag_b': [
+          '通过邮寄、电子邮件、短信、图片信息、电话和其他数字通信渠道，向我发送上述不进行个性化设置的通信。'
+        ]
+      },
+      'righe': [
+        'Max Mara可直接或在关联公司和/或其合作伙伴的协助下，根据Max Mara的指示，就以下的目的使用我的信息',
+        '（包括未来通过任何购买和联系过程中可能获得的任何信息，例如参与活动、使用客户服务或调查）:'
+      ]
+    },
+    'sezione_2': {
+
+    },
+    'language': 'zh',
+    'footer': 'Release4: 2022-Apr-26',
+    'sezione_7_bis': {
+      'riga_1': '由于业务营运变更,签署此声明同时,并同意华美敦贸易(上海)有限公司转移你过去购物交易及个人相关数据(如适用)予M Max Mara Fashion Group S.r.l. ',
+      'riga_2': ''
+    }
+  }
+}
