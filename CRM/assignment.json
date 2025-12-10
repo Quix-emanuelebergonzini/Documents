@@ -1,0 +1,92 @@
+1) inserisco il chekcout
+INSERT INTO `consumer_fidelity_calcolo_punti` (`id`, `id_operazione`, `tipo_operazione`, `cod_negozio`, `anno_operazione`, `id_ref`, `tipo`, `codice`, `timestamp_operazione`, `stato`, `importo`, `importo_utilizzato`, `custom_data`, `timestamp_modifica`, `utente_modifica`)
+VALUES
+	(1061291, '11512082', 'CHECKOUT', '0133007', 2020, NULL, 'LOYALTY_CARD_NEW', '2130026771412', '2020-01-27 15:13:06', 'PENDING', 471.00, 0.00, '[{\"sku\": \"80444090050347\", \"guadagnati\": 118.0, \"tipo_prezzo\": \"V\", \"importo_promozione\": 0, \"tipo\": \"CAPO\", \"variante\": \"034\", \"classe\": \"\", \"progressivo\": 2, \"taglia\": \"7\", \"annostag\": \"\", \"utilizzati\": 0.0, \"split\": [], \"punti\": 118.0, \"importo_finale\": \"118.0\", \"modello\": \"8044409005\", \"importo_iniziale\": \"118.0\"}, {\"sku\": \"70140870030035\", \"guadagnati\": 129.0, \"tipo_prezzo\": \"V\", \"importo_promozione\": 0, \"tipo\": \"CAPO\", \"variante\": \"003\", \"classe\": \"\", \"progressivo\": 3, \"taglia\": \"5\", \"annostag\": \"\", \"utilizzati\": 0.0, \"split\": [], \"punti\": 129.0, \"importo_finale\": \"129.0\", \"modello\": \"7014087003\", \"importo_iniziale\": \"129.0\"}, {\"sku\": \"26240479030024\", \"guadagnati\": 62.0, \"tipo_prezzo\": \"V\", \"importo_promozione\": 0, \"tipo\": \"CAPO\", \"variante\": \"002\", \"classe\": \"\", \"progressivo\": 4, \"taglia\": \"4\", \"annostag\": \"\", \"utilizzati\": 0.0, \"split\": [], \"punti\": 62.0, \"importo_finale\": \"62.0\", \"modello\": \"2624047903\", \"importo_iniziale\": \"62.0\"}, {\"sku\": \"26240479030024\", \"guadagnati\": 62.0, \"tipo_prezzo\": \"V\", \"importo_promozione\": 0, \"tipo\": \"CAPO\", \"variante\": \"002\", \"classe\": \"\", \"progressivo\": 5, \"taglia\": \"4\", \"annostag\": \"\", \"utilizzati\": 0.0, \"split\": [], \"punti\": 62.0, \"importo_finale\": \"62.0\", \"modello\": \"2624047903\", \"importo_iniziale\": \"62.0\"}, {\"codice_movimento\": \"CONTABILITA_GIFT\", \"guadagnati\": 100.0, \"importo_promozione\": 0, \"tipo\": \"CONTABILITA_GIFT\", \"punti\": 100.0, \"progressivo\": 1, \"split\": [], \"utilizzati\": 0.0, \"importo_finale\": \"100.0\"}]', '2020-01-27 15:13:07', 'b2c');
+
+2) eseguo assignment - https://localhost:4444/api/v1/pos/fidelity/update
+{
+  "data": {
+    "operazione": "ASSIGNMENT",
+    "cod_negozio": "0133007",
+    "importo": 371,
+    "divisa": "EUR",
+    "pk_consumer": "11133779",
+    "id_operazione": "EB_01",
+    "data_ora_operazione": "2020-01-27 15:13:06",
+    "id_operazione_ref": "11512082",
+    "cod_negozio_ref": "0133007",
+    "anno_operazione_ref": "2020",
+    "contabilita": [{
+      "codice_movimento": "CONTABILITA_GIFT",
+          "importo_promozione": 0,
+          "tipo": "CONTABILITA_GIFT",
+          "progressivo": 1,
+          "importo_finale": "100.0"
+    }],
+    "pagamenti": [
+      {
+        "cod_operazione": "CONTANTI",
+        "importo_finale": 371.0
+      }
+    ],
+    "capi": [
+      {
+        "tipologia_merce": "GARMENTS",
+        "sku": "80444090050347",
+        "tipo_prezzo": "V",
+        "importo_promozione": 0,
+        "tipo": "CAPO",
+        "variante": "034",
+        "classe": "",
+        "progressivo": 2,
+        "taglia": "7",
+        "annostag": "",
+        "importo_finale": "118.0",
+        "modello": "8044409005",
+        "importo_iniziale": "118.0"
+      },
+      {
+        "sku": "70140870030035",
+        "tipo_prezzo": "V",
+        "importo_promozione": 0,
+        "tipo": "CAPO",
+        "variante": "003",
+        "classe": "",
+        "progressivo": 3,
+        "taglia": "5",
+        "annostag": "",
+        "importo_finale": "129.0",
+        "modello": "7014087003",
+        "importo_iniziale": "129.0"
+      },
+      {
+        "sku": "26240479030024",
+        "tipo_prezzo": "V",
+        "importo_promozione": 0,
+        "tipo": "CAPO",
+        "variante": "002",
+        "classe": "",
+        "progressivo": 4,
+        "taglia": "4",
+        "annostag": "",
+        "importo_finale": "62.0",
+        "modello": "2624047903",
+        "importo_iniziale": "62.0"
+      },
+      {
+        "sku": "26240479030024",
+        "tipo_prezzo": "V",
+        "importo_promozione": 0,
+        "tipo": "CAPO",
+        "variante": "002",
+        "classe": "",
+        "progressivo": 5,
+        "taglia": "4",
+        "annostag": "",
+        "importo_finale": "62.0",
+        "modello": "2624047903",
+        "importo_iniziale": "62.0"
+      }
+    ]
+  }
+}
