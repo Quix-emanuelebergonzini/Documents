@@ -1,0 +1,59 @@
+{
+    "data": {
+      "pagamenti": [
+        {
+          "importo_finale": 244.0,
+           "cod_operazione": "CONTANTI"
+        }
+      ],
+       "contabilita": [
+        {
+          "codice_movimento": "CONTABILITA_GIFT",
+           "importo_finale": 244.0,
+           "progressivo": 1
+        }
+      ],
+       "importo": 244.0,
+       "id_operazione": "1377",
+       "data_ora_operazione": "2019-04-05 09:33:03",
+       "cod_negozio": "0100514",
+       "divisa": "EUR",
+       "extra_data": {
+        "numero_documento": "18",
+         "data_documento": "20190405"
+      },
+       "operazione": "SALE",
+       "pk_consumer": "9042519",
+       "handle_duplicates": 0,
+       "capi": [
+        {
+          "tipo_prezzo": "S",
+           "variante": "001",
+           "taglia": "1",
+           "importo_finale": 39.0,
+           "modello": "1021015406",
+           "importo_iniziale": 39.0,
+           "sku": "10210154060011",
+           "nome": "ELLADE",
+           "classe": "02",
+           "progressivo": 1,
+           "annostag": "20151",
+           "tipologia_merce": "GARMENTS"
+        },
+         {
+          "tipo_prezzo": "S",
+           "variante": "001",
+           "taglia": "2",
+           "importo_finale": 39.0,
+           "modello": "1021015406",
+           "importo_iniziale": 39.0,
+           "sku": "10210154060012",
+           "nome": "ELLADE",
+           "classe": "02",
+           "progressivo": 2,
+           "annostag": "20151",
+           "tipologia_merce": "GARMENTS"
+        }
+      ]
+    }
+}
