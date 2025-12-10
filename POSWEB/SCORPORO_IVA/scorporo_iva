@@ -1,0 +1,224 @@
+vendita con due capi e due sartorie per ogni capo.
+abilitato il tax reduction (detrazione d'imposta) --> SHIPPING_ENABLED & GRIPS_MX_ENABLED
+
+quando premo su Tax deduction (detrazione d'imposta) viene invocato lo scorporo iva
+e sui log ho totali_vendita e aliquote_d (diciamo in anteprima di trovarmelo sulla movimentazione
+che ancora non è salvata a db)
+
+le vendite vengono generate con la CONTABILITA_SPEDIZIONE nei "movimenti"
+e dentro ai capi/movimenti abbiamo "dettaglio_mov" con CONTABILITA_SCONTO, CONTABILITA_ABBUONO,
+CONTABILITA_SARTORIA e CONTABILITA_TASSA
+
+i resi devono poter rendere vendite nuove (modalità CONTABILITA_TASSA in "movimenti")
+e resi di vendite passate (niente di tutto ciò...)
+
+negozio uk - calcola_scorporo_iva_dettaglio_capi (non è italiana e non è universale e non è us/ca o jp)
+10110198060025 da 1380 con 2 sartorie da 37 e 45
+10110198060024 da 1380 con 2 sartorie da 37 e 45
+impostato uno sconto del 10%
+impostato un abbuono di 100 euri
+impostato costi di spedizione 100 euri
+impostata la detrazione d'imposta
+{
+  "aliquote_d": {
+    "20": {
+      "capi": [
+        {
+          "id_transazione": 105609,
+          "progressivo": 1,
+          "cod_negozio": "1001010",
+          "codice_stato": "CLOSED",
+          "codice_movimento": "VENDITA",
+          "cod_commessa": "E1256",
+          "sku": "10110198060024",
+          "ean": "",
+          "rfid": "",
+          "sku_gruppo": "",
+          "flag_promo": 0,
+          "flag_divisa": 0,
+          "sku_created": 0,
+          "sku_splitted": 0,
+          "sku_read": "10110198060024",
+          "nome": "FEMME",
+          "classe": "01",
+          "iva": 20,
+          "flag_tassabile": 0,
+          "composizione": "F:100WV,F:095AC005EA",
+          "custom_data": "{\"desc_taglia\": \"10\", \"desc_classe\": \"Coat\", \"variante\": \"002\", \"annostag\": \"20191\", \"modello\": \"1011019806\", \"sconto_perc_attuale\": 0.0, \"data_consegna_sartoria\": \"\", \"nota_lavorazioni\": \"\"}",
+          "nota": "",
+          "prezzo_listino_vendita": 1380,
+          "sconto_listino_vendita": 0,
+          "importo_iniziale": 1380,
+          "importo_custom": 0,
+          "sconto": 0,
+          "correzione_importo": 0,
+          "importo_finale": 1380,
+          "tipo_importo": "V",
+          "tipologia_merce": "GARMENTS",
+          "reso": 0,
+          "causale_reso": "",
+          "data_creazione": "2021-10-19 13:36:21",
+          "data_modifica": "2021-10-19 13:37:07",
+          "dettaglio_mov": [
+            {
+              "cod_mov": "CONTABILITA_SARTORIA",
+              "tot": 82.0,
+              "su_capo": true
+            },
+            {
+              "cod_mov": "CONTABILITA_SCONTO",
+              "tot": -146.2,
+              "su_capo": false
+            },
+            {
+              "cod_mov": "CONTABILITA_ABBUONO",
+              "tot": -50.0,
+              "su_capo": false
+            },
+            {
+              "cod_mov": "CONTABILITA_TASSA",
+              "tot": -210.97,
+              "su_capo": false
+            }
+          ],
+          "prezzo_ricalcolato": 1054.83,
+          "imponibile": 1054.83,
+          "imposta": 0
+        },
+        {
+          "id_transazione": 105609,
+          "progressivo": 2,
+          "cod_negozio": "1001010",
+          "codice_stato": "CLOSED",
+          "codice_movimento": "VENDITA",
+          "cod_commessa": "E1256",
+          "sku": "10110198060025",
+          "ean": "",
+          "rfid": "",
+          "sku_gruppo": "",
+          "flag_promo": 0,
+          "flag_divisa": 0,
+          "sku_created": 0,
+          "sku_splitted": 0,
+          "sku_read": "10110198060025",
+          "nome": "FEMME",
+          "classe": "01",
+          "iva": 20,
+          "flag_tassabile": 0,
+          "composizione": "F:100WV,F:095AC005EA",
+          "custom_data": "{\"desc_taglia\": \"12\", \"desc_classe\": \"Coat\", \"variante\": \"002\", \"annostag\": \"20191\", \"modello\": \"1011019806\", \"sconto_perc_attuale\": 0.0, \"data_consegna_sartoria\": \"\", \"nota_lavorazioni\": \"\"}",
+          "nota": "",
+          "prezzo_listino_vendita": 1380,
+          "sconto_listino_vendita": 0,
+          "importo_iniziale": 1380,
+          "importo_custom": 0,
+          "sconto": 0,
+          "correzione_importo": 0,
+          "importo_finale": 1380,
+          "tipo_importo": "V",
+          "tipologia_merce": "GARMENTS",
+          "reso": 0,
+          "causale_reso": "",
+          "data_creazione": "2021-10-19 13:36:23",
+          "data_modifica": "2021-10-19 13:37:07",
+          "dettaglio_mov": [
+            {
+              "cod_mov": "CONTABILITA_SARTORIA",
+              "tot": 82.0,
+              "su_capo": true
+            },
+            {
+              "cod_mov": "CONTABILITA_SCONTO",
+              "tot": -146.8,
+              "su_capo": false
+            },
+            {
+              "cod_mov": "CONTABILITA_ABBUONO",
+              "tot": -50.0,
+              "su_capo": false
+            },
+            {
+              "cod_mov": "CONTABILITA_TASSA",
+              "tot": -210.86,
+              "su_capo": false
+            }
+          ],
+          "prezzo_ricalcolato": 1054.34,
+          "imponibile": 1054.34,
+          "imposta": 0
+        }
+      ],
+      "movimenti": [
+        {
+          "id_transazione": 105609,
+          "progressivo": 5,
+          "cod_negozio": "1001010",
+          "tipo_applicazione": "POSWEB",
+          "id_postazione": "01",
+          "codice_stato": "CLOSED",
+          "progressivo_capo": 0,
+          "codice_movimento": "CONTABILITA_SPEDIZIONE",
+          "cod_operazione": "",
+          "dati_operazione": "",
+          "importo_iniziale": 100,
+          "importo_finale": 100,
+          "divisa": "GBP",
+          "nota": "",
+          "barcode": "",
+          "reso": 0,
+          "data_creazione": "2021-10-19 13:36:55",
+          "data_modifica": "2021-10-19 13:37:07",
+          "prezzo_ricalcolato": 83.33,
+          "dettaglio_mov": [
+            {
+              "cod_mov": "CONTABILITA_TASSA",
+              "tot": -16.67,
+              "su_capo": false
+            }
+          ],
+          "imponibile": 83.33,
+          "imposta": 0
+        }
+      ],
+      "num_capi_ricalcolo_vendita": 2,
+      "num_capi_ricalcolo_storno": 0,
+      "costi_contabili_alq": 0,
+      "totale_alq": 2192.5,
+      "imponibile": 2192.5,
+      "imposta": 0
+    }
+  },
+  "totali_vendita": {
+    "ven_coupon": 0,
+    "ven_abbuono": -100.0,
+    "ven_costi_extra": 0,
+    "lordo_tessuto": 0,
+    "lordo_capi": 2760.0,
+    "tot_costi_extra_detailed": 0,
+    "vendita_sconto": -293.0,
+    "tot_sartoria": 164.0,
+    "tot_gift_card": 0,
+    "tot_shopping_bags": 0,
+    "tot_spedizioni": 100.0,
+    "tot_netto": 2631.0,
+    "tot_lordo": 3024.0,
+    "tot_sconti_abbuoni": 0.0,
+    "tot_rettifiche_maggiorazioni": 0,
+    "tot_imposte": 438.5
+  }
+}
+
+# runtime di posweb con il comando poswebpy
+import config_store
+pard = config_store.application_parameters(use_ws=True)
+import movim_utils
+id_transazione = '105577'
+testata, mov_capi, mov_contabilita = movim_utils.get_testa_e_righe(pard, id_transazione)
+aliquote_d, totali_vendita = movim_utils.calcola_scorporo_iva_dettaglio_capi(pard, testata, mov_capi, mov_contabilita)
+dict_finale = {
+    "aliquote_d": {},
+    "totali_vendita": {}
+}
+dict_finale["aliquote_d"] = aliquote_d
+dict_finale["totali_vendita"] = totali_vendita
+dict_finale

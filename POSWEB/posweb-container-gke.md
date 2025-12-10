@@ -1,0 +1,3 @@
+per vedere i logs di http://es-dev.pos.maxmara.com/
+
+https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0Aresource.labels.cluster_name%3D%22gke-stghislain%22%0Aresource.labels.container_name%3D%22runtime%22%0Aresource.labels.namespace_name%3D%22poswebonlinees-test%22;summaryFields=:false:32:beginning;cursorTimestamp=2022-08-18T09:37:44.327689804Z?project=mmfg-bms-gruppo-multi

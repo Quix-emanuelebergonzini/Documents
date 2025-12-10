@@ -1,0 +1,2 @@
+le informazioni di stampa scontrino devono arrivare sulla
+pos_movimentazioni_info_stampa
