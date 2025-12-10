@@ -1,0 +1,714 @@
+MMJ (modificata):
+SELECT distinct m.id_soggetto AS id_soggetto, m.dataora_modifica, m.codice_gruppo, m.status, m.nome, n.nome
+			FROM ana_soggetti_master m
+			JOIN ana_soggetti_master n ON (
+				m.tipo_soggetto='Dipendente'
+				AND n.tipo_soggetto='Negozio'
+				AND n.codice_gruppo='{codice_gruppo}'
+				AND m.id_soggetto_appartenenza=n.id_soggetto)
+			LEFT JOIN ana_soggetti_orario o ON (m.id_soggetto=o.id_soggetto)
+			LEFT JOIN ana_soggetti_profilo_professionale pp ON (m.id_soggetto=pp.id_soggetto)
+			LEFT JOIN ana_soggetti_fisici f ON (m.id_soggetto=f.id_soggetto)
+			LEFT JOIN ana_soggetti_contratti c ON (m.id_soggetto=c.id_soggetto)
+
+se c'è non qualcosa indagare per ogni join
+se c'è qualcosa guardare bene i timestamp perchè la seconda parte della query è
+WHERE
+(m.dataora_modifica between "{min_timestamp}" AND "{max_timestamp}"
+			OR o.dataora_inserimento between "{min_timestamp}" AND "{max_timestamp}"
+			OR pp.dataora_inserimento between "{min_timestamp}" AND "{max_timestamp}"
+			OR f.dataora_inserimento between "{min_timestamp}" AND "{max_timestamp}"
+			OR c.dataora_inserimento between "{min_timestamp}" AND "{max_timestamp}")
+in base all'incrementale
+
+
+per scompattarre
+gunzip -v XXX
+
+per scompattarre
+gzip XXX
+
+db_001002\:20210322161803_0.sql
+SET autocommit=0; SET SESSION sql_mode = 'PIPES_AS_CONCAT';
+
+BEGIN;
+
+
+REPLACE INTO commesse VALUES
+('0801574','E430647','Kageyama Chie','景山 千絵','','','20210321','','9050','','','','','','','','2021-03-22 16:16:45'),
+('0801574','E430648','Miyata Junko','宮田 順子','','','20210321','','9425','','','','','','','','2021-03-22 16:16:45'),
+('0801574','E430649','Kageyama Kaori','福山 かおり','','','20210321','','9460','','','','','','','','2021-03-22 16:16:45'),
+('0801574','E430650','Kosa Ruri','甲佐 瑠吏','','','20210321','','9490','','','','','','','','2021-03-22 16:16:45');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REPLACE INTO tipi_costo VALUES
+('0801016','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801016','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801018','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801018','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801020','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801020','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801033','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801033','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801036','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801036','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801037','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801037','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801038','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801038','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801039','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801039','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801040','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801040','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801042','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801042','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801045','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801045','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801048','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801048','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801049','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801049','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801053','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801053','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801054','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801054','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801055','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801055','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801058','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801058','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801060','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801060','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801061','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801061','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801062','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801062','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801086','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801086','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801092','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801092','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801097','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801097','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801126','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801126','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801130','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801130','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801159','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801159','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801181','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801181','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801213','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801213','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801235','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801235','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801243','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801243','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801298','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801298','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801366','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801366','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801367','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801367','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801370','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801370','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801371','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801371','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801378','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801378','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801385','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801385','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801398','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801398','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801400','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801400','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801418','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801418','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801429','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801429','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801448','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801448','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801449','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801449','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801482','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801482','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801483','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801483','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801534','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801534','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801536','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801536','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801537','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801537','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801544','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801544','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801545','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801545','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801546','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801546','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801551','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801551','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801557','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801557','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801558','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801558','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801559','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801559','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801564','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801564','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801565','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801565','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801568','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801568','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801574','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801574','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801577','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801577','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+REPLACE INTO tipi_costo VALUES
+('0801582','TAXFREE_SERVIZIO',0,'2020-04-08 07:22:51'),
+('0801582','TAXFREE_TASSA',0,'2020-04-08 07:08:41');
+
+COMMIT;
