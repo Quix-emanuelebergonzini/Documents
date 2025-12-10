@@ -1,0 +1,94 @@
+diff --git a/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py b/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py
+index 74c117a3ea..6745629e0e 100644
+--- a/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py
++++ b/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py
+@@ -1,5 +1,7 @@
+ # -*- coding: utf-8 -*-
+ from collections import defaultdict
++from types import NoneType
++
+ from fpdf import FPDF
+ import datetime
+ import subprocess
+@@ -3121,6 +3123,14 @@ def prima_nota(pard, browser_download=None):
+ 		},
+ 	}
+ 
++def get_lavorazioni_descrizioni_d(print_language, lavorazioni_descrizioni_all_d, info_negozio, store_language):
++	if (info_negozio["nazione"] == "CA" and info_negozio["provincia"] == "QC")\
++			or print_language in ("CATA",):
++		lavorazioni_descrizioni_d = lavorazioni_descrizioni_all_d[print_language]
++	else:
++		lavorazioni_descrizioni_d = lavorazioni_descrizioni_all_d[store_language]
++	return lavorazioni_descrizioni_d
++
+ 
+ def vendita_sartorie(pard, id_transazione, testata, mov_capi, mov_contabilita, pagamenti, transl_defs, browser_download=None):
+ 
+@@ -3150,7 +3160,7 @@ def vendita_sartorie(pard, id_transazione, testata, mov_capi, mov_contabilita, p
+ 	# pard['LOGGER'].debug(num_capi_per_sartoria)
+ 
+ 	dati_mov_sartoria = {s['progressivo_capo']: s for s in sartorie}
+-	lavorazioni_descrizioni_all_d = movim_utils.lavorazioni_descrizioni_dict(pard)
++	lavorazioni_descrizioni_all_d = movim_utils.lavorazioni_descrizioni_dict(pard) # da listini_riparazioni
+ 
+ 	# Le stampe che riguardano le lavorazioni di sartoria sono:
+ 	# - prima copia, per la consumatrice: tutti i modelli insieme, SENZA BARCODE
+@@ -3180,10 +3190,10 @@ def sartorie_sarta(pard, testata, mov_capi, sartorie, num_capi_per_sartoria, dat
+ 
+ 	info_negozio = common_utils.get_info_negozio(pard, pard['POS_CONFIG']['COD_NEGOZIO'])
+ 
+-	if info_negozio["nazione"] == "CA" and info_negozio["provincia"] == "QC":
+-		lavorazioni_descrizioni_d = lavorazioni_descrizioni_all_d[pard['POS_CONFIG']['PRINT_LANGUAGE']]
+-	else:
+-		lavorazioni_descrizioni_d = lavorazioni_descrizioni_all_d[transl_data['language']]
++	lavorazioni_descrizioni_d = get_lavorazioni_descrizioni_d(pard["POS_CONFIG"]["PRINT_LANGUAGE"],
++															  lavorazioni_descrizioni_all_d,
++															  info_negozio, store_language)
++	raise Exception(lavorazioni_descrizioni_d)
+ 
+ 	count_m = 0
+ 
+@@ -3323,6 +3333,7 @@ def componi_bollettina_sarta(pard, count_m, oggi, testata, translations, barcode
+ 	pdf.add_row_config({
+ 		'fn_name': 'header_titolo_documento',
+ 		'testo': '{}'.format(curr_titolo_documento),
++		'multiriga': True if pard['POS_CONFIG']['PRINT_LANGUAGE'] == 'CATA' else False
+ 	})
+ 
+ 	if barcode_capo_lavorazioni != '':
+@@ -3422,10 +3433,9 @@ def sartorie_negozio_consumatrice(pard, testata, mov_capi, sartorie, num_capi_pe
+ 
+ 		info_negozio = common_utils.get_info_negozio(pard, pard['POS_CONFIG']['COD_NEGOZIO'])
+ 
+-		if info_negozio["nazione"] == "CA" and info_negozio["provincia"] == "QC":
+-			lavorazioni_descrizioni_d = lavorazioni_descrizioni_all_d[pard['POS_CONFIG']['PRINT_LANGUAGE']]
+-		else:
+-			lavorazioni_descrizioni_d = lavorazioni_descrizioni_all_d[transl_data['language']]
++		lavorazioni_descrizioni_d = get_lavorazioni_descrizioni_d(pard["POS_CONFIG"]["PRINT_LANGUAGE"],
++																	  lavorazioni_descrizioni_all_d,
++																	  info_negozio, store_language)
+ 
+ 		count_m = 0
+ 
+@@ -3453,6 +3463,7 @@ def sartorie_negozio_consumatrice(pard, testata, mov_capi, sartorie, num_capi_pe
+ 		pdf.add_row_config({
+ 			'fn_name': 'header_titolo_documento',
+ 			'testo': '{}'.format(curr_titolo_documento),
++			'multiriga': True if pard['POS_CONFIG']['PRINT_LANGUAGE'] == 'CATA' else False
+ 		})
+ 
+ 		# dati consumatrice:
+diff --git a/mmfg/posweb/site/bin/lib/stampe_utils.py b/mmfg/posweb/site/bin/lib/stampe_utils.py
+index c05fc33945..7b6d275286 100644
+--- a/mmfg/posweb/site/bin/lib/stampe_utils.py
++++ b/mmfg/posweb/site/bin/lib/stampe_utils.py
+@@ -58,7 +58,7 @@ def get_translation_defs(pard, consumer_code, lingua=None):
+ 	if (pard['POS_CONFIG']['DEPLOY_ENV'] in (pard['DEPLOY_ENVS']['SVILUPPO'], pard['DEPLOY_ENVS']['DEMO']) \
+ 			or pard['POS_CONFIG']['COUNTRY_CODE'] in (
+ 			pard["BUNDLE_COUNTRIES"]["BELGIUM"],
+-	)) and pard['POS_CONFIG']['COUNTRY_CODE'] not in ( pard["BUNDLE_COUNTRIES"]["CANADA"], ):
++	)) and pard['POS_CONFIG']['COUNTRY_CODE'] not in ( pard["BUNDLE_COUNTRIES"]["CANADA"], pard["BUNDLE_COUNTRIES"]["SPAIN"]):
+ 
+ 		consumer_lang = common_utils.get_language_per_consumer(pard, consumer_code, lingua)
+ 		

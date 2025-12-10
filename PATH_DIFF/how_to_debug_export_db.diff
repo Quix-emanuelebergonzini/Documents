@@ -1,0 +1,189 @@
+diff --git a/bin/poswsbe/delega_negozi/service.py b/bin/poswsbe/delega_negozi/service.py
+index 2927450..13953bf 100644
+--- a/bin/poswsbe/delega_negozi/service.py
++++ b/bin/poswsbe/delega_negozi/service.py
+@@ -177,7 +177,7 @@ class DelegaNegoziPOSWS(Service):
+ 
+ 		pard[PROJECT_DIR] = main_project_home
+ 		pard[DATA_DIR] = pard[PROJECT_DIR] + /data
+-		log_file_name = main_project_home + /log/delega_negozi.log
++		log_file_name = log/delega_negozi.log
+ 
+ 		pos_utils.init_logger(pard, config={
+ 			logger_name: delega_negozi,
+diff --git a/bin/poswsbe/pos_export_to_store_db.py b/bin/poswsbe/pos_export_to_store_db.py
+index a3986b6..2acbe41 100644
+--- a/bin/poswsbe/pos_export_to_store_db.py
++++ b/bin/poswsbe/pos_export_to_store_db.py
+@@ -117,13 +117,14 @@ def get_canale(pard, *negozi_l):
+ 
+ @pos_utils.cached()
+ def get_nazione_negozio(pard, *negozi_l):
+-	negozi_s = ",".join(negozi_l)
+-	mysql_query = """select nazione, count(*) as c from fr_negozi where negozio in ({negozi_s}) group by nazione
+-		""".format(negozi_s=negozi_s)
+-	result = pard[DB].query_l(mysql_query, retail)
+-	assert len(result) == 1  # verifica che la nazione sia la stessa per tutti i negozi
+-	assert int(result[0][1]) == len(negozi_l)  # verifica che i negozi siano tutti presenti
+-	return result[0][0]  # restituisce il risultato
++	return IT
++	# negozi_s = ",".join(negozi_l)
++	# mysql_query = """select nazione, count(*) as c from fr_negozi where negozio in ({negozi_s}) group by nazione
++	# 	""".format(negozi_s=negozi_s)
++	# result = pard[DB].query_l(mysql_query, retail)
++	# assert len(result) == 1  # verifica che la nazione sia la stessa per tutti i negozi
++	# assert int(result[0][1]) == len(negozi_l)  # verifica che i negozi siano tutti presenti
++	# return result[0][0]  # restituisce il risultato
+ 
+ 
+ @pos_utils.cached()
+@@ -7991,26 +7992,28 @@ def export_package(pard, cod_installazione=, export_config=None):
+ 		file_counter += write_file(pard, export_info)
+ 
+ 	# se sono stati creati dei file, aggiunge le informazioni sul pacchetto
+-	if file_counter:
+-		# aggiunge il package
+-		obj = pos_install_utils.InstallPackage(pard, cod_installazione=cod_installazione, update_type=update_type,
+-											   version=new_version)
+-		obj[tot_files] = file_counter
+-		obj[requirements] = {sw: required_sw, db: required_db}
+-		obj[properties] = {
+-			priority: priority,
+-			do_backup: creation_mode != incr and 1 or 0,
+-			do_delete: creation_mode == full and 1 or 0,
+-		}
+-		if remove_list:
+-			obj[properties][remove_list] = remove_list
+-		obj[creation_mode] = creation_mode
+-		obj.save_record()
+-
+-		if creation_mode in (full, incr):
+-			# aggiorna il numero di versione disponibile solo in caso di aggiornamento full o incr
+-			pos_install_db_access.pos_install_set_version(pard, cod_installazione, update_type, available,
+-														  new_version)
++	# if file_counter:
++	# 	# aggiunge il package
++	# 	obj = pos_install_utils.InstallPackage(pard, cod_installazione=cod_installazione, update_type=update_type,
++	# 										   version=new_version)
++	# 	obj[tot_files] = file_counter
++	# 	obj[requirements] = {sw: required_sw, db: required_db}
++	# 	obj[properties] = {
++	# 		priority: priority,
++	# 		do_backup: creation_mode != incr and 1 or 0,
++	# 		do_delete: creation_mode == full and 1 or 0,
++	# 	}
++	# 	if remove_list:
++	# 		obj[properties][remove_list] = remove_list
++	# 	obj[creation_mode] = creation_mode
++	# 	obj.save_record()
++	#
++	# 	if creation_mode in (full, incr):
++	# 		# aggiorna il numero di versione disponibile solo in caso di aggiornamento full o incr
++	# 		pos_install_db_access.pos_install_set_version(pard, cod_installazione, update_type, available,
++	# 													  new_version)
++	
++	
+ 
+ 	# elimina il lock
+ 	pos_install_db_access.pos_install_delete_lock(pard, cod_installazione, update_type)
+@@ -8050,9 +8053,9 @@ def write_file(pard, export_info, compression=gz, compresslevel=6):
+ 
+ 	# creazione directory
+ 	dir_name = os.path.dirname(full_name)
+-	if not dir_exists(dir_name):
+-		dir_makedirs(dir_name)
+-		file_chmod(dir_name, 02777)
++	# if not dir_exists(dir_name):
++	# 	dir_makedirs(dir_name)
++	# 	file_chmod(dir_name, 02777)
+ 
+ 	# Se in cloud si abilita il buffering nella scrittura del file
+ 	additional_open_args = {}
+@@ -8060,16 +8063,16 @@ def write_file(pard, export_info, compression=gz, compresslevel=6):
+ 		additional_open_args["buffering"] = 500 * 1024
+ 
+ 	# verifica compressione
+-	if compression == gz:
+-		file_name += .gz
+-		full_name += .gz
+-		out = file_gzip(full_name, wb if provider == MMFG else ab, compresslevel, **additional_open_args)
+-	# out = codecs.getwriter(utf-8)(out)	# per passare unicode a write
+-	elif compression == :
+-		out = file_open(full_name, wb, **additional_open_args)
+-	# out = codecs.open(full_name, wb, encoding=utf-8)
+-	else:
+-		raise Exception("Unsupported compression method: {0}".format(compression))
++	# if compression == gz:
++	# 	file_name += .gz
++	# 	full_name += .gz
++	# 	out = file_gzip(full_name, wb if provider == MMFG else ab, compresslevel, **additional_open_args)
++	# # out = codecs.getwriter(utf-8)(out)	# per passare unicode a write
++	# elif compression == :
++	# 	out = file_open(full_name, wb, **additional_open_args)
++	# # out = codecs.open(full_name, wb, encoding=utf-8)
++	# else:
++	# 	raise Exception("Unsupported compression method: {0}".format(compression))
+ 
+ 	header = -- {0}.format( .join((
+ 		file_name,
+@@ -8084,7 +8087,7 @@ def write_file(pard, export_info, compression=gz, compresslevel=6):
+ 	# TODO: valutare se non scrivere nulla nel caso non ci siano dati da inviare
+ 	pard[LOGGER].info(### Generazione file)
+ 	query_size = 0
+-	out.write(header)
++	# out.write(header)
+ 	for class_name in export_info[file_info][table_list]:
+ 		tmp_size = 0
+ 		ExportClass = class_dict[class_name]
+@@ -8093,35 +8096,39 @@ def write_file(pard, export_info, compression=gz, compresslevel=6):
+ 			for i in obj.iterschema():
+ 				query_size += len(i)
+ 				tmp_size += len(i)
+-				out.write(i)
++				# out.write(i)
++				pard[LOGGER].info(i)
+ 		for i in obj.iterqueries():
+ 			query_size += len(i)
+ 			tmp_size += len(i)
+-			out.write(i)
++			# out.write(i)
++			pard[LOGGER].info(i)
+ 		if is_full:
+ 			for i in obj.iterpost():
+ 				query_size += len(i)
+ 				tmp_size += len(i)
+-				out.write(i)
++				# out.write(i)
++				pard[LOGGER].info(i)
+ 		if tmp_size:
+-			out.write(separator)
++			# out.write(separator)
++			pard[LOGGER].info(i)
+ 	# footer
+-	out.write(footer)
+-	out.close()
+-	file_chmod(full_name, 0644)
++	# out.write(footer)
++	# out.close()
++	# file_chmod(full_name, 0644)
+ 
+ 	if query_size == 0:
+ 		pard[LOGGER].info(--- File vuoto e ignorato)
+-		file_remove(full_name)
++		# file_remove(full_name)
+ 		return 0
+ 
+ 	pard[LOGGER].info(--- Calcolo checksum)
+ 	file_size = 0
+ 	file_hash = hashlib.md5()
+-	with file_open(full_name) as f:
+-		for i in f:
+-			file_hash.update(i)
+-			file_size += len(i)
++	# with file_open(full_name) as f:
++	# 	for i in f:
++	# 		file_hash.update(i)
++	# 		file_size += len(i)
+ 
+ 	# salva le informazioni dellupdate su db
+ 	pard[LOGGER].info(--- Aggiornamento database)

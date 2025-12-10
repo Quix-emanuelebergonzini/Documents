@@ -1,0 +1,177 @@
+diff --git a/mmfg/posweb/bin/configure.sh b/mmfg/posweb/bin/configure.sh
+index 1ee1ce3a26..3232fa89ad 100755
+--- a/mmfg/posweb/bin/configure.sh
++++ b/mmfg/posweb/bin/configure.sh
+@@ -91,7 +91,7 @@ load_pos_configuration() {
+     IFS='.'
+     MAC_OS_X_VERSION=$(sw_vers -productVersion)
+     # ONLY FOR TEST
+-    # MAC_OS_X_VERSION="10.6"
++    MAC_OS_X_VERSION="10.6"
+     MAC_OS_X_VERSION_ARRAY=()
+     for x in ${MAC_OS_X_VERSION}
+     do
+diff --git a/mmfg/posweb/conf/config.py b/mmfg/posweb/conf/config.py
+index 9002a64386..a47cda8f32 100644
+--- a/mmfg/posweb/conf/config.py
++++ b/mmfg/posweb/conf/config.py
+@@ -1,58 +1,58 @@
+-#UPDATE_TYPE_LIST = 'db' # lista di aggiornamenti abilitati separati da virgola: 'db,sw,python,sqlite,httpd,microlog,firefox'
++UPDATE_TYPE_LIST = 'db' # lista di aggiornamenti abilitati separati da virgola: 'db,sw,python,sqlite,httpd,microlog,firefox'
+ 
+ #######################################################################################################################
+ # PARAMETRIZZATE
+ #######################################################################################################################
+-COD_INSTALLAZIONE = '' # 10 characters - 000+shop code all 7 numbers / IT DOS 0000000+shop code last 3 numbers
+-LISTA_COD_NEGOZIO = '' # shop code all 7 numbers
++COD_INSTALLAZIONE ="9001101013"
++LISTA_COD_NEGOZIO ="1101013"
+ CASH_ID = '01'
+-CASH_ROLE = 'MASTER' #  MASTER, SLAVE, BACKUP
+-FEATURE_SET = 'CASH' #  CASH, WAREHOUSE, OFFICE, CONSULTATION
+-LOCAL_IP = '192.168.1.1'
+-MASTER_IP = '192.168.1.1'
+-BACKUP_IP = '' # IP computer backup if it exists
++CASH_ROLE ="MASTER"
++FEATURE_SET = 'CASH'
++MASTER_IP = '192.168.140.86'
+ MASTER_PORT = '8000'
+-MMFG_WS_HOST = 'http://pos-ws.mmfg.it/bin/driver_ws' # URL BMS https://confluence.mmfg.it/pages/viewpage.action?pageId=82286430
+-MMFG_WS_PROXY = '' # 'http://proxy3.mmfg.it:9000'  - IT DOS empty
+-POS_CONTROLLER_PORT = 13456
++LOCAL_IP = '192.168.140.86'
++MMFG_WS_HOST ="https://pos-ws-hk-dev.bms.maxmara.com/bin/driver_ws"
++MMFG_WS_PROXY ="http://proxy.mmfg.it:8080"
+ 
+ #######################################################################################################################
+ # ALTRE
+ #######################################################################################################################
+-GUI_LANGUAGE = 'ITAL' # ITAL SPAG INGL JAPA TEDE OLAN PORT FRAN 
+-GUI_THEME = 'RICH'      # global appearance of this webapp; values are: "RICH" (normal) or "BASIC" (touchscreen)
+-DEPLOY_ENV = 'live' # environment: live, demo, development
+-DEBUG = 1                       # debug: 0 (default), 1
+-#ENABLE_CNT = 0         # abilitazione contapersone: 0 (default), 1
+-#MANAGE_BUNDLE_USERS = 0 
++BACKUP_IP = ''
++GUI_LANGUAGE ="INGL"
++GUI_THEME = 'RICH'	# global appearance of this webapp; values are: "RICH" (normal) or "BASIC" (touchscreen)
++DEPLOY_ENV = 'development' # environment: live, demo, development
++DEBUG = 1			# debug: 0 (default), 1
++#ENABLE_CNT = 0		# abilitazione contapersone: 0 (default), 1
++#MANAGE_BUNDLE_USERS = 0
+ #ALLOW_WEB_TRANSLATIONS = '1'
+ 
+ # daemon options
+-# POS_WEBSERVER         = 1             # all
+-# POS_PRINTER           = 1             # all
+-# POS_KEEPALIVE         = 1             # all
+-# POS_DOWNLOADER        = 1             # all
+-# POS_UPLOADER          = 1             # all
+-# POS_INSTALLER         = 1             # all
+-# POS_TERMINAL          = 1             # all
+-# POS_SYNCHRONIZER      = 0             # only backup
++POS_WEBSERVER = 1				# all
++POS_PRINTER = 1					# all
++POS_KEEPALIVE = 1  				# all
++POS_DOWNLOADER = 1				# all
++POS_UPLOADER = 1				# all
++POS_INSTALLER = 1				# all
++POS_TERMINAL = 1				# all
++POS_SCHEDULER = 0				# all
++POS_SYNCHRONIZER = 0			# solo backup
+ 
+ # pos_installer
+-#POS_INSTALLER_MIN_TIME = '000000'      # estremo inferiore dell'intervallo di installazione in formato HHMMSS
+-#POS_INSTALLER_MAX_TIME = '080000'      # estremo superiore dell'intervallo di installazione in formato HHMMSS
++#POS_INSTALLER_MIN_TIME = '000000'	# estremo inferiore dell'intervallo di installazione in formato HHMMSS
++#POS_INSTALLER_MAX_TIME = '080000'	# estremo superiore dell'intervallo di installazione in formato HHMMSS
+ 
+ # pos_controller
+-# POS_CONTROLLER_HOST = 'localhost'
+-# POS_CONTROLLER_PORT = 13456
++POS_CONTROLLER_HOST = 'localhost'
++POS_CONTROLLER_PORT = 13456
+ POS_CONTROLLER_PASS = 'zinc0st4'
+ 
+ # pos_printer
+-# POS_PRINTER_DEVICE = ''
+-# POS_PRINTER_COMMAND = "lpr -P '%(printer_name)s' -o sides=two-sided-long-edge -o media=A4 '%(file_name)s'"0
++POS_PRINTER_DEVICE = ''
++POS_PRINTER_COMMAND = "lpr -P '%(printer_name)s' -o sides=two-sided-long-edge -o media=A4 '%(file_name)s'"
+ #
+ # # pos_terminal
+-POS_TERMINAL_ID_TERMINALE = '12345678' # insert pos-id
+-POS_TERMINAL_HOST = '192.168.1.240' # Local IP POS
++POS_TERMINAL_ID_TERMINALE = '12345678'
++POS_TERMINAL_HOST = '192.168.1.25'
+ POS_TERMINAL_TIMEOUT = '1'
+ POS_TERMINAL_PORT = '14520'
+ POS_TERMINAL_SCONTRINO = '1'
+@@ -60,7 +60,21 @@ POS_TERMINAL_DEBUG = '1'
+ POS_TERMINAL_BACKUP = '1'
+ #
+ # # cash register
+-CASH_REGISTER_HOST = '192.168.1.200' # Local IP cash register
++CASH_REGISTER_HOST = '192.168.195.40'
+ CASH_REGISTER_PORT = '9100'
+ CASH_REGISTER_PROTOCOL = 'CUSTOMDLL'
+-CASH_REGISTER_ENABLED = '1'     # enable cash register
++
++# CASH_REGISTER_TYPE puo avere i seguenti valori
++# KUBE - OFFICE
++# KUBEUSBPDF - ITAL
++# KUBEUSBJP - JP
++# EPSONUSBPDF
++# KUBEUSBPDFK3
++CASH_REGISTER_ENABLED = "1"	# abilitazione registratore di cassa
++CASH_REGISTER_TYPE = "KUBEUSBPDF"
++
++OVERRIDE_DEV = '1'
++# MYSQL_HOST = "127.0.0.1"
++# MYSQL_PORT = 12345
++# MYSQL_USER = "poswebonline"
++# MYSQL_PASSWD = "jkg$repoj$ahng3"
+diff --git a/mmfg/posweb/site/bin/lib/movim_db_access.py b/mmfg/posweb/site/bin/lib/movim_db_access.py
+index 0f71474bb6..cf02f6ec5e 100644
+--- a/mmfg/posweb/site/bin/lib/movim_db_access.py
++++ b/mmfg/posweb/site/bin/lib/movim_db_access.py
+@@ -7165,6 +7165,7 @@ def promo_engine_v2(pard, id_transazione, simulate=None):
+ 				})["items"].append({
+ 					"id": capo["id"],
+ 					"amount": capo.get("final_price", 0),
++					"added": True # TODO: togliere chiave
+ 				})
+ 
+ 		if new_items["modified"] and not new_items["added"]:
+@@ -7181,6 +7182,7 @@ def promo_engine_v2(pard, id_transazione, simulate=None):
+ 								})["items"].append({
+ 									"id"    : obj["id"],
+ 									"amount": obj.get("final_price", { }).get("diff", 0),
++									"modified": True # TODO: togliere chiave
+ 								})
+ 		
+ 		items.append(new_items)
+@@ -7196,6 +7198,7 @@ def promo_engine_v2(pard, id_transazione, simulate=None):
+ 			"prev_price": prev_price,
+ 			"final_price": prev_price,
+ 			"modified": True if contabilita.get("promo_engine") else False,
++			"added": False, # TODO: togliere chiave
+ 		}
+ 		
+ 		if new_costs["modified"]:
+@@ -7212,6 +7215,7 @@ def promo_engine_v2(pard, id_transazione, simulate=None):
+ 								})["costs"].append({
+ 									"id"    : obj["id"],
+ 									"amount": obj.get("final_price", { }).get("diff", 0),
++									"modified": True, # TODO: togliere chiave
+ 								})
+ 		
+ 		costs.append(new_costs)
+@@ -7234,6 +7238,7 @@ def promo_engine_v2(pard, id_transazione, simulate=None):
+ 		promo.setdefault(change["promo"], {"items": [], "costs": []})
+ 	
+ 	res.update({
++		"response": response, # TODO: togliere chiave
+ 		"items": items,
+ 		"costs": costs,
+ 		"vouchers": vouchers,

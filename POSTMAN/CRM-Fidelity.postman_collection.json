@@ -1,0 +1,1186 @@
+{
+	"id": "a03cba7f-6b59-274b-0f4b-a577cf5eb654",
+	"name": "CRM-Fidelity",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"6931bfa1-0c29-6cc0-29a1-237e6144b8b6",
+		"b0cd91ba-38e4-32d9-534e-6fc907acc5a6",
+		"ce6f0ff9-bf19-b26b-35b5-b0ba8bf23064",
+		"0eed30f4-5af9-7940-a19b-09979012633e",
+		"00bad983-a258-1ac5-80fe-ff5b581afcf9",
+		"27733223-d1e2-10af-2de5-f2bc6688822a",
+		"75179fb0-cc85-1cff-d7e8-6dd7ba63252a",
+		"52cb8648-4e8d-1948-b133-67c9c839dbbf",
+		"06638ade-ae07-501f-ca14-59a908e26c3a",
+		"40794d35-5e8e-9ed8-84e2-a33f8f84c958",
+		"3ea98f7e-7344-7f86-d7b1-1ba1bab78d01",
+		"605ed5cf-ee0b-7428-2562-e1e23d18bdf0",
+		"7f22898c-f880-1595-cb56-207db49ca894",
+		"207b173f-6f3b-2059-7bbf-1a45ee07a06a",
+		"f01ec178-1d30-2600-749c-33609bbd84e8",
+		"292e1eb9-4a27-ba76-8d62-e94f7b198e1c",
+		"bf8c758f-5514-7c56-3910-5bb9065fb448",
+		"a92bb604-0bfd-9347-0596-f61ce7c3ae26",
+		"22559a67-e17f-4da0-a3fa-ad317d22c0de",
+		"2009505c-69fc-429b-0c6f-086352e01aa1",
+		"db9b9fe9-c927-0b62-88ab-85d00be8d6ae",
+		"862267db-7634-ca24-bfe9-b6a6ccbc86ca",
+		"01889e69-17f0-796e-e610-3adb7765ab06",
+		"ae8aa705-6dc8-f74f-318a-976becb6ea0d",
+		"fb1d7460-76c7-eef1-7bfe-e29197ed9c5e",
+		"37e46bcf-b0a8-1108-d778-23dcbce1fe15",
+		"9eb21b90-9e2b-bd1f-357d-e3ddc4efd423",
+		"6a3438de-bfe5-84b4-c949-481d93c06a7d",
+		"84dfb54d-c9c6-a219-1fd3-dd10e654018a",
+		"a81dd3d7-fc61-7992-3346-d3e66f66b335",
+		"6396d32a-8f73-eb5a-d2e8-f4f4fa516ab8",
+		"a2372d93-0a19-5785-4e28-36efb2b5a51e",
+		"6b8d8341-bb14-1344-fb17-ce9b04a7c7ae",
+		"97468764-fbdf-d63d-9d62-976407786cd0",
+		"9bdb9e8a-5faa-d2dc-13f9-ea5dfbbce454",
+		"09b445f4-f09d-88df-936f-817322822026",
+		"17c301be-edc1-6286-89c8-74133774b1d4",
+		"3ed51212-a80b-ec09-9eab-3a8f9bc0d693"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "00bad983-a258-1ac5-80fe-ff5b581afcf9",
+			"name": "Crea e assegna fidelity B2C",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/action",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"ASSIGN\",\n    \"tipo\": \"LOYALTY_CARD\",\n    \"pk_consumer\": \"651951\",\n    \"cod_negozio\": \"0100518\"\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "01889e69-17f0-796e-e610-3adb7765ab06",
+			"name": "Calc MR (solo capi)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 1200,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1200\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "06638ade-ae07-501f-ca14-59a908e26c3a",
+			"name": "Saldo consumatrice",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/consumer_details?cod_negozio=0100518&pk_consumer=651951",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "cod_negozio",
+					"value": "0100518",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "pk_consumer",
+					"value": "651951",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "09b445f4-f09d-88df-936f-817322822026",
+			"name": "Calc MR (capi, sartorie, sconto, abbuono, promo) STORNO",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": -958,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2040022374503\",\n                \"importo_finale\": 100,                \n                \"punti\": 1000,\n                \"tipo\": \"FIDELITY_CARD\"\n            },\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": 122\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": 40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": -20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": -958\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": -200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": -1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0eed30f4-5af9-7940-a19b-09979012633e",
+			"name": "Assegna fidelity Posweb",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/action",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"ASSIGN\",\n    \"tipo\": \"LOYALTY_CARD\",\n    \"codice\": \"1111111111116\",\n    \"pk_consumer\": \"156336\",\n    \"cod_negozio\": \"0100501\"\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "17c301be-edc1-6286-89c8-74133774b1d4",
+			"name": "Calc MR (capo V con sconto, abbuono) copy",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": -180,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": 10\n      }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": -180\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": -190,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2009505c-69fc-429b-0c6f-086352e01aa1",
+			"name": "Calc DT (capi, sartorie, gift, sconto, abbuono, pagato gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1180,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -100\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 900\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 280\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "207b173f-6f3b-2059-7bbf-1a45ee07a06a",
+			"name": "Update RETURN",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/return",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"cod_negozio\": \"0100518\",\n    \"pk_consumer\": \"2758930\",\n    \"id_operazione\": \"111\",\n    \"data_ora_operazione\": \"2018-02-21 12:10:10\",\n    \"id_operazione_ref\": \"802\",\n    \"cod_negozio_ref\": \"0100518\",\n    \"anno_operazione_ref\": \"2018\",\n    \"reso\": {\n      \"LOYALTY_CARD_NEW\": [\n        {\n          \"guadagnati\": 836.0,\n          \"importo_promozione\": 0,\n          \"tipo\": \"CAPO\",\n          \"punti\": 836.0,\n          \"progressivo\": 1,\n          \"utilizzati\": 0.0\n        }\n      ]\n    }\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "22559a67-e17f-4da0-a3fa-ad317d22c0de",
+			"name": "Calc DT (capi, sartorie, gift, sconto, abbuono, tessuti)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1200,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -100\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1200\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 3,\n        \"sku\": \"10392155900259\",\n        \"tipo_prezzo\": \"\",\n        \"importo_finale\": 20,\n        \"importo_iniziale\": 20,\n        \"classe\": \"\",\n        \"annostag\": \"\",\n        \"modello\": \"\",\n        \"variante\": \"\",\n        \"taglia\": \"\",\n        \"tipologia_merce\": \"TEXTILE\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "27733223-d1e2-10af-2de5-f2bc6688822a",
+			"name": "Sostituisci fidelity",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/substitution",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"codice\": \"1234567890166\",\n    \"tipo\": \"LOYALTY_CARD\",\n    \"pk_consumer\": \"196163\",\n    \"cod_negozio\": \"0100518\"\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "292e1eb9-4a27-ba76-8d62-e94f7b198e1c",
+			"name": "Calc DT (solo gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 100,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 100\n      }\n    ],\n    \"capi\": [\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "37e46bcf-b0a8-1108-d778-23dcbce1fe15",
+			"name": "Calc MR (capi, sartorie, gift, sconto, abbuono)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 1158,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -122\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1158\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3ea98f7e-7344-7f86-d7b1-1ba1bab78d01",
+			"name": "Update SALE",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"SALE\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 844,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"id_operazione\": \"123\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 844\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 385,\n        \"importo_iniziale\": 385,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 459,\n        \"importo_iniziale\": 459,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3ed51212-a80b-ec09-9eab-3a8f9bc0d693",
+			"name": "RECUPERO VENDITE PROD",
+			"url": "http://crm-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOktWMTFoam8tZ2xjLng2NWEqYyth",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\"data\": {\n    \"cod_negozio\": \"0100516\",\n    \"pagamenti\": [\n        {\n            \"importo_finale\": 149.0,\n            \"cod_operazione\": \"CARTA\"\n        }\n    ],\n    \"capi\": [\n        {\n            \"sku\": \"81623070050606\",\n            \"tipo_prezzo\": \"V\",\n            \"nome\": \"1OMNIUM\",\n            \"progressivo\": 1,\n            \"classe\": \"16\",\n            \"variante\": \"060\",\n            \"taglia\": \"6\",\n            \"annostag\": \"20171\",\n            \"importo_finale\": 69.0,\n            \"modello\": \"8162307005\",\n            \"tipologia_merce\": \"GARMENTS\",\n            \"importo_iniziale\": 69.0\n        },\n        {\n            \"sku\": \"95420170040341\",\n            \"tipo_prezzo\": \"V\",\n            \"nome\": \"SOLARE\",\n            \"progressivo\": 2,\n            \"classe\": \"54\",\n            \"variante\": \"034\",\n            \"taglia\": \"1\",\n            \"annostag\": \"20171\",\n            \"importo_finale\": 15.0,\n            \"modello\": \"9542017004\",\n            \"tipologia_merce\": \"GARMENTS\",\n            \"importo_iniziale\": 15.0\n        },\n        {\n            \"sku\": \"51311577060016\",\n            \"tipo_prezzo\": \"V\",\n            \"nome\": \"EMMY\",\n            \"progressivo\": 3,\n            \"classe\": \"13\",\n            \"variante\": \"001\",\n            \"taglia\": \"6\",\n            \"annostag\": \"20171\",\n            \"importo_finale\": 65.0,\n            \"modello\": \"5131157706\",\n            \"tipologia_merce\": \"GARMENTS\",\n            \"importo_iniziale\": 65.0\n        }\n    ],\n    \"contabilita\": [],\n    \"importo\": 149.0,\n    \"id_operazione\": \"398337\",\n    \"divisa\": \"EUR\",\n    \"extra_data\": {\n        \"numero_documento\": \"11481\",\n        \"data_documento\": \"20180308\"\n    },\n    \"operazione\": \"SALE\",\n    \"pk_consumer\": \"625580\",\n    \"data_ora_operazione\": \"2018-03-08 11:00:11\"\n}\n}",
+			"headers": "Authorization: Basic cG9zOktWMTFoam8tZ2xjLng2NWEqYyth\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "40794d35-5e8e-9ed8-84e2-a33f8f84c958",
+			"name": "Update QUOTATION",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1100,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"id_operazione\": \"456\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"id_operazione_ref\": \"123\",\n    \"cod_negozio_ref\": \"0100518\",\n    \"anno_operazione_ref\": \"2017\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -100\n      },\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2130022384401\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"LOYALTY_CARD_NEW\"\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 800\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 300\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "52cb8648-4e8d-1948-b133-67c9c839dbbf",
+			"name": "Elenco tipi promozione",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/types?cod_negozio=0100518",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "cod_negozio",
+					"value": "0100518",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "605ed5cf-ee0b-7428-2562-e1e23d18bdf0",
+			"name": "Update CHECKOUT",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"CHECKOUT\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 844,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"id_operazione\": \"123\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 844\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 385,\n        \"importo_iniziale\": 385,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 459,\n        \"importo_iniziale\": 459,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6396d32a-8f73-eb5a-d2e8-f4f4fa516ab8",
+			"name": "Calc MR (capo V con sconto, abbuono)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 180,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -10\n      }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 180\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 190,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6931bfa1-0c29-6cc0-29a1-237e6144b8b6",
+			"name": "Disattiva fidelity",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/action",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"DISABLE\",\n    \"tipo\": \"LOYALTY_CARD\",\n    \"codice\": \"2130012374405\",\n    \"pk_consumer\": \"4970587\",\n    \"cod_negozio\": \"0100518\"\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6a3438de-bfe5-84b4-c949-481d93c06a7d",
+			"name": "Calc MR (capi, sartorie, gift, sconto, abbuono, promo, pagato gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 1058,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2040022374503\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"FIDELITY_CARD\"\n            },\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -122\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 900\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 158\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6b8d8341-bb14-1344-fb17-ce9b04a7c7ae",
+			"name": "Calc MR (solo capi, S maggiorato) STORNO",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": -1400,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": -1400\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": -200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": -1200,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "75179fb0-cc85-1cff-d7e8-6dd7ba63252a",
+			"name": "History",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/history?tipo=LOYALTY_CARD_NEW&codice=2130012808054",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "tipo",
+					"value": "LOYALTY_CARD_NEW",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "codice",
+					"value": "2130012808054",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7f22898c-f880-1595-cb56-207db49ca894",
+			"name": "Update ASSIGNMENT",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"ASSIGNMENT\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 500,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"id_operazione\": \"456\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"id_operazione_ref\": \"123\",\n    \"cod_negozio_ref\": \"0100518\",\n    \"anno_operazione_ref\": \"2017\",\n    \"contabilita\": [],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 500\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 300,\n        \"importo_iniziale\": 300,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "84dfb54d-c9c6-a219-1fd3-dd10e654018a",
+			"name": "Calc DT (capi, sartorie, gift, promo, tessuti, pagato gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1240,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2130022384401\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"LOYALTY_CARD_NEW\"\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 900\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 340\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 3,\n        \"sku\": \"10392155900259\",\n        \"tipo_prezzo\": \"\",\n        \"importo_finale\": 20,\n        \"importo_iniziale\": 20,\n        \"classe\": \"\",\n        \"annostag\": \"\",\n        \"modello\": \"\",\n        \"variante\": \"\",\n        \"taglia\": \"\",\n        \"tipologia_merce\": \"TEXTILE\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "862267db-7634-ca24-bfe9-b6a6ccbc86ca",
+			"name": "Calc DT (capi, sartorie, gift, sconto, abbuono, tessuti, pagato gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1200,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -100\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 900\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 300\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 3,\n        \"sku\": \"10392155900259\",\n        \"tipo_prezzo\": \"\",\n        \"importo_finale\": 20,\n        \"importo_iniziale\": 20,\n        \"classe\": \"\",\n        \"annostag\": \"\",\n        \"modello\": \"\",\n        \"variante\": \"\",\n        \"taglia\": \"\",\n        \"tipologia_merce\": \"TEXTILE\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "97468764-fbdf-d63d-9d62-976407786cd0",
+			"name": "Calc MR (capi, sartorie, promo) STORNO",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": -1120,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2040022374503\",\n                \"importo_finale\": 100,                \n                \"punti\": 1000,\n                \"tipo\": \"FIDELITY_CARD\"\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": -20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": -1120\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": -200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": -1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9bdb9e8a-5faa-d2dc-13f9-ea5dfbbce454",
+			"name": "Calc MR (capi, sartorie, sconto, abbuono) STORNO",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": -1058,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": 122\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": 40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": -20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": -1058\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": -200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": -1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9eb21b90-9e2b-bd1f-357d-e3ddc4efd423",
+			"name": "Calc MR (capi, sartorie, gift, sconto, abbuono, promo)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 1058,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2040022374503\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"FIDELITY_CARD\"\n            },\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -122\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1058\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a2372d93-0a19-5785-4e28-36efb2b5a51e",
+			"name": "Calc MR (solo capi) STORNO",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": -1200,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": -1200\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": -200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": -1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a81dd3d7-fc61-7992-3346-d3e66f66b335",
+			"name": "Calc MR (solo capi V, pagato gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 1200,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 700\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 500\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a92bb604-0bfd-9347-0596-f61ce7c3ae26",
+			"name": "Calc DT (capi, sartorie, gift, sconto, abbuono)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1180,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n        \"codice_movimento\": \"CONTABILITA_SCONTO\",\n        \"importo_finale\": -100\n      },\n      {\n        \"codice_movimento\": \"CONTABILITA_ABBUONO\",\n        \"importo_finale\": -40\n      },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1180\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ae8aa705-6dc8-f74f-318a-976becb6ea0d",
+			"name": "Calc MR (solo gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 100,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 100\n      }\n    ],\n    \"capi\": [\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b0cd91ba-38e4-32d9-534e-6fc907acc5a6",
+			"name": "Foce punti",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/action",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"FORCE\",\n    \"tipo\": \"LOYALTY_CARD\",\n    \"codice\": \"1234567890197\",\n    \"pk_consumer\": \"4970587\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1000\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "bf8c758f-5514-7c56-3910-5bb9065fb448",
+			"name": "Calc DT (capi, sartorie, gift, promo)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1220,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2130022384401\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"LOYALTY_CARD_NEW\"\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1220\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ce6f0ff9-bf19-b26b-35b5-b0ba8bf23064",
+			"name": "Travaso punti",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/action",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"operazione\": \"MOVE\",\n    \"tipo\": \"LOYALTY_CARD\",\n    \"codice_from\": \"2130012382660\",\n    \"codice_to\": \"2130012376966\",\n    \"pk_consumer\": \"156336\",\n    \"cod_negozio\": \"0100501\"\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "db9b9fe9-c927-0b62-88ab-85d00be8d6ae",
+			"name": "Calc DT (capi, sartorie, gift, promo, pagato gift)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1220,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2130022384401\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"LOYALTY_CARD_NEW\"\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 900\n      },\n      {\n        \"cod_operazione\": \"GIFT_CARD_CORPORATE\",\n        \"importo_finale\": 320\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f01ec178-1d30-2600-749c-33609bbd84e8",
+			"name": "Calc DT (solo capi)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100518\",\n    \"importo\": 1200,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"196165\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1200\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fb1d7460-76c7-eef1-7bfe-e29197ed9c5e",
+			"name": "Calc MR (capi, sartorie, gift, promo)",
+			"url": "http://crm-dev-ws.mmfg.it/api/v1/pos/fidelity/update",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"debug\": 1,\n    \"operazione\": \"QUOTATION\",\n    \"cod_negozio\": \"0100855\",\n    \"importo\": 1220,\n    \"divisa\": \"EUR\",\n    \"pk_consumer\": \"2393404\",\n    \"data_ora_operazione\": \"2017-12-21 12:10:10\",\n    \"contabilita\": [\n      {\n                \"codice_movimento\": \"CONTABILITA_PROMOZIONE\",\n                \"codice\": \"2040022374503\",\n                \"importo_finale\": -100,                \n                \"punti\": -1000,\n                \"tipo\": \"FIDELITY_CARD\"\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_GIFT\",\n              \"importo_finale\": 100\n            },\n            {\n              \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n              \"importo_finale\": 20\n            }\n    ],\n    \"pagamenti\": [\n      {\n        \"cod_operazione\": \"CONTANTI\",\n        \"importo_finale\": 1220\n      }\n    ],\n    \"capi\": [\n      {\n        \"progressivo\": 1,\n        \"sku\": \"10411621060031\",\n        \"tipo_prezzo\": \"V\",\n        \"importo_finale\": 200,\n        \"importo_iniziale\": 200,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      },\n      {\n        \"progressivo\": 2,\n        \"sku\": \"10210524060012\",\n        \"tipo_prezzo\": \"S\",\n        \"importo_finale\": 1000,\n        \"importo_iniziale\": 1000,\n        \"classe\": \"36\",\n        \"annostag\": \"20141\",\n        \"modello\": \"1361194106\",\n        \"variante\": \"003\",\n        \"taglia\": \"2\"\n      }\n    ]\n  }\n}",
+			"headers": "Authorization: Basic cG9zOjI1Q0Muc2RjNHQtY3gjemNiMTVw\nContent-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}

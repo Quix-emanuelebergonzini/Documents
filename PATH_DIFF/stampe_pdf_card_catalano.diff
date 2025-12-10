@@ -1,0 +1,63 @@
+diff --git a/mmfg/posweb/site/bin/lib/stampe_pdf.py b/mmfg/posweb/site/bin/lib/stampe_pdf.py
+index 52c8a356b7..f1f2e9ceff 100644
+--- a/mmfg/posweb/site/bin/lib/stampe_pdf.py
++++ b/mmfg/posweb/site/bin/lib/stampe_pdf.py
+@@ -2673,10 +2673,10 @@ def componi_pagina_due(pard, dati_contatto_privacy_negozio, language, dettaglio_
+ 				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_22}</td>
+ 			</tr>
+ 			<tr>
+-				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_23}{add_br}</td>
++				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_23}</td>
+ 			</tr>
+ 			<tr>
+-				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_24}</td>
++				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_24}{add_br}</td>
+ 			</tr>
+ 			<tr>
+ 				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_25}</td>
+@@ -2694,11 +2694,18 @@ def componi_pagina_due(pard, dati_contatto_privacy_negozio, language, dettaglio_
+ 				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_29}</td>
+ 			</tr>
+ 			<tr>
+-				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_30}{add_br}</td>
++				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_30}</td>
+ 			</tr>
+ 			<tr>
+ 				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_31}</td>
+-			</tr>""".format(
++			</tr>
++			<tr>
++				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_32}{add_br}</td>
++			</tr>
++			<tr>
++				<td width="100%" colspan="2" align="left" height="{row_height}">{riga_33}</td>
++			</tr>
++		""".format(
+ 		add_br=add_br,
+ 		riga_10=dettaglio_informativa_privacy['sezione_5']['riga_1'],
+ 		riga_11=dettaglio_informativa_privacy['sezione_5']['riga_2'],
+@@ -2717,14 +2724,16 @@ def componi_pagina_due(pard, dati_contatto_privacy_negozio, language, dettaglio_
+ 		riga_21=dettaglio_informativa_privacy['sezione_8']['riga_5'],
+ 		riga_22=dettaglio_informativa_privacy['sezione_8']['riga_6'],
+ 		riga_23=dettaglio_informativa_privacy['sezione_8']['riga_7'],
+-		riga_24=dettaglio_informativa_privacy['sezione_9']['riga_1'].format(brand_privacy_email=dati_contatto_privacy_negozio['mail_privacy']),
+-		riga_25=dettaglio_informativa_privacy['sezione_9']['riga_2'].format(brand_privacy_email=dati_contatto_privacy_negozio['mail_privacy']),
+-		riga_26=dettaglio_informativa_privacy['sezione_9']['riga_3'],
+-		riga_27=dettaglio_informativa_privacy['sezione_9']['riga_4'],
+-		riga_28=dettaglio_informativa_privacy['sezione_9']['riga_5'],
+-		riga_29=dettaglio_informativa_privacy['sezione_9']['riga_6'],
+-		riga_30=dettaglio_informativa_privacy['sezione_9']['riga_7'],
+-		riga_31=dettaglio_informativa_privacy['sezione_10']['riga_1'].format(brand_privacy_site=dati_contatto_privacy_negozio['website']),
++		riga_24=dettaglio_informativa_privacy['sezione_8'].get("riga_8"),
++		riga_25=dettaglio_informativa_privacy['sezione_9']['riga_1'].format(brand_privacy_email=dati_contatto_privacy_negozio['mail_privacy']),
++		riga_26=dettaglio_informativa_privacy['sezione_9']['riga_2'].format(brand_privacy_email=dati_contatto_privacy_negozio['mail_privacy']),
++		riga_27=dettaglio_informativa_privacy['sezione_9']['riga_3'],
++		riga_28=dettaglio_informativa_privacy['sezione_9']['riga_4'],
++		riga_29=dettaglio_informativa_privacy['sezione_9']['riga_5'],
++		riga_30=dettaglio_informativa_privacy['sezione_9']['riga_6'],
++		riga_31=dettaglio_informativa_privacy['sezione_9']['riga_7'],
++		riga_32=dettaglio_informativa_privacy['sezione_9'].get("riga_8"),
++		riga_33=dettaglio_informativa_privacy['sezione_10']['riga_1'].format(brand_privacy_site=dati_contatto_privacy_negozio['website']),
+ 		row_height=row_height
+ 	))
+ 	pagina_2.append("""</table></font>""")

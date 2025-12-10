@@ -1,0 +1,32 @@
+diff --git a/mmfg/posweb/site/bin/lib/stampe_custom.py b/mmfg/posweb/site/bin/lib/stampe_custom.py
+index 3d4e3a9bcb..70b83264e6 100644
+--- a/mmfg/posweb/site/bin/lib/stampe_custom.py
++++ b/mmfg/posweb/site/bin/lib/stampe_custom.py
+@@ -3132,7 +3132,9 @@ def aggiungi_informazioni_fidelity(pard, c, testata, tipologia_riga, copy_type):
+ 
+ 					# solo per DT per dismissione vecchio programma
+ 					data_documento = datetime.date(int(testata['data_documento'][0:4]), int(testata['data_documento'][4:6]), int(testata['data_documento'][6:8]))
+-					if cod_promozione == "LOYALTY_CARD_NEW" and datetime.date(2022, 11, 14) <= data_documento <= datetime.date(2023, 2, 27):
++					if (cod_promozione in ("LOYALTY_INTREND_FR", "LOYALTY_INTREND_ES", "LOYALTY_INTREND_AT",
++										   "LOYALTY_INTREND_NL", "LOYALTY_INTREND_HU")
++							and datetime.date(2025, 12, 1) <= data_documento <= datetime.date(2025, 12, 31)):
+ 						righe = stampe_utils.get_splitted_content(pard,
+                                     'Il programma Intrend Fidelity Card scade il 28 Febbraio 2023 e il tuo saldo punti verrà azzerato. Ricordati di utilizzare tutti i tuoi punti prima di quella data.',
+                                     Custom.Lengths[Custom.Styles.MEDIUM])
+diff --git a/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py b/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py
+index 74c117a3ea..0ebe8981d5 100644
+--- a/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py
++++ b/mmfg/posweb/site/bin/lib/stampe_scontrini_pdf.py
+@@ -6689,9 +6689,10 @@ def vendita_scontrino_fiscale(pard, id_transazione, pagamenti, testata, mov_capi
+ 							})
+ 
+ 					data_documento = datetime.date(int(testata['data_documento'][0:4]), int(testata['data_documento'][4:6]), int(testata['data_documento'][6:8]))
+-					if cod_promozione == "LOYALTY_CARD_NEW" and datetime.date(2022, 11, 14) <= data_documento <= datetime.date(2023, 2, 27):
++					if (cod_promozione in ("LOYALTY_INTREND_FR","LOYALTY_INTREND_ES","LOYALTY_INTREND_AT","LOYALTY_INTREND_NL","LOYALTY_INTREND_HU")
++							and datetime.date(2025, 12, 1) <= data_documento <= datetime.date(2025, 12, 31)):
+ 						righe = stampe_utils.get_splitted_content(pard,
+-                                  'Il programma Intrend Fidelity Card scade il 28 Febbraio 2023 e il tuo saldo punti verrà azzerato. Ricordati di utilizzare tutti i tuoi punti prima di quella data.',
++                                  'Il programma Intrend Fidelity Card scade il 28 Febbraio 2026 e il tuo saldo punti verrà azzerato. Ricordati di utilizzare tutti i tuoi punti prima di quella data.',
+ 	                              pdf.printer_config['max_caratteri_per_riga']['font_size_scontrino'])
+ 						pdf.add_row_config({ 'fn_name': 'line_empty' })
+ 						for r in righe:

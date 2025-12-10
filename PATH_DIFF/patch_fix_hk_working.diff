@@ -1,0 +1,86 @@
+diff --git a/mmfg/posweb/daemons/schema.py b/mmfg/posweb/daemons/schema.py
+index f94c9a1a29..72a258d575 100644
+--- a/mmfg/posweb/daemons/schema.py
++++ b/mmfg/posweb/daemons/schema.py
+@@ -32375,6 +32375,18 @@ INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','payment_panel_check_row
+ INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','payment_panel_check_row2','dk','il numero della carta di credito utilizzata per il rimborso corrisponda al numero della carta di credito utilizzata per la vendita','the number of the credit card used for the refund matches the number of the credit card used for the sale','carmagnolam','2021-07-01 15:00:00');
+ INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','payment_panel_check_row2','ja','il numero della carta di credito utilizzata per il rimborso corrisponda al numero della carta di credito utilizzata per la vendita','the number of the credit card used for the refund matches the number of the credit card used for the sale','carmagnolam','2021-07-01 15:00:00');
+ INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','payment_panel_check_row2','zh','il numero della carta di credito utilizzata per il rimborso corrisponda al numero della carta di credito utilizzata per la vendita','the number of the credit card used for the refund matches the number of the credit card used for the sale','carmagnolam','2021-07-01 15:00:00');
++
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','it','In caso di storno, non è consentito utilizzare la funzionalità di resto','In caso di storno, non è consentito utilizzare la funzionalità di resto','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','en','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','de','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','es','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','pt','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','fr','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','nl','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','dk','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','ja','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++INSERT INTO "mmfg_translations" VALUES('POS','pos_sale','no_money_change_in_case_of_return','zh','In caso di storno, non è consentito utilizzare la funzionalità di resto','In return case the feature change is not allowed','bergonzinie','2021-07-21 12:17:23');
++
+ 		''',
+ 	},
+ ]
+diff --git a/mmfg/posweb/site/bin/pos.py b/mmfg/posweb/site/bin/pos.py
+index e03a566bed..e9e5543d45 100644
+--- a/mmfg/posweb/site/bin/pos.py
++++ b/mmfg/posweb/site/bin/pos.py
+@@ -7384,6 +7384,12 @@ def controlla_transazione(pard, finalize=False, toJs=True, for_payment=False):
+ 		
+ 		rimborso_b2e = pard.get("rimborso_b2e") == "1"
+ 		reso = pard.get("reso")
++		
++		reso_in_valuta = False
++		if reso:
++			dati_reso = json.loads(pard.POST["json_reso"])
++			reso_in_valuta = dati_reso.get("vendita_in_valuta")
++	
+ 		mantieni_decimali = pard.get("preserve_decimals") == "1"
+ 
+ 		# se sono un USA o CANADA è possibile "vendere" i soli movimenti di spedizione:
+@@ -8830,7 +8836,7 @@ def controlla_transazione(pard, finalize=False, toJs=True, for_payment=False):
+ 
+ 				# se il totale vendita e' negativo E se ho forme di rimborso diverse dai contanti: numero e data bollettina devono essere valorizzati
+ 				if totale_vendita < 0 and not pard.get("layby"):
+-					if abs(sum_tot_pagamenti) > abs(totale_vendita):
++					if (abs(sum_tot_pagamenti) > abs(totale_vendita)) and reso_in_valuta:
+ 						errors["pagamenti_0_valore"] = common_utils.translate_tags(pard['USER'], pard['POS_CONFIG']['GUI_LANGUAGE_LOCALE'], u"""<trad group="pos_sale" id="no_money_change_in_case_of_return">In caso di storno, non è consentito utilizzare la funzionalità di resto</trad>""")
+ 						raise POSError, errors.items()
+ 
+diff --git a/mmfg/posweb/site/html/js/mmfg/rich/resi/1.0/resi.js b/mmfg/posweb/site/html/js/mmfg/rich/resi/1.0/resi.js
+index bdb649c2ab..d7cef8f6b8 100644
+--- a/mmfg/posweb/site/html/js/mmfg/rich/resi/1.0/resi.js
++++ b/mmfg/posweb/site/html/js/mmfg/rich/resi/1.0/resi.js
+@@ -1175,8 +1175,19 @@ YUI.add('pos-resi-1.0', function(Y) {
+ 							var select_pagamento = Y.one("#pagamenti > tbody > tr[data-progressivopos=" + ++i + "] select");
+ 							pagamenti_component.addPaymentResi(select_pagamento, value.cod_operazione, importo_finale, pag["currency_change"]["currency"]);
+ 							var riga = select_pagamento.ancestor("tr");
++							var val = YUI.mmfg.utils.unformatNumero(pag.currency_change.original_amount);
+ 							var input_pagamento = riga.one("input.imp_in_valuta");
+ 							input_pagamento.set("value", YUI.mmfg.utils.formatNumeroDivisa(pag.currency_change.currency, pag["currency_change"]["original_amount"] * -1));
++
++							// imposto la valuta con cui ho pagamento e aggiorno la valuta originale
++							var divisa = riga.one("select.select_valuta").get("value"),
++								valorePag = riga.one("input.valore_pagamento"),
++								formattedVal = YUI.mmfg.utils.formatNumeroDivisa(divisa, val);
++							input_pagamento.set("value", formattedVal);
++							var new_valore = YUI.mmfg.utils.calcCambioDivise(formattedVal, divisa, YUI.mmfg.storeConfig.currencyCode, true)
++							new_valore = YUI.mmfg.utils.unformatNumero(new_valore) * -1;
++							valorePag.set("value", YUI.mmfg.utils.formatNumeroDivisa(YUI.mmfg.storeConfig.currencyCode, new_valore));
++
+ 							YUI.mmfg.venditaPagamenti.freezePaymentRow(riga, false);
+ 							pagamenti_component.abilitaValutaResi = false;
+ 						}
+@@ -1279,9 +1290,11 @@ YUI.add('pos-resi-1.0', function(Y) {
+ 					return;
+ 				}
+ 
++				var vendita_selected = getSubtotaliVendita();
++				var vendita = JSON.parse(vendita_selected["json_reso"])["sale"];
+ 				var totPagamenti = YUI.mmfg.venditaPagamenti.getTotaliPagamenti(),
+ 					tot_vendita = parseFloat(YUI.mmfg.utils.unformatNumero(Y.one('#vendita_totale').get('text')));
+-				if (totPagamenti.totale_pagato !== tot_vendita) {
++				if (totPagamenti.totale_pagato !== tot_vendita && !vendita.vendita_in_valuta) {
+ 					YUI.mmfg.template.fancyDialogOpen(strings.ERRORE_TOT_PAGAMENTO, "error", true);
+ 					return;
+ 				}

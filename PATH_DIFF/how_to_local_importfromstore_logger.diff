@@ -1,0 +1,92 @@
+diff --git a/bin/poswsbe/consumer/service.py b/bin/poswsbe/consumer/service.py
+index 98387023..cf1a84eb 100644
+--- a/bin/poswsbe/consumer/service.py
++++ b/bin/poswsbe/consumer/service.py
+@@ -495,6 +495,7 @@ class PosWsBeConsumerService(Service):
+ 		for i, record in enumerate(records[:limit], 1):
+ 			sys.stdout.write('\r' + "Processing %s" % i)
+ 			errors = []
++			sys.stdout.write('\r' + "Processing %s" % record)
+ 			try:
+ 				cod_negozio = record["store"]
+ 				store = self._get_store_config(cod_negozio, errors=errors)
+@@ -516,6 +517,7 @@ class PosWsBeConsumerService(Service):
+ 					errors.append("Missing column: %s" % ex.args)
+ 
+ 				if not errors:
++					sys.stdout.write('\r' + "Xml %s" % xml)
+ 					# Salvataggio consumer
+ 					xml_file_name, result = self.insert_consumer_xml(cod_negozio,
+ 																	 xml,
+diff --git a/bin/poswsbe/consumer_utils.py b/bin/poswsbe/consumer_utils.py
+index 07786fbb..e80ff04b 100644
+--- a/bin/poswsbe/consumer_utils.py
++++ b/bin/poswsbe/consumer_utils.py
+@@ -75,10 +75,13 @@ class ConsumerService(object):
+ 				query += """ AND negozio='{cod_negozio}'""".format(cod_negozio=cod_negozio)
+ 			result = self.connection.query(query)
+ 		else:
++			self.pard['LOGGER'].info("cod_negozio {} extra_filter {} nazione {}".format(cod_negozio, {'cod_locale': cod_locale}, nazione))
+ 			result = self.crm_service.get_consumer_negozio(cod_negozio=cod_negozio, extra_filters={'cod_locale': cod_locale}, nazione=nazione)
++		self.pard['LOGGER'].info("result from crm_service.get_consumer_negozio {}".format(result))
+ 		pk_consumer = result[0]['pk_consumer'] if result else ''
+ 		if not pk_consumer and do_raise:
+ 			raise ValueError('pk_consumer non trovato per negozio={cod_negozio}, cod_locale={cod_locale}'.format(cod_negozio=cod_negozio, cod_locale=cod_locale))
++		self.pard['LOGGER'].info("pk_consumer {}".format(pk_consumer))
+ 		return pk_consumer
+ 
+ 	def get_consumer(self, pk_consumer):
+diff --git a/bin/poswsbe/pos_parser_consumer.py b/bin/poswsbe/pos_parser_consumer.py
+index b7eda320..e01bbd36 100644
+--- a/bin/poswsbe/pos_parser_consumer.py
++++ b/bin/poswsbe/pos_parser_consumer.py
+@@ -290,6 +290,8 @@ class XmlConsumer(dict):
+ 		self["cassiera"] 			= d.get("shop_assistant", "")
+ 		self["privacy_signature"]	= d.get("privacy_signature")
+ 
++		self.pard['LOGGER'].info("self[privacy_signature] {}".format(self["privacy_signature"]))
++
+ 		# to upper case
+ 		for k in (
+ 					'cognome',
+@@ -354,7 +356,7 @@ class XmlConsumer(dict):
+ 		# assegna pk_consumer e cod_locale
+ 		if self['local']:
+ 			cod_locale = self['consumer_code']
+-
++			self.pard['LOGGER'].info("cod_locale {}".format(cod_locale))
+ 			if self['bulk_import'] == 1:
+ 				# In caso di importazione bulk la verifica sull'esistenza della consumer va fatta senza controllare il
+ 				# negozio per evitare duplicazioni di consumer
+@@ -772,6 +774,10 @@ class XmlConsumer(dict):
+ 			is_new = 0
+ 			pk_consumer = int(pk_crm)
+ 
++		self.pard['LOGGER'].info("pk_crm {}".format(pk_crm))
++		self.pard['LOGGER'].info("is_new {}".format(is_new))
++		self.pard['LOGGER'].info("local {}".format(self['local']))
++
+ 		# Dati anagrafici
+ 		chiavi_consumer = (
+ 			'cognome', 'nome', 'nazione_iso', 'sesso', 'lingua', 'data_firma_scheda', 'negozio_firma_scheda',
+@@ -967,6 +973,8 @@ class XmlConsumer(dict):
+ 				res['consumer_privacy']['pdf_scheda'] = firma["pdf_scheda"]
+ 				res['consumer_privacy']['file_version'] = firma["file_version"]
+ 
++		self.pard['LOGGER'].info("res {}".format(res))
++
+ 		ext_base = {
+ 			"ext_id": "",
+ 			"ext_name": self.cod_negozio,
+diff --git a/bin/poswsbe/pos_utils.py b/bin/poswsbe/pos_utils.py
+index 1ee55211..d4fbaac6 100644
+--- a/bin/poswsbe/pos_utils.py
++++ b/bin/poswsbe/pos_utils.py
+@@ -867,6 +867,7 @@ def send_request_ws(ws_name, ws_params):
+ 	"""
+ 	from poswsbe.mmfg.webservice.client import send_request
+ 	from config.ws_client import ws_config
++	ws_config['pos-ws-mmj-be']['url'] = 'https://mmj-ws-dev.bms.maxmara.com:443'
+ 	config_dict = ws_config[ws_name]
+ 	result, info = send_request(params=ws_params, config_dict=config_dict)
+ 	return result

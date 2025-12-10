@@ -1,0 +1,28 @@
+diff --git a/mmfg/posweb/site/bin/pagamenti_carte.py b/mmfg/posweb/site/bin/pagamenti_carte.py
+index ceb13dcf0..2c01d82a1 100644
+--- a/mmfg/posweb/site/bin/pagamenti_carte.py
++++ b/mmfg/posweb/site/bin/pagamenti_carte.py
+@@ -630,7 +630,7 @@ def parse_payment_settlement_response(pard, dati_operazione, om_resp):
+ 	if dati_settlement:
+ 		dati_operazione["pos_tran_id"] = dati_settlement["txHead"]["txId"]
+ 		dati_operazione["dati_carta"]["codice_compagnia"] = movim_utils.get_codice_compagnia_nets(
+-			pard, dati_settlement["cardInfo"]["brand"])
++			pard, 'Visa')
+ 	else:
+ 		# transazione non eseguita per negozio NON diretto
+ 		pard['LOGGER'].debug('dati_settlement non ricevuti. Skip settlement per negozio NON diretto')
+diff --git a/mmfg/posweb/site/bin/pos.py b/mmfg/posweb/site/bin/pos.py
+index a980b78e7..4ee188d2b 100644
+--- a/mmfg/posweb/site/bin/pos.py
++++ b/mmfg/posweb/site/bin/pos.py
+@@ -4269,7 +4269,9 @@ def get_giacenza_sku(pard):
+ 	try:
+ 		sku_data = json.loads(pard.get("sku_list","[]"))
+ 		sku_list = [ d['sku'] for d in sku_data ]
+-		giacenze_d = movim_utils.get_giacenza_sku(pard, sku_list)
++		giacenze_d = {
++			'30110101020032': 5,
++		}
+ 
+ 		# Se lo stock è obbligatorio tolgo dalla giacenza restituita da bms la quantità degli articoli negli xml ancora
+ 		# da inviare

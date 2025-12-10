@@ -1,0 +1,169 @@
+diff --git a/bin/poswsbe/delega_negozi/service.py b/bin/poswsbe/delega_negozi/service.py
+index 81aa38fa..5bccebc4 100644
+--- a/bin/poswsbe/delega_negozi/service.py
++++ b/bin/poswsbe/delega_negozi/service.py
+@@ -55,8 +55,8 @@ class DelegaNegoziPOSWS(Service):
+ 			'logger_name': 'delega_negozi',
+ 			'file_and_stream': provider == 'MMFG'
+ 		}
+-		if provider == 'MMFG':
+-			logger_config['file_name'] = main_project_home + '/log/delega_negozi.log'
++		# if provider == 'MMFG':
++		# 	logger_config['file_name'] = main_project_home + '/log/delega_negozi.log'
+ 		pos_utils.init_logger(pard, logger_config)
+ 
+ 	def generate_negozio(self, nuovi_negozi):
+@@ -699,31 +699,31 @@ class DelegaNegoziPOSWS(Service):
+ 			lista_negozi = [n for n_sublist in list(lista_negozi.values()) for n in n_sublist]
+ 		neg_list = ",".join(lista_negozi) if len(lista_negozi) > 1 else ''
+ 		agg_db = nuovo_aggiornamento.get("update_entity")
+-		if agg_db:
+-			agg_db.inizio_aggiornamento = datetime.datetime.now()
+-			agg_db.stato_attuale = "IN PROGRESS"
+-			agg_db.lista_negozi = neg_list
+-		else:
+-			action = nuovo_aggiornamento['azione']
+-			if tipo == "sw" and action != "full":
+-				cod_negozio = ""
+-			else:
+-				cod_negozio = nuovo_aggiornamento['negozi_coinvolti'] if len(lista_negozi) > 1 else lista_negozi[0]
+-			agg_db = self.new(
+-				'Aggiornamento',
+-				cod_negozio=cod_negozio,
+-				lista_negozi=neg_list,
+-				tipologia=tipo,
+-				modalita=action,
+-				priorita=int(nuovo_aggiornamento["priorita"]) if nuovo_aggiornamento["priorita"] else 0,
+-				lista_tabelle=nuovo_aggiornamento['lista_tabelle'] if tipo == "db" else "",
+-				nome_utente=nuovo_aggiornamento['utente'],
+-				inizio_aggiornamento=datetime.datetime.now(),
+-				termine_aggiornamento=None,
+-				stato_attuale='IN PROGRESS',
+-				dettagli_errore=''
+-			)
+-		self.set(agg_db)
++		# if agg_db:
++		# 	agg_db.inizio_aggiornamento = datetime.datetime.now()
++		# 	agg_db.stato_attuale = "IN PROGRESS"
++		# 	agg_db.lista_negozi = neg_list
++		# else:
++		# 	action = nuovo_aggiornamento['azione']
++		# 	if tipo == "sw" and action != "full":
++		# 		cod_negozio = ""
++		# 	else:
++		# 		cod_negozio = nuovo_aggiornamento['negozi_coinvolti'] if len(lista_negozi) > 1 else lista_negozi[0]
++		# 	agg_db = self.new(
++		# 		'Aggiornamento',
++		# 		cod_negozio=cod_negozio,
++		# 		lista_negozi=neg_list,
++		# 		tipologia=tipo,
++		# 		modalita=action,
++		# 		priorita=int(nuovo_aggiornamento["priorita"]) if nuovo_aggiornamento["priorita"] else 0,
++		# 		lista_tabelle=nuovo_aggiornamento['lista_tabelle'] if tipo == "db" else "",
++		# 		nome_utente=nuovo_aggiornamento['utente'],
++		# 		inizio_aggiornamento=datetime.datetime.now(),
++		# 		termine_aggiornamento=None,
++		# 		stato_attuale='IN PROGRESS',
++		# 		dettagli_errore=''
++		# 	)
++		# self.set(agg_db)
+ 		return agg_db
+ 
+ 	def get_valida_aggiornamento(self):
+diff --git a/bin/poswsbe/pos_export_to_store_db.py b/bin/poswsbe/pos_export_to_store_db.py
+index be317c25..4aa44c61 100644
+--- a/bin/poswsbe/pos_export_to_store_db.py
++++ b/bin/poswsbe/pos_export_to_store_db.py
+@@ -8523,7 +8523,7 @@ def export_package(pard, cod_installazione='', export_config=None, tipo_istanza=
+ 		if remove_list:
+ 			obj['properties']['remove_list'] = remove_list
+ 		obj['creation_mode'] = creation_mode
+-		obj.save_record()
++		# obj.save_record()
+ 
+ 		if creation_mode in ('full', 'incr') and not restricted_list:
+ 			# aggiorna il numero di versione disponibile solo in caso di aggiornamento full o incr
+@@ -8648,9 +8648,9 @@ def write_file(pard, export_info, compression='gz', compresslevel=6, tipo_istanz
+ 
+ 	# creazione directory
+ 	dir_name = os.path.dirname(full_name)
+-	if not dir_exists(dir_name):
+-		dir_makedirs(dir_name)
+-		file_chmod(dir_name, 0o2777)
++	# if not dir_exists(dir_name):
++	# 	dir_makedirs(dir_name)
++	# 	file_chmod(dir_name, 02777)
+ 
+ 	# Se in cloud si abilita il buffering nella scrittura del file
+ 	additional_open_args = {}
+@@ -8663,10 +8663,10 @@ def write_file(pard, export_info, compression='gz', compresslevel=6, tipo_istanz
+ 	if compression == 'gz':
+ 		file_name += '.gz'
+ 		full_name += '.gz'
+-		out = file_gzip(full_name, 'wb' if provider == 'MMFG' else 'ab', compresslevel, **additional_open_args)
++		# out = file_gzip(full_name, 'wb' if provider == 'MMFG' else 'ab', compresslevel, **additional_open_args)
+ 	# out = codecs.getwriter('utf-8')(out)	# per passare unicode a write
+ 	elif compression == '':
+-		out = file_open(full_name, 'wb', **additional_open_args)
++		pass
+ 	# out = codecs.open(full_name, 'wb', encoding='utf-8')
+ 	else:
+ 		raise Exception("Unsupported compression method: {0}".format(compression))
+@@ -8688,7 +8688,7 @@ def write_file(pard, export_info, compression='gz', compresslevel=6, tipo_istanz
+ 	# TODO: valutare se non scrivere nulla nel caso non ci siano dati da inviare
+ 	pard['LOGGER'].info('### Generazione file')
+ 	query_size = 0
+-	out.write(bytes(header, encoding='utf-8'))
++	pard['LOGGER'].info(header)
+ 	for class_name in export_info['file_info']['table_list']:
+ 		tmp_size = 0
+ 		ExportClass = class_dict[class_name]
+@@ -8700,19 +8700,19 @@ def write_file(pard, export_info, compression='gz', compresslevel=6, tipo_istanz
+ 			for i in obj.iterschema():
+ 				query_size += len(i)
+ 				tmp_size += len(i)
+-				out.write(bytes(i, encoding='utf-8'))
++				# out.write(bytes(i, encoding='utf-8'))
+ 		for i in obj.iterqueries():
+ 			query_size += len(i)
+ 			tmp_size += len(i)
+-			out.write(bytes(i, encoding='utf-8'))
++			# out.write(bytes(i, encoding='utf-8'))
+ 		if is_full:
+ 			for i in obj.iterpost():
+ 				query_size += len(i)
+ 				tmp_size += len(i)
+-				out.write(bytes(i, encoding='utf-8'))
++				# out.write(bytes(i, encoding='utf-8'))
+ 	# footer
+-	out.write(bytes(footer, encoding='utf-8'))
+-	out.close()
++	pard['LOGGER'].info(footer)
++	# out.close()
+ 	file_chmod(full_name, 0o644)
+ 
+ 	if query_size == 0:
+@@ -8723,10 +8723,10 @@ def write_file(pard, export_info, compression='gz', compresslevel=6, tipo_istanz
+ 	pard['LOGGER'].info('--- Calcolo checksum')
+ 	file_size = 0
+ 	file_hash = hashlib.md5()
+-	with file_open(full_name, 'rb') as f:
+-		for i in f:
+-			file_hash.update(i)
+-			file_size += len(i)
++	# with file_open(full_name) as f:
++	# 	for i in f:
++	# 		file_hash.update(i)
++	# 		file_size += len(i)
+ 
+ 	# salva le informazioni dell'update su db
+ 	pard['LOGGER'].info('--- Aggiornamento database')
+@@ -8742,7 +8742,7 @@ def write_file(pard, export_info, compression='gz', compresslevel=6, tipo_istanz
+ 		'dialect': "mysql" if tipo_istanza == TipiInstallazione.POSWEB_ONLINE else "sqlite",
+ 	}
+ 
+-	obj.save_record()
++	# obj.save_record()
+ 
+ 	pard['LOGGER'].info('--- Scrittura completata: ' + full_name)
+ 

@@ -1,0 +1,32 @@
+diff --git a/bin/boss/config_boss/env.py b/bin/boss/config_boss/env.py
+index 3b76a941..cbfae3ca 100644
+--- a/bin/boss/config_boss/env.py
++++ b/bin/boss/config_boss/env.py
+@@ -337,6 +337,11 @@ projects = {
+ 			'fe_url': 'http://linmara.{0}/bin/driver',
+ 			'codice_proprietario': 'GDM',
+ 		},
++		'bmsmmj': {
++			'title'              : 'BMS [test]',
++			'fe_url'             : 'https://mmj-dev.bms.maxmara.com/bin/driver',
++			'codice_proprietario': 'MMJ',
++		},
+ 	},
+ }
+ 
+diff --git a/bin/config/configmaps/mysql.web b/bin/config/configmaps/mysql.web
+index 1242afad..55edd286 100644
+--- a/bin/config/configmaps/mysql.web
++++ b/bin/config/configmaps/mysql.web
+@@ -1 +1 @@
+-{"db": "web", "host": "cloud-sql-proxy", "compress": "1", "port": 3306}
+\ No newline at end of file
++{"host": "10.255.2.27", "db": "web", "port": 3306, "ssl": {}}
+diff --git a/bin/config/secrets/mysql.web b/bin/config/secrets/mysql.web
+index 1fd4e4b8..185e9e37 100644
+--- a/bin/config/secrets/mysql.web
++++ b/bin/config/secrets/mysql.web
+@@ -1 +1 @@
+-{"passwd": "8frepKeghojy", "user": "web"}
+\ No newline at end of file
++{"user": "bergonzini.e", "passwd": "OcgajVik}ow2"}

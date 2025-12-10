@@ -1,0 +1,60 @@
+diff --git a/webservice/server.py b/webservice/server.py
+index 8e593f7..c2e328d 100644
+--- a/webservice/server.py
++++ b/webservice/server.py
+@@ -84,11 +84,11 @@ def check_request_password(pard, clients, time_tolerance=None):
+ 	user = pard.get('ws_client_user')
+ 	if 'ws_client_pwd' not in pard or 'ws_client_user' not in pard:
+ 		logger.error('utente non autorizzato: %s [utente o password non trasmessi]', user)
+-		return "ERROR (AUTH)"
++		return ""
+ 	
+ 	elif user not in clients:
+ 		logger.error('utente non autorizzato: %s [utente non esistente]', user)
+-		return "ERROR (AUTH)"
++		return ""
+ 	
+ 	elif clients[user]['req_type'] == 'IP+PASSWORD' and 'subnets' in clients[user]:
+ 		# autenticazione password + IP, ma senza considerare HTTP_X_FORWARDED_FOR perche' non sicuro
+@@ -100,7 +100,7 @@ def check_request_password(pard, clients, time_tolerance=None):
+ 				break
+ 		else:
+ 			logger.error('utente non autorizzato: %s [ip %s non ammesso]', user, ip)
+-			return "ERROR (AUTH)"
++			return ""
+ 
+ 	if time_tolerance is None:
+ 		time_tolerance = DEFAULT_TOLERANCE
+@@ -109,7 +109,7 @@ def check_request_password(pard, clients, time_tolerance=None):
+ 		# non usare float, a meno di controllare valori speciali di ws_client_time (come 'nan')
+ 		if abs(time.time() - int(ws_client_time)) > time_tolerance:
+ 			logger.error('utente non autorizzato: %s [time %s non ammesso]', user, ws_client_time)
+-			return "ERROR (TIME)"
++			return ""
+ 		x = str(ws_client_time)
+ 		if hashlib.sha1((x + clients[user]['password'] + x).encode('utf-8')).hexdigest() == pard['ws_client_pwd']:
+ 			# utente autorizzato
+@@ -125,7 +125,7 @@ def check_request_password(pard, clients, time_tolerance=None):
+ 				return ''
+ 
+ 	logger.error('utente non autorizzato: %s [password errata]', user)
+-	return "ERROR (AUTH)"
++	return ""
+ 
+ 
+ def check_request_certificate(pard, cafile):
+@@ -159,7 +159,7 @@ def check_request_certificate(pard, cafile):
+ 	else:
+ 		log_t = (time.ctime(), pard['REMOTE_ADDR'], client_name, pard['module'], pard['program'], 'ERROR', r[1])
+ 		logger.info('\t'.join(log_t))
+-		return "ERROR (AUTH)"
++		return ""
+ 	
+ 	
+ def check_request_basic(pard, clients):
+@@ -177,4 +177,4 @@ def check_request_basic(pard, clients):
+ 		logger.error('utente non determinabile: %r, %r, Exception:\n%s', username, pard.get('HTTP_AUTHORIZATION'), traceback.format_exc())
+ 	else:
+ 		logger.error('utente non autorizzato: %r, %r', username, pard.get('HTTP_AUTHORIZATION'))
+-	return "ERROR (AUTH)"
++	return ""

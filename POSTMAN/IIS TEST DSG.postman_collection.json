@@ -1,0 +1,1370 @@
+{
+	"id": "9fad272b-fa15-2a0a-e4d3-565fbb9d8991",
+	"name": "IIS TEST DSG",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"24c2b749-0a8c-acf1-cf60-e3ca3e85cb6c",
+		"d5b8c240-b296-b9d8-9e4e-1145ac6c36c2",
+		"43a80082-7f8b-a265-5189-44e2363b7343",
+		"a690c1f9-e8c0-41a6-bd82-9850becf2774",
+		"0c4ab2fe-639d-720d-6aa2-05bb317b5a56",
+		"26137208-3472-464f-bbe1-82369b5d8882",
+		"11668ea1-23d3-bdea-658c-8d0e303cd6a4",
+		"2b2f14a2-4a49-4743-a548-64651b724b2a",
+		"5a3efb12-9ce2-5664-65fc-94bfced0dcb7",
+		"dee8a10b-3625-4c1f-7df9-56b0b2f91580",
+		"7b105629-1164-b9d8-3e9b-8a6ab5abd1db",
+		"ca834c13-d0bf-f072-ad19-bbcee990ec8e",
+		"9978217d-6a4c-8991-4931-833251386b09",
+		"67b9b714-b99e-a7bb-ed9b-f20db7182b22",
+		"d0f7ad58-d630-2d51-34e4-66fc4c463ad7",
+		"81a05ac3-4fe7-2bc7-04cc-6e3f02d3a38e",
+		"09bfa158-12a8-649f-bab3-6e4feb8cdb6d",
+		"c5673aa9-4fff-475d-467a-d1e803ad4e00",
+		"f9ecd15d-ad7a-e882-75f0-3eac7a4f4413",
+		"7a059c91-7225-6131-c7d6-36031f41d4cc",
+		"43ad0b36-b0f3-ccec-c1c2-efd925dd564d",
+		"0c83db44-48d5-50d5-cc2c-1f9b4a696ef3",
+		"706f432f-f7a8-0ae4-fa68-242968d831a3",
+		"cc1f807a-5bb4-9121-d5b2-83a181e87bd3",
+		"785dc021-c124-5ea1-b5a5-35c17ab5e35b",
+		"f3275d73-740d-976c-bdfe-cc9918917ac9",
+		"1ed3544d-ff8d-bd0f-d621-1db78b3697ef",
+		"ffe7d226-7108-fba7-6da5-5d315b5039ee",
+		"eb5b1b35-de7f-ff08-f8e9-8c1d2f79832b",
+		"c95150b0-6b96-ccfb-c239-d942c40804c4",
+		"b3bfbb97-a892-85be-c2b2-b38a63e32b42",
+		"f7b07b2f-9338-f38b-1ac0-ed911957529e",
+		"ccf7b3b8-4db0-7623-a811-01a10198c77b",
+		"b800891c-2c9d-6e5f-0d11-a6cc2baf7316",
+		"083cc477-180d-0dd5-1945-c98ccf35d242",
+		"716eaebb-5aae-77f7-1927-3b355fb42785",
+		"181973cf-71a2-f381-7820-6b2054f20564",
+		"474ef8fb-289c-61d9-eb0f-d1451bf4515d",
+		"9ffc81e3-d2ff-189b-7382-1edef8a65569",
+		"46073445-ea39-4b97-a0ae-aa3fe6b208cf",
+		"68c5ebe3-d113-0b32-9bed-f6da1cbbf515",
+		"1b453b89-3dfd-d2a4-271b-e9e9411a698b",
+		"3640fc1e-7544-acfc-41a1-4f7326c48b80",
+		"928cce7c-9e17-e2b4-19a7-48d4edd87c5e",
+		"cdf03cc0-7617-1480-3c23-07f11fce587f",
+		"28174745-c825-db15-f705-78cf07e664fe",
+		"bd177eb5-a708-18ce-8ca6-1b0399e2a50e",
+		"061b4fb3-50de-4d88-b9e1-bf342bb1836b",
+		"ae1cff0d-6d8c-4b3b-8d01-676f93094278"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "061b4fb3-50de-4d88-b9e1-bf342bb1836b",
+			"name": "Listino prezzo abilitato",
+			"url": "http://localhost:8000/api/v1/price-list?filter[pk_consumer]=1839015",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpa5vozn"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[pk_consumer]",
+					"value": "1839015",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltpa5vozn\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "083cc477-180d-0dd5-1945-c98ccf35d242",
+			"name": "Chiudi vendita nuova",
+			"url": "http://localhost:8000/api/v1/sales",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto2doxgu"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"attributes\": {\n      \"cod_documento\": \"SALE_TICKET\",\n      \"codice_movimento\": \"VENDITA\",\n      \"data_documento\": \"20160208\",\n      \"tipo_applicazione_apertura\": \"DSMOBILE\",\n      \"data_modifica\": \"2016-02-08 14:47:56\",\n      \"dati_aggiuntivi\": \"\",\n      \"importo_finale\": 230,\n      \"dati_documenti\": \"{\\\"nome_contatore\\\": \\\"\\\", \\\"flag_stampa_scontrino_cortesia\\\": 0, \\\"valore_contatore\\\": 113, \\\"numero_scontrino\\\": \\\"\\\", \\\"flag_no_iva\\\": 0, \\\"numero_documento_stampato\\\": \\\"R051800113\\\", \\\"dati_documento\\\": {\\\"rererere\\\": 2, \\\"nominativo\\\": \\\" \\\", \\\"nome\\\": \\\"\\\", \\\"cognome\\\": \\\"\\\", \\\"data_nascita\\\": \\\"\\\", \\\"comune_nascita\\\": \\\"\\\", \\\"stato_nascita\\\": \\\"\\\", \\\"stato\\\": \\\"\\\", \\\"cod_fiscale\\\": \\\"\\\"},  \\\"shipping_destination\\\": \\\"STORE\\\"}\",\n      \"codice_stato\": \"CLOSED\",\n      \"id_utente\": \"assistenza\",\n      \"ora_documento\": \"154756\",\n      \"data_creazione\": \"2016-02-08 14:47:56\",\n      \"nota\": \"\",\n      \"tipo_applicazione_chiusura\": \"DSMOBILE\",\n      \"sid\": \"0z8kflto28h39y\",\n      \"divisa\": \"EUR\",\n      \"importo_pagato\": 0,\n      \"pk_consumer\": \"5368001\",\n      \"id_postazione_apertura\": \"01\",\n      \"cod_vettore\": \"\",\n      \"pagamenti\": [\n        {\n          \"codice_movimento\": \"CONTABILITA_PAGAMENTO\",\n          \"tipo_applicazione\": \"POSWEB\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-02-08 14:47:56\",\n          \"data_creazione\": \"2016-02-08 14:47:56\",\n          \"id_postazione\": \"01\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"dati_operazione\": \"{\\\"payment_date\\\": \\\"20160208\\\"}\",\n          \"cod_negozio\": \"0100518\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 230,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"CONTANTI\",\n          \"importo_iniziale\": 230\n        }\n      ],\n      \"numero_documento\": 113,\n      \"numero_stampa_documento\": \"\",\n      \"capi\": [\n        {\n          \"codice_movimento\": \"VENDITA\",\n          \"iva\": 22,\n          \"progressivo\": 1,\n          \"flag_divisa\": 1,\n          \"cod_commessa\": \"16\",\n          \"correzione_importo\": 0,\n          \"sku_created\": 0,\n          \"importo_finale\": 230,\n          \"codice_stato\": \"CLOSED\",\n          \"sku\": \"20410547060017\",\n          \"nome\": \"FLORIA\",\n          \"flag_promo\": 0,\n          \"data_creazione\": \"2016-02-08 14:47:49\",\n          \"sconto\": 0,\n          \"composizione\": \"T:096VI004EA,F:095AC005EA\",\n          \"nota\": \"\",\n          \"importo_custom\": 0,\n          \"tipologia_merce\": \"GARMENTS\",\n          \"ean\": \"8028993628362\",\n          \"data_modifica\": \"2016-02-08 14:47:56\",\n          \"sku_splitted\": 0,\n          \"tipo_importo\": \"V\",\n          \"importo_iniziale\": 230,\n          \"cod_negozio\": \"0100518\",\n          \"classe\": \"04\",\n          \"sku_read\": \"20410547060017\",\n          \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"48\\\", \\\"desc_classe\\\": \\\"Giacca\\\", \\\"annostag\\\": \\\"20141\\\", \\\"stock_type\\\": \\\"IN_STORE\\\"}\"\n        }\n      ],\n      \"flag_stampa_documento\": 0,\n      \"importo_iniziale\": 230,\n      \"id_postazione_chiusura\": \"01\",\n      \"cod_cassiera\": \"16\",\n      \"cod_negozio\": \"0100518\",\n      \"cod_cassa\": \"01\"\n    },\n    \"type\": \"sales\"\n  }\n}",
+			"headers": "Authorization: Bearer 0z8kflto2doxgu\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "09bfa158-12a8-649f-bab3-6e4feb8cdb6d",
+			"name": "Elenco sconti",
+			"url": "http://localhost:8000/api/v1/posweb/discounts",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpnu4mhg"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltpnu4mhg\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0c4ab2fe-639d-720d-6aa2-05bb317b5a56",
+			"name": "Modifica consumatrice",
+			"url": "http://localhost:8000/api/v1/consumers/1619983",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltowzrxko",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"data\": {\n        \"relationships\": {\n            \"nomi\": {\n                \"data\": []\n            },\n            \"indirizzi\": {\n                \"data\": []\n            }\n        },\n        \"attributes\": {\n            \"data_prima_registrazione\": \"20070105\",\n            \"lingua\": \"ITAL\",\n            \"cellulare2\": \"\",\n            \"cellulare1\": \"3386989375\",\n            \"locale\": 0,\n            \"canale_firma\": null,\n            \"interessi\": \"\",\n            \"data_modifica\": \"2017-03-16 11:48:57\",\n            \"numero_civico\": \"63\",\n            \"sesso\": \"F\",\n            \"anno_nascita\": \"\",\n            \"grado_anonimato\": 0,\n            \"cod_scheda\": 3269,\n            \"professioni\": \"\",\n            \"indirizzo\": \"VIA WOLFANGO AMEDEO MOZART\",\n            \"provincia\": \"MI\",\n            \"nome\": \"FIORELLA\",\n            \"preferenze_contatto\": \"SMS\",\n            \"note\": \"\",\n            \"email\": \"FIORELLA.ZARAMELLA@GMAIL.COM\",\n            \"localita\": \"PADERNO DUGNANO\",\n            \"non_contattare\": 0,\n            \"note_negozio\": \"\",\n            \"data_ultimo_aggiornamento\": \"20140413\",\n            \"mese_nascita\": \"\",\n            \"giorno_nascita\": \"\",\n            \"telefono1\": \"\",\n            \"nazione_iso\": \"IT\",\n            \"negozio_firma_scheda\": \"\",\n            \"note_indirizzo\": \"\",\n            \"cognome\": \"ZARAMELLA\",\n            \"cap\": \"20037\",\n            \"edificio\": \"\",\n            \"pk_consumer\": \"1619983\",\n            \"data_firma_scheda\": \"\",\n            \"anno_nascita_presunto\": \"\",\n            \"telefono2\": \"\",\n            \"agreement_profiling\": 1,\n            \"agreement_direct_marketing\": 0,\n      \"tipo_applicazione\": \"DSMOBILE\",\n            \"id_postazione\": \"02\",\n            \"shop_assistant\": \"U46360\"\n        },\n        \"type\": \"consumers\",\n        \"id\": \"1619983\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltowzrxko\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0c83db44-48d5-50d5-cc2c-1f9b4a696ef3",
+			"name": "Sospendi vendita già presente",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sales/0100520,9",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{ \"data\": \n\n{\n      \"attributes\": {\n        \"cod_documento\": \"\",\n        \"codice_movimento\": \"VENDITA\",\n        \"data_documento\": \"\",\n        \"tipo_applicazione_apertura\": \"POSWEB\",\n        \"data_modifica\": \"2015-12-04 09:37:18\",\n        \"dati_aggiuntivi\": \"\",\n        \"importo_finale\": 85,\n        \"dati_documenti\": \"{}\",\n        \"codice_stato\": \"SUSPENDED\",\n        \"id_utente\": \"notlogged\",\n        \"ora_documento\": \"\",\n        \"data_creazione\": \"2015-12-04 09:35:46\",\n        \"nota\": \"\",\n        \"tipo_applicazione_chiusura\": \"POSWEB\",\n        \"sid\": \"\",\n        \"divisa\": \"EUR\",\n        \"importo_pagato\": 0,\n        \"pk_consumer\": \"POS2015471\",\n        \"id_postazione_apertura\": \"01\",\n        \"cod_vettore\": \"\",\n        \"pagamenti\": [],\n        \"numero_documento\": 0,\n        \"numero_stampa_documento\": \"\",\n        \"capi\": [\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 1,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"24\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 0,\n            \"importo_finale\": 85,\n            \"codice_stato\": \"SUSPENDED\",\n            \"sku\": \"29410347060014\",\n            \"nome\": \"PANARO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:097VI003EA,T:051VI049AC\",\n            \"nota\": \"\",\n            \"importo_custom\": 0,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"8028993624272\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 85,\n            \"cod_negozio\": \"0100520\",\n            \"classe\": \"94\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"29410347060014\",\n            \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"L\\\", \\\"desc_classe\\\": \\\"Body/Top\\\", \\\"annostag\\\": \\\"20141\\\"}\"\n          }\n        ],\n        \"flag_stampa_documento\": 0,\n        \"importo_iniziale\": 85,\n        \"id_postazione_chiusura\": \"01\",\n        \"cod_cassiera\": \"24\",\n        \"cod_negozio\": \"0100520\",\n        \"id_transazione\": 9,\n        \"cod_cassa\": \"01\"\n      },\n      \"type\": \"sales\",\n      \"id\": \"0100520,9\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "11668ea1-23d3-bdea-658c-8d0e303cd6a4",
+			"name": "Elenco nazioni",
+			"url": "http://localhost:8000/api/v1/posweb/countries",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpd4zy77"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltpd4zy77\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "181973cf-71a2-f381-7820-6b2054f20564",
+			"name": "Chiudi vendita nuova (sku no store)",
+			"url": "http://localhost:8000/api/v1/sales",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto2bpais"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"attributes\": {\n      \"cod_documento\": \"SALE_TICKET\",\n      \"codice_movimento\": \"VENDITA\",\n      \"data_documento\": \"20160208\",\n      \"tipo_applicazione_apertura\": \"DSMOBILE\",\n      \"data_modifica\": \"2016-02-08 14:47:56\",\n      \"dati_aggiuntivi\": \"\",\n      \"importo_finale\": 240,\n      \"dati_documenti\": \"{\\\"nome_contatore\\\": \\\"\\\", \\\"flag_stampa_scontrino_cortesia\\\": 0, \\\"valore_contatore\\\": 113, \\\"numero_scontrino\\\": \\\"\\\", \\\"flag_no_iva\\\": 0, \\\"numero_documento_stampato\\\": \\\"R051800113\\\", \\\"dati_documento\\\": {\\\"nominativo\\\": \\\" \\\", \\\"nome\\\": \\\"\\\", \\\"cognome\\\": \\\"\\\", \\\"data_nascita\\\": \\\"\\\", \\\"comune_nascita\\\": \\\"\\\", \\\"stato_nascita\\\": \\\"\\\", \\\"stato\\\": \\\"\\\", \\\"cod_fiscale\\\": \\\"\\\"},  \\\"shipping_destination\\\": \\\"CONSUMER\\\", \\\"shipping_address\\\": {\\\"surname\\\": \\\"ciccio\\\", \\\"name\\\": \\\"bello\\\", \\\"address\\\": \\\"via pippo\\\", \\\"city\\\": \\\"reggio\\\", \\\"zipcode\\\": \\\"42123\\\", \\\"county\\\": \\\"abc\\\", \\\"state\\\": \\\"RE\\\", \\\"province\\\": \\\"MO\\\", \\\"country\\\": \\\"IT\\\"}}\",\n      \"codice_stato\": \"CLOSED\",\n      \"id_utente\": \"assistenza\",\n      \"ora_documento\": \"154756\",\n      \"data_creazione\": \"2016-02-08 14:47:56\",\n      \"nota\": \"\",\n      \"tipo_applicazione_chiusura\": \"DSMOBILE\",\n      \"sid\": \"0z8kflto28h39y\",\n      \"divisa\": \"EUR\",\n      \"importo_pagato\": 0,\n      \"pk_consumer\": \"5368001\",\n      \"id_postazione_apertura\": \"01\",\n      \"cod_vettore\": \"\",\n      \"pagamenti\": [\n        {\n          \"codice_movimento\": \"CONTABILITA_PAGAMENTO\",\n          \"tipo_applicazione\": \"POSWEB\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-02-08 14:47:56\",\n          \"data_creazione\": \"2016-02-08 14:47:56\",\n          \"id_postazione\": \"01\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"dati_operazione\": \"{\\\"payment_date\\\": \\\"20160208\\\"}\",\n          \"cod_negozio\": \"0100518\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 240,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"CONTANTI\",\n          \"importo_iniziale\": 240\n        }\n      ],\n      \"numero_documento\": 113,\n      \"numero_stampa_documento\": \"\",\n      \"capi\": [\n        {\n          \"codice_movimento\": \"VENDITA\",\n          \"iva\": 22,\n          \"progressivo\": 1,\n          \"flag_divisa\": 1,\n          \"cod_commessa\": \"16\",\n          \"correzione_importo\": 0,\n          \"sku_created\": 0,\n          \"importo_finale\": 230,\n          \"codice_stato\": \"CLOSED\",\n          \"sku\": \"20410547060017\",\n          \"nome\": \"FLORIA\",\n          \"flag_promo\": 0,\n          \"data_creazione\": \"2016-02-08 14:47:49\",\n          \"sconto\": 0,\n          \"composizione\": \"T:096VI004EA,F:095AC005EA\",\n          \"nota\": \"\",\n          \"importo_custom\": 0,\n          \"tipologia_merce\": \"GARMENTS\",\n          \"ean\": \"8028993628362\",\n          \"data_modifica\": \"2016-02-08 14:47:56\",\n          \"sku_splitted\": 0,\n          \"tipo_importo\": \"V\",\n          \"importo_iniziale\": 230,\n          \"cod_negozio\": \"0100518\",\n          \"classe\": \"04\",\n          \"sku_read\": \"20410547060017\",\n          \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"48\\\", \\\"desc_classe\\\": \\\"Giacca\\\", \\\"annostag\\\": \\\"20141\\\", \\\"stock_type\\\": \\\"IN_STORE\\\"}\"\n        },\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 2,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"02\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 1,\n            \"importo_finale\": 10,\n            \"codice_stato\": \"SUSPENDED\",\n            \"sku\": \"11122233344455\",\n            \"nome\": \"ANONIMO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:100WG,F:\",\n            \"nota\": \"\",\n            \"importo_custom\": 10,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 0,\n            \"cod_negozio\": \"0100518\",\n            \"classe\": \"26\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"11122233344455\",\n            \"custom_data\": \"{\\\"annostag\\\": \\\"\\\", \\\"desc_taglia\\\": \\\"\\\", \\\"desc_classe\\\": \\\"2 pezzi\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"variante\\\": \\\"\\\", \\\"nota_lavorazioni\\\": \\\"\\\", \\\"stock_type\\\": \\\"OUT_STORE\\\"}\"\n          }\n      ],\n      \"flag_stampa_documento\": 0,\n      \"importo_iniziale\": 240,\n      \"id_postazione_chiusura\": \"01\",\n      \"cod_cassiera\": \"16\",\n      \"cod_negozio\": \"0100518\",\n      \"cod_cassa\": \"01\"\n    },\n    \"type\": \"sales\"\n  }\n}",
+			"headers": "Authorization: Bearer 0z8kflto2bpais\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1b453b89-3dfd-d2a4-271b-e9e9411a698b",
+			"name": "Chiusura con costi extra",
+			"url": "http://localhost:8000/api/v1/sales",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto72e1go"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"attributes\": {\n      \"cod_documento\": \"SALE_TICKET\",\n      \"codice_movimento\": \"VENDITA\",\n      \"data_documento\": \"20160208\",\n      \"tipo_applicazione_apertura\": \"DSMOBILE\",\n      \"data_modifica\": \"2016-02-08 14:47:56\",\n      \"dati_aggiuntivi\": \"\",\n      \"importo_finale\": 230,\n      \"dati_documenti\": \"{\\\"nome_contatore\\\": \\\"\\\", \\\"flag_stampa_scontrino_cortesia\\\": 0, \\\"valore_contatore\\\": 113, \\\"numero_scontrino\\\": \\\"\\\", \\\"flag_no_iva\\\": 0, \\\"numero_documento_stampato\\\": \\\"R051800113\\\", \\\"dati_documento\\\": {\\\"rererere\\\": 2, \\\"nominativo\\\": \\\" \\\", \\\"nome\\\": \\\"\\\", \\\"cognome\\\": \\\"\\\", \\\"data_nascita\\\": \\\"\\\", \\\"comune_nascita\\\": \\\"\\\", \\\"stato_nascita\\\": \\\"\\\", \\\"stato\\\": \\\"\\\", \\\"cod_fiscale\\\": \\\"\\\"},  \\\"shipping_destination\\\": \\\"STORE\\\"}\",\n      \"codice_stato\": \"CLOSED\",\n      \"id_utente\": \"assistenza\",\n      \"ora_documento\": \"154756\",\n      \"data_creazione\": \"2016-02-08 14:47:56\",\n      \"nota\": \"\",\n      \"tipo_applicazione_chiusura\": \"DSMOBILE\",\n      \"sid\": \"0z8kflto28h39y\",\n      \"divisa\": \"EUR\",\n      \"importo_pagato\": 0,\n      \"pk_consumer\": \"2297\",\n      \"id_postazione_apertura\": \"01\",\n      \"cod_vettore\": \"\",\n      \"pagamenti\": [\n        {\n          \"codice_movimento\": \"CONTABILITA_PAGAMENTO\",\n          \"tipo_applicazione\": \"POSWEB\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-02-08 14:47:56\",\n          \"data_creazione\": \"2016-02-08 14:47:56\",\n          \"id_postazione\": \"01\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"dati_operazione\": \"{\\\"payment_date\\\": \\\"20160208\\\"}\",\n          \"cod_negozio\": \"0100014\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 230,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"CONTANTI\",\n          \"importo_iniziale\": 230\n        },\n        {\n          \"codice_movimento\": \"CONTABILITA_COSTI_EXTRA\",\n          \"tipo_applicazione\": \"POSWEB\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-05-11 07:30:30\",\n          \"data_creazione\": \"2016-05-11 07:29:15\",\n          \"id_postazione\": \"01\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"dati_operazione\": \"{\\\"note\\\": \\\"sole\\\", \\\"iva\\\": 22, \\\"tipo\\\": \\\"VENDITA\\\"}\",\n          \"cod_negozio\": \"0100014\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 10,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"LAVANDERIA\",\n          \"importo_iniziale\": 10\n        },\n        {\n          \"codice_movimento\": \"CONTABILITA_COSTI_EXTRA\",\n          \"tipo_applicazione\": \"POSWEB\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-05-11 07:30:30\",\n          \"data_creazione\": \"2016-05-11 07:29:15\",\n          \"id_postazione\": \"01\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"dati_operazione\": \"{\\\"note\\\": \\\"cuore\\\", \\\"iva\\\": 22, \\\"tipo\\\": \\\"VENDITA\\\"}\",\n          \"cod_negozio\": \"0100014\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 12,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"TRASPORTO\",\n          \"importo_iniziale\": 12\n        },\n        {\n          \"codice_movimento\": \"CONTABILITA_COSTI_EXTRA\",\n          \"tipo_applicazione\": \"POSWEB\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-05-11 07:30:30\",\n          \"data_creazione\": \"2016-05-11 07:29:15\",\n          \"id_postazione\": \"01\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"dati_operazione\": \"{\\\"note\\\": \\\"amore\\\", \\\"iva\\\": 22, \\\"tipo\\\": \\\"VENDITA\\\"}\",\n          \"cod_negozio\": \"0100014\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 8,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"LAVANDERIA\",\n          \"importo_iniziale\": 8\n        }\n      ],\n      \"numero_documento\": 113,\n      \"numero_stampa_documento\": \"\",\n      \"capi\": [\n        {\n          \"codice_movimento\": \"VENDITA\",\n          \"iva\": 22,\n          \"progressivo\": 1,\n          \"flag_divisa\": 1,\n          \"cod_commessa\": \"16\",\n          \"correzione_importo\": 0,\n          \"sku_created\": 0,\n          \"importo_finale\": 200,\n          \"codice_stato\": \"CLOSED\",\n          \"sku\": \"20410547060017\",\n          \"nome\": \"FLORIA\",\n          \"flag_promo\": 0,\n          \"data_creazione\": \"2016-02-08 14:47:49\",\n          \"sconto\": 0,\n          \"composizione\": \"T:096VI004EA,F:095AC005EA\",\n          \"nota\": \"\",\n          \"importo_custom\": 0,\n          \"tipologia_merce\": \"GARMENTS\",\n          \"ean\": \"8028993628362\",\n          \"data_modifica\": \"2016-02-08 14:47:56\",\n          \"sku_splitted\": 0,\n          \"tipo_importo\": \"V\",\n          \"importo_iniziale\": 200,\n          \"cod_negozio\": \"0100014\",\n          \"classe\": \"04\",\n          \"sku_read\": \"20410547060017\",\n          \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"48\\\", \\\"desc_classe\\\": \\\"Giacca\\\", \\\"annostag\\\": \\\"20141\\\", \\\"stock_type\\\": \\\"IN_STORE\\\"}\"\n        }\n      ],\n      \"flag_stampa_documento\": 0,\n      \"importo_iniziale\": 230,\n      \"id_postazione_chiusura\": \"01\",\n      \"cod_cassiera\": \"05\",\n      \"cod_negozio\": \"0100014\",\n      \"cod_cassa\": \"01\"\n    },\n    \"type\": \"sales\"\n  }\n}",
+			"headers": "Authorization: Bearer 0z8kflto72e1go\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1ed3544d-ff8d-bd0f-d621-1db78b3697ef",
+			"name": "Ricerca Cliente fattura",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/consumers-invoice?filter[input]=MCCNDR62P18G843I",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[input]",
+					"value": "MCCNDR62P18G843I"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "24c2b749-0a8c-acf1-cf60-e3ca3e85cb6c",
+			"name": "Elenco casse",
+			"url": "http://localhost:8000/api/v1/posweb/cashes?filter[feature_set]=CASH&fields[cashes]=feature_set,cash_status,cod_cassa,cod_negozio,ip_address",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpbe7riy"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[feature_set]",
+					"value": "CASH",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "fields[cashes]",
+					"value": "feature_set,cash_status,cod_cassa,cod_negozio,ip_address",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltpbe7riy\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "26137208-3472-464f-bbe1-82369b5d8882",
+			"name": "Modifica consumatrice NO GDPR",
+			"url": "http://localhost:8000/api/v1/consumers/8847872",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpba45k8",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"data\": {\n\t\t\"attributes\": {\n\t\t\t\"data_prima_registrazione\": \"20151112\",\n\t\t\t\"lingua\": \"ITAL\",\n\t\t\t\"cellulare2\": \"\",\n\t\t\t\"cellulare1\": \"+434578345\",\n\t\t\t\"locale\": 1,\n\t\t\t\"interessi\": \"\",\n\t\t\t\"data_modifica\": \"2015-11-12 11:17:39\",\n\t\t\t\"numero_civico\": \"180\",\n\t\t\t\"sesso\": \"F\",\n\t\t\t\"anno_nascita\": \"1980\",\n\t\t\t\"grado_anonimato\": 0,\n\t\t\t\"cod_scheda\": 20,\n\t\t\t\"professioni\": \"\",\n\t\t\t\"indirizzo\": \"VIA STATALE\",\n\t\t\t\"provincia\": \"RE\",\n\t\t\t\"nome\": \"NOME\",\n\t\t\t\"preferenze_contatto\": \"SMS,TELEFONO\",\n\t\t\t\"note\": \"NOTE DI PROVA\",\n\t\t\t\"email\": \"prova@mail.it\",\n\t\t\t\"localita\": \"REGGIO EMILIA\",\n\t\t\t\"non_contattare\": 0,\n\t\t\t\"note_negozio\": \"NOTE SCRITTE DAL NEGOZIO\",\n\t\t\t\"data_ultimo_aggiornamento\": \"20151112\",\n\t\t\t\"mese_nascita\": \"12\",\n\t\t\t\"giorno_nascita\": \"20\",\n\t\t\t\"telefono1\": \"+1245414545\",\n\t\t\t\"nazione_iso\": \"IT\",\n\t\t\t\"negozio_firma_scheda\": \"\",\n\t\t\t\"note_indirizzo\": \"ALCUNE NOTE\",\n\t\t\t\"cognome\": \"COGNOME\",\n\t\t\t\"cap\": \"42122\",\n\t\t\t\"edificio\": \"PALAZZO\",\n\t\t\t\"pk_consumer\": \"8847872\",\n\t\t\t\"data_firma_scheda\": \"\",\n\t\t\t\"anno_nascita_presunto\": \"1975\",\n\t\t\t\"telefono2\": \"\",\n\t\t\t\"locale\": 0\n\t\t},\n\t\t\"type\": \"consumers\",\n\t\t\"id\": \"8847872\"\n\t}\n}",
+			"headers": "Authorization: Bearer 0z8kfltpba45k8\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "28174745-c825-db15-f705-78cf07e664fe",
+			"name": "Notifica",
+			"url": "http://localhost:8000/api/v1/notify/mmfg-notify",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltovgbfts",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"attributes\": {\n      \"program\": \"program\",\n      \"module\": \"module\",\n    \"error_code\": 100,\n    \"error_message\": \"Messaggio errore\",\n    \"error_traceback\": \"Traceback Errore\",\n    \"error_post_data\": \"{\\\"mia_chiave\\\": \\\"mio_valore\\\"}\",\n    \"event_categories\": [\"App\"]\n    },\n    \"type\": \"event\"\n  }\n}",
+			"headers": "Authorization: Bearer 0z8kfltovgbfts\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2b2f14a2-4a49-4743-a548-64651b724b2a",
+			"name": "Elenco stati",
+			"url": "http://localhost:8000/api/v1/posweb/states?filter[nazione]=US",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpd54pmc"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[nazione]",
+					"value": "US",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltpd54pmc\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3640fc1e-7544-acfc-41a1-4f7326c48b80",
+			"name": "Consumatrici anonime",
+			"url": "http://localhost:8000/api/v1/anonymous-consumer",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto4uqngp"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kflto4uqngp\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "43a80082-7f8b-a265-5189-44e2363b7343",
+			"name": "Crea consumatrice",
+			"url": "http://localhost:8000/api/v1/consumers",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltp8rgg83",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"data\": {\n        \"relationships\": {\n            \"nomi\": {\n                \"data\": []\n            },\n            \"indirizzi\": {\n                \"data\": []\n            }\n        },\n        \"attributes\": {\n            \"data_prima_registrazione\": \"20070105\",\n            \"lingua\": \"ITAL\",\n            \"cellulare2\": \"\",\n            \"cellulare1\": \"+3386989375\",\n            \"canale_firma\": null,\n            \"interessi\": \"\",\n            \"data_modifica\": \"2017-03-16 11:48:57\",\n            \"numero_civico\": \"63\",\n            \"sesso\": \"F\",\n            \"anno_nascita\": \"\",\n            \"professioni\": \"\",\n            \"indirizzo\": \"VIA WOLFANGO AMEDEO MOZART\",\n            \"provincia\": \"MI\",\n            \"nome\": \"GIGETTA\",\n            \"preferenze_contatto\": \"SMS\",\n            \"note\": \"\",\n            \"email\": \"FIORELLA.ZARAMELLA@GMAIL.COM\",\n            \"localita\": \"PADERNO DUGNANO\",\n            \"non_contattare\": 0,\n            \"note_negozio\": \"\",\n            \"data_ultimo_aggiornamento\": \"20140413\",\n            \"mese_nascita\": \"\",\n            \"giorno_nascita\": \"\",\n            \"telefono1\": \"\",\n            \"nazione_iso\": \"IT\",\n            \"negozio_firma_scheda\": \"\",\n            \"note_indirizzo\": \"\",\n            \"cognome\": \"GIGETTANI\",\n            \"cap\": \"20037\",\n            \"edificio\": \"\",\n            \"data_firma_scheda\": \"\",\n            \"anno_nascita_presunto\": \"\",\n            \"telefono2\": \"\",\n            \"nazionalita\": \"IT\",\n            \"agreement_profiling\": 0,\n            \"agreement_direct_marketing\": 0,\n            \"tipo_applicazione\": \"DSMOBILE\",\n            \"id_postazione\": \"02\",\n            \"shop_assistant\": \"U46360\"\n        },\n        \"type\": \"consumers\",\n        \"id\": \"1619983\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltp8rgg83\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "43ad0b36-b0f3-ccec-c1c2-efd925dd564d",
+			"name": "Riattiva vendita sospesa",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sales/0100520,9",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{ \"data\": \n\n{\n      \"attributes\": {\n        \"cod_documento\": \"\",\n        \"codice_movimento\": \"VENDITA\",\n        \"data_documento\": \"\",\n        \"tipo_applicazione_apertura\": \"POSWEB\",\n        \"data_modifica\": \"2015-12-04 09:37:18\",\n        \"dati_aggiuntivi\": \"\",\n        \"importo_finale\": 85,\n        \"dati_documenti\": \"{}\",\n        \"codice_stato\": \"CURRENT\",\n        \"id_utente\": \"notlogged\",\n        \"ora_documento\": \"\",\n        \"data_creazione\": \"2015-12-04 09:35:46\",\n        \"nota\": \"\",\n        \"tipo_applicazione_chiusura\": \"POSWEB\",\n        \"sid\": \"\",\n        \"divisa\": \"EUR\",\n        \"importo_pagato\": 0,\n        \"pk_consumer\": \"POS2015471\",\n        \"id_postazione_apertura\": \"01\",\n        \"cod_vettore\": \"\",\n        \"pagamenti\": [],\n        \"numero_documento\": 0,\n        \"numero_stampa_documento\": \"\",\n        \"capi\": [\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 1,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"24\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 0,\n            \"importo_finale\": 85,\n            \"codice_stato\": \"CURRENT\",\n            \"sku\": \"29410347060014\",\n            \"nome\": \"PANARO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:097VI003EA,T:051VI049AC\",\n            \"nota\": \"\",\n            \"importo_custom\": 0,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"8028993624272\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 85,\n            \"cod_negozio\": \"0100520\",\n            \"classe\": \"94\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"29410347060014\",\n            \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"L\\\", \\\"desc_classe\\\": \\\"Body/Top\\\", \\\"annostag\\\": \\\"20141\\\"}\"\n          }\n        ],\n        \"flag_stampa_documento\": 0,\n        \"importo_iniziale\": 85,\n        \"id_postazione_chiusura\": \"01\",\n        \"cod_cassiera\": \"24\",\n        \"cod_negozio\": \"0100520\",\n        \"id_transazione\": 9,\n        \"cod_cassa\": \"01\"\n      },\n      \"type\": \"sales\",\n      \"id\": \"0100520,9\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "46073445-ea39-4b97-a0ae-aa3fe6b208cf",
+			"name": "Listino prezzo",
+			"url": "http://localhost:8000/api/v1/prices?filter[model]=8221068206",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto4uqngp"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[model]",
+					"value": "8221068206"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kflto4uqngp\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "474ef8fb-289c-61d9-eb0f-d1451bf4515d",
+			"name": "Statistiche cliente",
+			"url": "http://localhost:8000/api/v1/consumers/5360179/statistics",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto7olnjg",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kflto7olnjg\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5a3efb12-9ce2-5664-65fc-94bfced0dcb7",
+			"name": "Ricerca consumatrice locale",
+			"url": "http://localhost:8000/api/v1/consumers?filter[source]=local&filter[cognome]=ZARAMELLA&filter[nome]=FIORELLA",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltowzrxko",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[source]",
+					"value": "local",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[cognome]",
+					"value": "ZARAMELLA",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[nome]",
+					"value": "FIORELLA",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltowzrxko\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "67b9b714-b99e-a7bb-ed9b-f20db7182b22",
+			"name": "Parametri configurazione",
+			"url": "http://localhost:8000/api/v1/posweb/config?filter[source]=DSMOBILE",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[source]",
+					"value": "DSMOBILE",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "68c5ebe3-d113-0b32-9bed-f6da1cbbf515",
+			"name": "Prezzo di più modelli",
+			"url": "http://localhost:8000/api/v1/prices?filter[model]=1011018106,1021019104,8221068206",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto4uqngp"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[model]",
+					"value": "1011018106,1021019104,8221068206"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kflto4uqngp\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "706f432f-f7a8-0ae4-fa68-242968d831a3",
+			"name": "Login",
+			"url": "http://localhost:8000/api/v1/sessions?username=cassiera&password=mmfg&cod_cassa=01",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "username",
+					"value": "cassiera",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "mmfg",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "cod_cassa",
+					"value": "01",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "716eaebb-5aae-77f7-1927-3b355fb42785",
+			"name": "Sospendi vendita nuova (sku no store)",
+			"url": "http://localhost:8000/api/v1/sales",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto2dpi86"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{ \"data\": \n\n{\n      \"attributes\": {\n        \"cod_documento\": \"\",\n        \"codice_movimento\": \"VENDITA\",\n        \"data_documento\": \"\",\n        \"tipo_applicazione_apertura\": \"DSMOBILE\",\n        \"data_modifica\": \"2015-12-04 09:37:18\",\n        \"dati_aggiuntivi\": \"\",\n        \"importo_finale\": 95,\n        \"dati_documenti\": \"{\\\"shipping_destination\\\": \\\"CONSUMER\\\", \\\"shipping_address\\\": {\\\"surname\\\": \\\"ciccio\\\", \\\"name\\\": \\\"bello\\\", \\\"address\\\": \\\"via pippo\\\", \\\"city\\\": \\\"reggio\\\", \\\"zipcode\\\": \\\"42123\\\", \\\"county\\\": \\\"abc\\\", \\\"state\\\": \\\"RE\\\", \\\"province\\\": \\\"MO\\\", \\\"country\\\": \\\"IT\\\"}}\",\n        \"codice_stato\": \"SUSPENDED\",\n        \"id_utente\": \"notlogged\",\n        \"ora_documento\": \"\",\n        \"data_creazione\": \"2015-12-04 09:35:46\",\n        \"nota\": \"\",\n        \"tipo_applicazione_chiusura\": \"DSMOBILE\",\n        \"sid\": \"\",\n        \"divisa\": \"EUR\",\n        \"importo_pagato\": 0,\n        \"pk_consumer\": \"5368001\",\n        \"id_postazione_apertura\": \"01\",\n        \"cod_vettore\": \"\",\n        \"pagamenti\": [],\n        \"numero_documento\": 0,\n        \"numero_stampa_documento\": \"\",\n        \"capi\": [\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 1,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"02\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 0,\n            \"importo_finale\": 85,\n            \"codice_stato\": \"SUSPENDED\",\n            \"sku\": \"29410347060014\",\n            \"nome\": \"PANARO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:097VI003EA,T:051VI049AC\",\n            \"nota\": \"\",\n            \"importo_custom\": 0,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"8028993624272\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 85,\n            \"cod_negozio\": \"0100518\",\n            \"classe\": \"94\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"29410347060014\",\n            \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"L\\\", \\\"desc_classe\\\": \\\"Body/Top\\\", \\\"annostag\\\": \\\"20141\\\", \\\"stock_type\\\": \\\"IN_STORE\\\"}\"\n          },\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 2,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"02\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 1,\n            \"importo_finale\": 10,\n            \"codice_stato\": \"SUSPENDED\",\n            \"sku\": \"11122233344455\",\n            \"nome\": \"ANONIMO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:100WG,F:\",\n            \"nota\": \"\",\n            \"importo_custom\": 10,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 0,\n            \"cod_negozio\": \"0100518\",\n            \"classe\": \"26\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"11122233344455\",\n            \"custom_data\": \"{\\\"annostag\\\": \\\"\\\", \\\"desc_taglia\\\": \\\"\\\", \\\"desc_classe\\\": \\\"2 pezzi\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"variante\\\": \\\"\\\", \\\"nota_lavorazioni\\\": \\\"\\\", \\\"stock_type\\\": \\\"OUT_STORE\\\"}\"\n          }\n        ],\n        \"flag_stampa_documento\": 0,\n        \"importo_iniziale\": 95,\n        \"id_postazione_chiusura\": \"01\",\n        \"cod_cassiera\": \"01\",\n        \"cod_negozio\": \"0100518\",\n        \"id_transazione\": 9,\n        \"cod_cassa\": \"01\"\n      },\n      \"type\": \"sales\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kflto2dpi86\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "785dc021-c124-5ea1-b5a5-35c17ab5e35b",
+			"name": "Logout",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sessions/0z8kfltnz6xqk5",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "",
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7a059c91-7225-6131-c7d6-36031f41d4cc",
+			"name": "Lista nazioni taxfree",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/posweb/taxfree-countries",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7b105629-1164-b9d8-3e9b-8a6ab5abd1db",
+			"name": "Dettaglio consumatrice",
+			"url": "http://localhost:8000/api/v1/consumers/6461609",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "81a05ac3-4fe7-2bc7-04cc-6e3f02d3a38e",
+			"name": "Elenco cassiere",
+			"url": "http://localhost:8000/api/v1/posweb/cashiers",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpnu4mhg"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltpnu4mhg\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "928cce7c-9e17-e2b4-19a7-48d4edd87c5e",
+			"name": "Chiudi vendita nuova con TaxFree",
+			"url": "http://localhost:8000/api/v1/sales",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto2doxgu"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"attributes\": {\n      \"cod_documento\": \"SALE_TAXFREE\",\n      \"codice_movimento\": \"VENDITA\",\n      \"data_documento\": \"20160607\",\n      \"tipo_applicazione_apertura\": \"DSMOBILE\",\n      \"data_modifica\": \"2016-06-07 09:19:02\",\n      \"dati_aggiuntivi\": \"\",\n      \"importo_finale\": 95,\n      \"dati_documenti\": \"{\\\"nome_contatore\\\": \\\"INVOICE_NUMBER\\\", \\\"numero_documento_stampato\\\": \\\"R008000057\\\", \\\"flag_no_iva\\\": 0, \\\"flag_stampa_scontrino_cortesia\\\": 0, \\\"dati_documento\\\": {\\\"indirizzo\\\": \\\"Test Address 123\\\", \\\"provincia\\\": \\\" \\\", \\\"stato_nascita\\\": \\\" \\\", \\\"passaporto\\\": \\\"3086040772177330\\\", \\\"nome\\\": \\\"John\\\", \\\"cognome\\\": \\\"Traveller\\\", \\\"cap\\\": \\\"54321\\\", \\\"number\\\": \\\"3086040772177330\\\", \\\"data_nascita\\\": \\\"15/05/1980\\\", \\\"taxfreeDocumentType\\\": \\\"003\\\", \\\"autofill\\\": {\\\"ProfileId\\\": \\\"2003325\\\", \\\"type\\\": \\\"AUTOFILL_GB_CARD\\\", \\\"TravellerIdentifier\\\": \\\"3086040772177330\\\"}, \\\"barcode_taxfree\\\": \\\" \\\", \\\"nominativo\\\": \\\"John Traveller\\\", \\\"numero_civico\\\": \\\"\\\", \\\"stato\\\": \\\" \\\", \\\"stato_autocomplete_taxfree\\\": {\\\"cod_negozio\\\": \\\"0100014\\\", \\\"country_code\\\": \\\"643\\\", \\\"passport_code\\\": \\\"643\\\"}, \\\"localita\\\": \\\"Test City\\\"}, \\\"valore_contatore\\\": 57}\",\n      \"codice_stato\": \"CLOSED\",\n      \"id_utente\": \"gerente\",\n      \"ora_documento\": \"111902\",\n      \"data_creazione\": \"2016-06-07 09:19:02\",\n      \"nota\": \"\",\n      \"tipo_applicazione_chiusura\": \"DSMOBILE\",\n      \"sid\": \"0z8kflto8e3l2m\",\n      \"divisa\": \"EUR\",\n      \"importo_pagato\": 0,\n      \"pk_consumer\": \"3621363\",\n      \"id_postazione_apertura\": \"A7417751-1C74-4E91-BFD5-83F5DE33F181\",\n      \"cod_vettore\": \"\",\n      \"pagamenti\": [\n        {\n          \"codice_movimento\": \"CONTABILITA_PAGAMENTO\",\n          \"tipo_applicazione\": \"DSMOBILE\",\n          \"progressivo_capo\": 0,\n          \"barcode\": \"\",\n          \"data_modifica\": \"2016-06-07 09:19:02\",\n          \"data_creazione\": \"2016-06-07 09:19:02\",\n          \"id_postazione\": \"A7417751-1C74-4E91-BFD5-83F5DE33F181\",\n          \"progressivo\": 1,\n          \"nota\": \"\",\n          \"id_transazione\": 681,\n          \"dati_operazione\": \"{\\\"payment_date\\\": \\\"20160607\\\", \\\"esito\\\": \\\"ESITO_POSITIVO\\\", \\\"raw_response\\\": \\\"\\\", \\\"pos_tran_id\\\": \\\"\\\", \\\"tipo\\\": \\\"AUTOMATICO\\\", \\\"dati_carta\\\": {\\\"online_transaction_id\\\": \\\"\\\", \\\"flag_multicurrency\\\": \\\"\\\", \\\"tipo_carta_ingenico\\\": \\\"2\\\", \\\"pan\\\": \\\"************0298\\\", \\\"response_code\\\": \\\"\\\", \\\"terminal_id\\\": \\\"30001003\\\", \\\"transaction_time\\\": \\\"1109\\\", \\\"codice_compagnia\\\": \\\"\\\", \\\"transaction_type\\\": \\\"CLI\\\", \\\"authorization_number\\\": \\\"123456\\\", \\\"transaction_date\\\": \\\"20160607\\\", \\\"desc_acquirer\\\": \\\"            VISA          \\\", \\\"id_acquirer\\\": \\\"00000000003\\\", \\\"stan\\\": \\\"000017\\\", \\\"scontrino\\\": \\\"\\\", \\\"esito_transazione\\\": \\\"0\\\"}}\",\n          \"cod_negozio\": \"0100014\",\n          \"divisa\": \"EUR\",\n          \"importo_finale\": 95,\n          \"codice_stato\": \"CLOSED\",\n          \"cod_operazione\": \"CARTA\",\n          \"importo_iniziale\": 95\n        }\n      ],\n      \"numero_documento\": 128,\n      \"numero_stampa_documento\": \"R008000057\",\n      \"capi\": [\n        {\n          \"codice_movimento\": \"VENDITA\",\n          \"iva\": 22,\n          \"progressivo\": 1,\n          \"flag_divisa\": 0,\n          \"cod_commessa\": \"13\",\n          \"correzione_importo\": 0,\n          \"sku_created\": 0,\n          \"importo_finale\": 95,\n          \"codice_stato\": \"CLOSED\",\n          \"sku\": \"72219960030014\",\n          \"nome\": \"CAMPANA\",\n          \"flag_promo\": 0,\n          \"data_creazione\": \"2016-06-07 10:48:26\",\n          \"sconto\": 0,\n          \"composizione\": \"MN:::72219916P\",\n          \"nota\": \"\",\n          \"importo_custom\": 95,\n          \"tipologia_merce\": \"GARMENTS\",\n          \"ean\": \"\",\n          \"data_modifica\": \"2016-06-07 09:19:02\",\n          \"sku_splitted\": 0,\n          \"tipo_importo\": \"V\",\n          \"importo_iniziale\": 95,\n          \"cod_negozio\": \"0100014\",\n          \"classe\": \"22\",\n          \"id_transazione\": 681,\n          \"sku_read\": \"72219960030014\",\n          \"custom_data\": \"{\\\"annostag\\\":\\\"2016|1\\\",\\\"desc_taglia\\\":\\\"42\\\",\\\"desc_classe\\\":\\\"Dress\\\",\\\"data_consegna_sartoria\\\":\\\"\\\",\\\"variante\\\":\\\"7221996003001\\\",\\\"nota_lavorazioni\\\":\\\"\\\",\\\"stock_type\\\":\\\"IN_STORE\\\"}\"\n        }\n      ],\n      \"flag_stampa_documento\": 0,\n      \"importo_iniziale\": 95,\n      \"id_postazione_chiusura\": \"A7417751-1C74-4E91-BFD5-83F5DE33F181\",\n      \"cod_cassiera\": \"13\",\n      \"cod_negozio\": \"0100014\",\n      \"id_transazione\": 681,\n      \"cod_cassa\": \"01\"\n    }\n  }\n}",
+			"headers": "Authorization: Bearer 0z8kflto2doxgu\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9978217d-6a4c-8991-4931-833251386b09",
+			"name": "PDF consumatrice",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/consumers/6461609/scheda",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9ffc81e3-d2ff-189b-7382-1edef8a65569",
+			"name": "Prezzo di un modello",
+			"url": "http://localhost:8000/api/v1/prices?filter[model]=8221068206",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto4uqngp"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[model]",
+					"value": "8221068206"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kflto4uqngp\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a690c1f9-e8c0-41a6-bd82-9850becf2774",
+			"name": "Crea consumatrice NO GDPR",
+			"url": "http://localhost:8000/api/v1/consumers",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltpba3f3a",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"data\": {\n\t\t\"type\": \"consumers\",\n\t\t\"attributes\": {\n\t\t\t\"cognome\": \"PIPPO\",\n\t\t\t\"nome\": \"FRANCO\",\n\t\t\t\"nazione_iso\": \"IT\",\n\t\t\t\"lingua\": \"ITAL\",\n\t\t\t\"giorno_nascita\": \"20\",\n\t\t\t\"mese_nascita\": \"12\",\n\t\t\t\"anno_nascita\": \"1980\",\n\t\t\t\"eta_presunta\": \"40\",\n\t\t\t\"telefono1\": \"+1245414545\",\n\t\t\t\"telefono2\": \"\",\n\t\t\t\"cellulare1\": \"+434578345\",\n\t\t\t\"cellulare2\": \"\",\n\t\t\t\"email\": \"prova@mail.it\",\n\t\t\t\"edificio\": \"palazzo\",\n\t\t\t\"note_indirizzo\": \"alcune note\",\n\t\t\t\"indirizzo\": \"via statale\",\n\t\t\t\"numero_civico\": \"180\",\n\t\t\t\"localita\": \"reggio emilia\",\n\t\t\t\"cap\": \"42122\",\n\t\t\t\"provincia\": \"RE\",\n\t\t\t\"note\": \"note di prova\",\n\t\t\t\"note_negozio\": \"note scritte dal negozio\",\n\t\t\t\"sesso\": \"F\",\n\t\t\t\"preferenze_contatto\": \"SMS,TELEFONO\",\n\t\t\t\"non_contattare\": 0,\n\t\t\t\"data_firma_scheda\": true,\n\t\t\t\"anno_nascita_presunto\": \"1975\",\n\t\t\t\"professioni\": \"\"\n\t\t}\n\t}\n}",
+			"headers": "Authorization: Bearer 0z8kfltpba3f3a\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ae1cff0d-6d8c-4b3b-8d01-676f93094278",
+			"name": "History schede PDF",
+			"url": "http://localhost:8000/api/v1/posweb/document-types-active",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltovgbfts",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"data\": {\n        \"attributes\": {\n            \"cod_documento\": \"SALE_TICKET\",\n            \"codice_movimento\": \"STORNO\",\n            \"data_documento\": \"20170829\",\n            \"tipo_applicazione_apertura\": \"POSWEB\",\n            \"data_modifica\": \"2017-08-29 08:05:52\",\n            \"dati_aggiuntivi\": \"\",\n            \"importo_finale\": -24,\n            \"dati_documenti\": \"{\\\"nome_contatore\\\": \\\"\\\", \\\"numero_documento_stampato\\\": \\\"R001439570\\\", \\\"flag_no_iva\\\": 0, \\\"flag_stampa_scontrino_cortesia\\\": 0, \\\"valore_contatore\\\": 39570, \\\"dati_documento\\\": {\\\"nome\\\": \\\"\\\", \\\"cognome\\\": \\\"\\\", \\\"data_nascita\\\": \\\"\\\", \\\"comune_nascita\\\": \\\"\\\", \\\"stato_nascita\\\": \\\"\\\", \\\"stato\\\": \\\"\\\", \\\"cod_fiscale\\\": \\\"\\\"}, \\\"dati_storno\\\": {\\\"data_bollettina\\\": \\\"\\\", \\\"possiede_scontrino\\\": 1, \\\"num_bollettina\\\": \\\"\\\", \\\"original_sale_type\\\": \\\"SALE\\\"}}\",\n            \"codice_stato\": \"CLOSED\",\n            \"id_utente\": \"assistenza\",\n            \"ora_documento\": \"100552\",\n            \"data_creazione\": \"2017-08-29 08:05:52\",\n            \"nota\": \"\",\n            \"tipo_applicazione_chiusura\": \"POSWEB\",\n            \"sid\": \"0z8kfltovfstio\",\n            \"divisa\": \"EUR\",\n            \"importo_pagato\": 0,\n            \"pk_consumer\": \"29086\",\n            \"id_postazione_apertura\": \"01\",\n            \"cod_vettore\": \"\",\n            \"pagamenti\": [\n                {\n                    \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:46\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 1,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"rdv\\\": \\\"U57138\\\", \\\"desc_classe\\\": \\\"Mantello\\\", \\\"iva\\\": 20.0, \\\"tipo\\\": \\\"STORNO\\\", \\\"gruppo\\\": \\\"1\\\", \\\"classe\\\": \\\"01\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"descrizione\\\": \\\"ACCORCIARE FONDO DIRITTO\\\", \\\"nota_lavorazioni\\\": \\\"\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -10,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"02\",\n                    \"importo_iniziale\": -10\n                },\n                {\n                    \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:46\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 2,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"rdv\\\": \\\"U57138\\\", \\\"desc_classe\\\": \\\"Mantello\\\", \\\"iva\\\": 22.0, \\\"tipo\\\": \\\"STORNO\\\", \\\"gruppo\\\": \\\"1\\\", \\\"classe\\\": \\\"01\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"descrizione\\\": \\\"ACCORCIARE MANICHE\\\", \\\"nota_lavorazioni\\\": \\\"\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -7,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"03\",\n                    \"importo_iniziale\": -7\n                },\n                {\n                    \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:46\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 3,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"rdv\\\": \\\"U57138\\\", \\\"desc_classe\\\": \\\"Soprabito-Impermeabile\\\", \\\"iva\\\": 22.0, \\\"tipo\\\": \\\"STORNO\\\", \\\"gruppo\\\": \\\"2\\\", \\\"classe\\\": \\\"02\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"descrizione\\\": \\\"ACCORCIARE FONDO\\\", \\\"nota_lavorazioni\\\": \\\"\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -7,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"01\",\n                    \"importo_iniziale\": -7\n                },\n                {\n                    \"codice_movimento\": \"CONTABILITA_PAGAMENTO\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:52\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 4,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"payment_date\\\": \\\"20170829\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -24,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"CONTANTI\",\n                    \"importo_iniziale\": -24\n                }\n            ],\n            \"numero_documento\": 39570,\n            \"numero_stampa_documento\": \"\",\n            \"capi\": [],\n            \"flag_stampa_documento\": 0,\n            \"importo_iniziale\": -24,\n            \"id_postazione_chiusura\": \"01\",\n            \"cod_cassiera\": \"U57138\",\n            \"cod_negozio\": \"0100014\",\n            \"id_transazione\": 57290,\n            \"cod_cassa\": \"01\"\n        },\n        \"type\": \"sales\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltovgbfts\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b3bfbb97-a892-85be-c2b2-b38a63e32b42",
+			"name": "Prezzo di uno SKU",
+			"url": "http://localhost:8000/api/v1/prices?filter[sku]=69740630040343",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnzjv4or",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[sku]",
+					"value": "69740630040343",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnzjv4or\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b800891c-2c9d-6e5f-0d11-a6cc2baf7316",
+			"name": "Sospendi vendita nuova",
+			"url": "http://localhost:8000/api/v1/sales",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto2dpi86"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{ \"data\": \n\n{\n      \"attributes\": {\n        \"cod_documento\": \"\",\n        \"codice_movimento\": \"VENDITA\",\n        \"data_documento\": \"\",\n        \"tipo_applicazione_apertura\": \"DSMOBILE\",\n        \"data_modifica\": \"2015-12-04 09:37:18\",\n        \"dati_aggiuntivi\": \"\",\n        \"importo_finale\": 85,\n        \"dati_documenti\": \"{\\\"shipping_destination\\\": \\\"STORE\\\"}\",\n        \"codice_stato\": \"SUSPENDED\",\n        \"id_utente\": \"notlogged\",\n        \"ora_documento\": \"\",\n        \"data_creazione\": \"2015-12-04 09:35:46\",\n        \"nota\": \"\",\n        \"tipo_applicazione_chiusura\": \"DSMOBILE\",\n        \"sid\": \"\",\n        \"divisa\": \"EUR\",\n        \"importo_pagato\": 0,\n        \"pk_consumer\": \"5368001\",\n        \"id_postazione_apertura\": \"01\",\n        \"cod_vettore\": \"\",\n        \"pagamenti\": [],\n        \"numero_documento\": 0,\n        \"numero_stampa_documento\": \"\",\n        \"capi\": [\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 1,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"02\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 0,\n            \"importo_finale\": 85,\n            \"codice_stato\": \"SUSPENDED\",\n            \"sku\": \"29410347060014\",\n            \"nome\": \"PANARO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:097VI003EA,T:051VI049AC\",\n            \"nota\": \"\",\n            \"importo_custom\": 0,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"8028993624272\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 85,\n            \"cod_negozio\": \"0100518\",\n            \"classe\": \"94\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"29410347060014\",\n            \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"L\\\", \\\"desc_classe\\\": \\\"Body/Top\\\", \\\"annostag\\\": \\\"20141\\\", \\\"stock_type\\\": \\\"IN_STORE\\\"}\"\n          }\n        ],\n        \"flag_stampa_documento\": 0,\n        \"importo_iniziale\": 85,\n        \"id_postazione_chiusura\": \"01\",\n        \"cod_cassiera\": \"01\",\n        \"cod_negozio\": \"0100518\",\n        \"id_transazione\": 9,\n        \"cod_cassa\": \"01\"\n      },\n      \"type\": \"sales\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kflto2dpi86\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "bd177eb5-a708-18ce-8ca6-1b0399e2a50e",
+			"name": "Documenti abilitati",
+			"url": "http://localhost:8000/api/v1/posweb/document-types-active",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltovgbfts",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"data\": {\n        \"attributes\": {\n            \"cod_documento\": \"SALE_TICKET\",\n            \"codice_movimento\": \"STORNO\",\n            \"data_documento\": \"20170829\",\n            \"tipo_applicazione_apertura\": \"POSWEB\",\n            \"data_modifica\": \"2017-08-29 08:05:52\",\n            \"dati_aggiuntivi\": \"\",\n            \"importo_finale\": -24,\n            \"dati_documenti\": \"{\\\"nome_contatore\\\": \\\"\\\", \\\"numero_documento_stampato\\\": \\\"R001439570\\\", \\\"flag_no_iva\\\": 0, \\\"flag_stampa_scontrino_cortesia\\\": 0, \\\"valore_contatore\\\": 39570, \\\"dati_documento\\\": {\\\"nome\\\": \\\"\\\", \\\"cognome\\\": \\\"\\\", \\\"data_nascita\\\": \\\"\\\", \\\"comune_nascita\\\": \\\"\\\", \\\"stato_nascita\\\": \\\"\\\", \\\"stato\\\": \\\"\\\", \\\"cod_fiscale\\\": \\\"\\\"}, \\\"dati_storno\\\": {\\\"data_bollettina\\\": \\\"\\\", \\\"possiede_scontrino\\\": 1, \\\"num_bollettina\\\": \\\"\\\", \\\"original_sale_type\\\": \\\"SALE\\\"}}\",\n            \"codice_stato\": \"CLOSED\",\n            \"id_utente\": \"assistenza\",\n            \"ora_documento\": \"100552\",\n            \"data_creazione\": \"2017-08-29 08:05:52\",\n            \"nota\": \"\",\n            \"tipo_applicazione_chiusura\": \"POSWEB\",\n            \"sid\": \"0z8kfltovfstio\",\n            \"divisa\": \"EUR\",\n            \"importo_pagato\": 0,\n            \"pk_consumer\": \"29086\",\n            \"id_postazione_apertura\": \"01\",\n            \"cod_vettore\": \"\",\n            \"pagamenti\": [\n                {\n                    \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:46\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 1,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"rdv\\\": \\\"U57138\\\", \\\"desc_classe\\\": \\\"Mantello\\\", \\\"iva\\\": 20.0, \\\"tipo\\\": \\\"STORNO\\\", \\\"gruppo\\\": \\\"1\\\", \\\"classe\\\": \\\"01\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"descrizione\\\": \\\"ACCORCIARE FONDO DIRITTO\\\", \\\"nota_lavorazioni\\\": \\\"\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -10,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"02\",\n                    \"importo_iniziale\": -10\n                },\n                {\n                    \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:46\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 2,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"rdv\\\": \\\"U57138\\\", \\\"desc_classe\\\": \\\"Mantello\\\", \\\"iva\\\": 22.0, \\\"tipo\\\": \\\"STORNO\\\", \\\"gruppo\\\": \\\"1\\\", \\\"classe\\\": \\\"01\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"descrizione\\\": \\\"ACCORCIARE MANICHE\\\", \\\"nota_lavorazioni\\\": \\\"\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -7,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"03\",\n                    \"importo_iniziale\": -7\n                },\n                {\n                    \"codice_movimento\": \"CONTABILITA_SARTORIA\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:46\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 3,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"rdv\\\": \\\"U57138\\\", \\\"desc_classe\\\": \\\"Soprabito-Impermeabile\\\", \\\"iva\\\": 22.0, \\\"tipo\\\": \\\"STORNO\\\", \\\"gruppo\\\": \\\"2\\\", \\\"classe\\\": \\\"02\\\", \\\"data_consegna_sartoria\\\": \\\"\\\", \\\"descrizione\\\": \\\"ACCORCIARE FONDO\\\", \\\"nota_lavorazioni\\\": \\\"\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -7,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"01\",\n                    \"importo_iniziale\": -7\n                },\n                {\n                    \"codice_movimento\": \"CONTABILITA_PAGAMENTO\",\n                    \"tipo_applicazione\": \"POSWEB\",\n                    \"progressivo_capo\": 0,\n                    \"barcode\": \"\",\n                    \"data_modifica\": \"2017-08-29 08:05:52\",\n                    \"data_creazione\": \"2017-08-29 08:05:52\",\n                    \"id_postazione\": \"01\",\n                    \"progressivo\": 4,\n                    \"nota\": \"\",\n                    \"id_transazione\": 57290,\n                    \"dati_operazione\": \"{\\\"payment_date\\\": \\\"20170829\\\"}\",\n                    \"cod_negozio\": \"0100014\",\n                    \"divisa\": \"EUR\",\n                    \"importo_finale\": -24,\n                    \"codice_stato\": \"CLOSED\",\n                    \"cod_operazione\": \"CONTANTI\",\n                    \"importo_iniziale\": -24\n                }\n            ],\n            \"numero_documento\": 39570,\n            \"numero_stampa_documento\": \"\",\n            \"capi\": [],\n            \"flag_stampa_documento\": 0,\n            \"importo_iniziale\": -24,\n            \"id_postazione_chiusura\": \"01\",\n            \"cod_cassiera\": \"U57138\",\n            \"cod_negozio\": \"0100014\",\n            \"id_transazione\": 57290,\n            \"cod_cassa\": \"01\"\n        },\n        \"type\": \"sales\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltovgbfts\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c5673aa9-4fff-475d-467a-d1e803ad4e00",
+			"name": "Card consumatrice",
+			"url": "http://localhost:8000/api/v1/consumers/4337097/cards",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltp2dt4c9",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltp2dt4c9\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c95150b0-6b96-ccfb-c239-d942c40804c4",
+			"name": "Visualizza vendita",
+			"url": "http://localhost:8000/api/v1/sales/0100520,9",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltp5bu71d",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltp5bu71d\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ca834c13-d0bf-f072-ad19-bbcee990ec8e",
+			"name": "Scegli consumatrice remota",
+			"url": "http://localhost:8000/api/v1/consumers?filter[source]=company&filter[cognome]=GRISENDI&filter[nome]=MARISA&filter[pk_consumer]=354",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[source]",
+					"value": "company",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[cognome]",
+					"value": "GRISENDI",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[nome]",
+					"value": "MARISA",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[pk_consumer]",
+					"value": "354",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cc1f807a-5bb4-9121-d5b2-83a181e87bd3",
+			"name": "Cambio lingua",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sessions/0z8kfltnz6xqk5",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{ \"data\": { \"type\": \"sessions\", \"id\": \"0z8kfltnz6xqk5\", \"attributes\": { \"language\": \"INGL\" } } }",
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ccf7b3b8-4db0-7623-a811-01a10198c77b",
+			"name": "Stock per sku multipli",
+			"url": "http://localhost:8000/api/v1/stock?filter[sku]=74860236060015,74860236060016&filter[details]=1",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kflto2ac0so"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[sku]",
+					"value": "74860236060015,74860236060016"
+				},
+				{
+					"key": "filter[details]",
+					"value": "1"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kflto2ac0so\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cdf03cc0-7617-1480-3c23-07f11fce587f",
+			"name": "Circuiti carte di credito",
+			"url": "http://localhost:8000/api/v1/credit-card",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltodqsctm"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltodqsctm\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d0f7ad58-d630-2d51-34e4-66fc4c463ad7",
+			"name": "Listino sartorie",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/posweb/alterations-prices?filter[classe]=01",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[classe]",
+					"value": "01"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d5b8c240-b296-b9d8-9e4e-1145ac6c36c2",
+			"name": "Elenco vendite sospese",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sales?filter[codice_stato]=SUSPENDED&filter[tipo_applicazione_apertura]=POSWEB",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnzjv4or"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[codice_stato]",
+					"value": "SUSPENDED"
+				},
+				{
+					"key": "filter[tipo_applicazione_apertura]",
+					"value": "POSWEB"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnzjv4or\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "dee8a10b-3625-4c1f-7df9-56b0b2f91580",
+			"name": "Ricerca consumatrice remota",
+			"url": "http://localhost:8000/api/v1/consumers?filter[source]=company&filter[cognome]=GRISENDI&filter[nome]=MARISA",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltowxei3j",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[source]",
+					"value": "company",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[cognome]",
+					"value": "GRISENDI",
+					"equals": true,
+					"enabled": true
+				},
+				{
+					"key": "filter[nome]",
+					"value": "MARISA",
+					"equals": true,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltowxei3j\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "eb5b1b35-de7f-ff08-f8e9-8c1d2f79832b",
+			"name": "Chiudi vendita già presente",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sales/0100520,9",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{ \"data\": \n\n{\n      \"attributes\": {\n        \"cod_documento\": \"\",\n        \"codice_movimento\": \"VENDITA\",\n        \"data_documento\": \"\",\n        \"tipo_applicazione_apertura\": \"POSWEB\",\n        \"data_modifica\": \"2015-12-04 09:37:18\",\n        \"dati_aggiuntivi\": \"\",\n        \"importo_finale\": 85,\n        \"dati_documenti\": \"{}\",\n        \"codice_stato\": \"SUSPENDED\",\n        \"id_utente\": \"notlogged\",\n        \"ora_documento\": \"\",\n        \"data_creazione\": \"2015-12-04 09:35:46\",\n        \"nota\": \"\",\n        \"tipo_applicazione_chiusura\": \"POSWEB\",\n        \"sid\": \"\",\n        \"divisa\": \"EUR\",\n        \"importo_pagato\": 0,\n        \"pk_consumer\": \"POS2015471\",\n        \"id_postazione_apertura\": \"01\",\n        \"cod_vettore\": \"\",\n        \"pagamenti\": [],\n        \"numero_documento\": 0,\n        \"numero_stampa_documento\": \"\",\n        \"capi\": [\n          {\n            \"codice_movimento\": \"VENDITA\",\n            \"iva\": 22,\n            \"progressivo\": 1,\n            \"flag_divisa\": 0,\n            \"cod_commessa\": \"24\",\n            \"correzione_importo\": 0,\n            \"sku_created\": 0,\n            \"importo_finale\": 85,\n            \"codice_stato\": \"SUSPENDED\",\n            \"sku\": \"29410347060014\",\n            \"nome\": \"PANARO\",\n            \"flag_promo\": 0,\n            \"data_creazione\": \"2015-12-04 09:35:42\",\n            \"sconto\": 0,\n            \"composizione\": \"T:097VI003EA,T:051VI049AC\",\n            \"nota\": \"\",\n            \"importo_custom\": 0,\n            \"tipologia_merce\": \"GARMENTS\",\n            \"ean\": \"8028993624272\",\n            \"data_modifica\": \"2015-12-04 09:37:18\",\n            \"sku_splitted\": 0,\n            \"tipo_importo\": \"V\",\n            \"importo_iniziale\": 85,\n            \"cod_negozio\": \"0100520\",\n            \"classe\": \"94\",\n            \"id_transazione\": 9,\n            \"sku_read\": \"29410347060014\",\n            \"custom_data\": \"{\\\"variante\\\": \\\"001\\\", \\\"desc_taglia\\\": \\\"L\\\", \\\"desc_classe\\\": \\\"Body/Top\\\", \\\"annostag\\\": \\\"20141\\\"}\"\n          }\n        ],\n        \"flag_stampa_documento\": 0,\n        \"importo_iniziale\": 85,\n        \"id_postazione_chiusura\": \"01\",\n        \"cod_cassiera\": \"24\",\n        \"cod_negozio\": \"0100520\",\n        \"id_transazione\": 9,\n        \"cod_cassa\": \"01\"\n      },\n      \"type\": \"sales\",\n      \"id\": \"0100520,9\"\n    }\n}",
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f3275d73-740d-976c-bdfe-cc9918917ac9",
+			"name": "Ricerca Global",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/consumers-taxfree?filter[type]=AUTOFILL_PASSPORT&filter[country]=RU&filter[passport_number]=X7777777",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnzjv4or"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[type]",
+					"value": "AUTOFILL_PASSPORT"
+				},
+				{
+					"key": "filter[country]",
+					"value": "RU"
+				},
+				{
+					"key": "filter[passport_number]",
+					"value": "X7777777"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnzjv4or\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f7b07b2f-9338-f38b-1ac0-ed911957529e",
+			"name": "Wishlist",
+			"url": "http://localhost:8000/api/v1/consumers/51422/wishlists",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnzjv4or"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnzjv4or\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f9ecd15d-ad7a-e882-75f0-3eac7a4f4413",
+			"name": "Tipi ricerca taxfree",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/posweb/document-types?filter[codice_gruppo]=AUTOFILL",
+			"description": null,
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnz6xqk5"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "filter[codice_gruppo]",
+					"value": "AUTOFILL"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnz6xqk5\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ffe7d226-7108-fba7-6da5-5d315b5039ee",
+			"name": "Chiudi cassa",
+			"url": "http://testnw-dsg.mmfg.it:8000/api/v1/sessions/0z8kfltnzjv4or?cod_cassa=02&action=CLOSE",
+			"description": null,
+			"data": [],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 0z8kfltnzjv4or"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "cod_cassa",
+					"value": "02"
+				},
+				{
+					"key": "action",
+					"value": "CLOSE"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Authorization: Bearer 0z8kfltnzjv4or\n",
+			"pathVariables": {}
+		}
+	]
+}

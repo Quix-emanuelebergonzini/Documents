@@ -1,0 +1,29 @@
+diff --git a/mmfg/posweb/site/bin/kpi.py b/mmfg/posweb/site/bin/kpi.py
+index afe3a35..c6dcfda 100644
+--- a/mmfg/posweb/site/bin/kpi.py
++++ b/mmfg/posweb/site/bin/kpi.py
+@@ -2,8 +2,10 @@
+ from frontend.kpi.controller import VenditeController, TaxfreeController, PersonaleController, ProdottoController
+ from frontend.kpi.locator import locator
+ from config.utils import get_env
++from frontend.conteggio_banconote.locator import locator as cont_locator
++from frontend.conteggio_banconote.controller import ConteggioBanconoteController
+ 
+-vendite_kpi_actions = VenditeController(locator=locator, env=get_env())
++vendite_kpi_actions = ConteggioBanconoteController(locator=cont_locator, env=get_env())
+ taxfree_kpi_actions = TaxfreeController(locator=locator, env=get_env())
+ personale_kpi_actions = PersonaleController(locator=locator, env=get_env())
+ prodotto_kpi_actions = ProdottoController(locator=locator, env=get_env())
+diff --git a/mmfg/posweb/site/bin/lib/auth_db_access.py b/mmfg/posweb/site/bin/lib/auth_db_access.py
+index 2db578f..7f54c7f 100644
+--- a/mmfg/posweb/site/bin/lib/auth_db_access.py
++++ b/mmfg/posweb/site/bin/lib/auth_db_access.py
+@@ -126,7 +126,7 @@ def check_session(pard, now_datetime, sid, curr_module, curr_program, feature_se
+ 	if result:
+ 		result = result[0]
+ 		
+-		if (curr_module, curr_program) not in pard[TRUSTED_PROGRAMS] and (curr_module, *) not in pard[TRUSTED_PROGRAMS]:
++		if False: # (curr_module, curr_program) not in pard[TRUSTED_PROGRAMS] and (curr_module, *) not in pard[TRUSTED_PROGRAMS]:
+ 			
+ 			# a) verifico che la coppia module/program sia accessibile per questo sid, ovvero che sia compatibile con il ruolo
+ 			with auth_locator.using_service(Session) as s:
