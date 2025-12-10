@@ -1,0 +1,1 @@
+Sonar Pycharm - squ_36d7f60f934bb574c89acc387ec5ec4051803979
