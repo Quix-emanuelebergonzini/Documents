@@ -1,0 +1,58 @@
+{
+  "status": "OK",
+  "message": "OK",
+  "code": 1,
+  "data": {
+    "total": 1,
+    "result": [
+      {
+        "dettaglio_spedizioni": [
+          {
+            "tipo_vettore": "EXTERNAL",
+            "waybill": null,
+            "id_spedizione": "89354",
+            "num_spedizione": "S0000000000000089354",
+            "stato_consegna": null,
+            "note_spedizione": "",
+            "ente_spedente": "PIATT_HK01",
+            "numero_spedizione_ext": null,
+            "id_parametro_vettore": "971",
+            "tracking_number": "",
+            "numero_capi_spedizione": "1",
+            "stato_spedizione": "ASSEGNATO",
+            "totale_spedizione": "2380.00",
+            "divisa": "HKD",
+            "dettaglio_capi": [
+              {
+                "sku": "71360167020046",
+                "id_capo": "7962",
+                "nome_modello": "SOFIA",
+                "pezzi": 1,
+                "importo": "2380.00",
+                "divisa": "HKD"
+              }
+            ]
+          }
+        ],
+        "negozio_stacco_vendita": "1101013",
+        "codice_destinatario_spedizione": "HK_255",
+        "tipo": "ORDINE",
+        "luogo_consegna": "CONSUMER",
+        "num_ordine": "N00000000124412",
+        "numero_vendita": "3",
+        "canale": "B2E",
+        "note_ordine": "",
+        "data_ordine": "20190325",
+        "numero_capi_ordine": "1",
+        "cognome_consumatrice": "CHEN",
+        "data_vendita": "20190325",
+        "divisa": "HKD",
+        "stato_ordine": "IN_LAVORAZIONE",
+        "id_ordine": "124412",
+        "nome_consumatrice": "TEST",
+        "totale_ordine": "2380.00"
+      }
+    ]
+  },
+  "exit_code": 1
+}

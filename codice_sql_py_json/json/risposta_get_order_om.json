@@ -1,0 +1,84 @@
+{
+  "status": "OK",
+  "message": "OK",
+  "code": 1,
+  "data": {
+    "total": 1,
+    "result": [
+      {
+        "dettaglio_spedizioni": [
+          {
+            "tipo_vettore": "UPS",
+            "id_parametro_vettore": "658",
+            "ente_spedente": "0100070",
+            "numero_spedizione_ext": "None",
+            "waybill": "1ZA8303R6898058987",
+            "id_spedizione": "89126",
+            "note_spedizione": "",
+            "tracking_number": "<a class=\"stato-vettore\" data-vettore=\"consegnato_negozio\" target=\"_ups\" href=http://wwwapps.ups.com/WebTracking/processInputRequest?HTMLVersion=5.0&loc=en_IT&Requester=UPSHome&trackNums=1ZA8303R6898058987&ignore=&track.x=28&track.y=7>1ZA8303R6898058987</a>",
+            "numero_capi_spedizione": "1",
+            "stato_spedizione": "SPEDITO",
+            "num_spedizione": "S0000000000000089126",
+            "stato_consegna": "CONSEGNATO_NEGOZIO",
+            "totale_spedizione": "225.00",
+            "divisa": "EUR",
+            "dettaglio_capi": [
+              {
+                "sku": "92240486030021",
+                "id_capo": "4727",
+                "nome_modello": "PALPITO",
+                "pezzi": 1,
+                "importo": "225.00",
+                "divisa": "EUR"
+              }
+            ]
+          },
+          {
+            "tipo_vettore": "UPS",
+            "id_parametro_vettore": "678",
+            "ente_spedente": "PIATT_MN",
+            "numero_spedizione_ext": "None",
+            "waybill": "1Z0FY7006890612229",
+            "id_spedizione": "89125",
+            "note_spedizione": "",
+            "tracking_number": "<a class=\"stato-vettore\" data-vettore=\"consegnato_negozio\" target=\"_ups\" href=http://wwwapps.ups.com/WebTracking/processInputRequest?HTMLVersion=5.0&loc=en_IT&Requester=UPSHome&trackNums=1Z0FY7006890612229&ignore=&track.x=28&track.y=7>1Z0FY7006890612229</a>",
+            "numero_capi_spedizione": "1",
+            "stato_spedizione": "SPEDITO",
+            "num_spedizione": "S0000000000000089125",
+            "stato_consegna": "CONSEGNATO_NEGOZIO",
+            "totale_spedizione": "179.00",
+            "divisa": "EUR",
+            "dettaglio_capi": [
+              {
+                "sku": "40449780030033",
+                "id_capo": "4728",
+                "nome_modello": "MANILA",
+                "pezzi": 1,
+                "importo": "179.00",
+                "divisa": "EUR"
+              }
+            ]
+          }
+        ],
+        "negozio_stacco_vendita": "0601011",
+        "codice_destinatario_spedizione": "0601011",
+        "tipo": "ORDINE",
+        "luogo_consegna": "STORE",
+        "num_ordine": "N00000000121195",
+        "numero_vendita": "12",
+        "canale": "B2E",
+        "note_ordine": "",
+        "data_ordine": "20181022",
+        "numero_capi_ordine": "2",
+        "cognome_consumatrice": "FARINI",
+        "data_vendita": "20181022",
+        "divisa": "EUR",
+        "stato_ordine": "COMPLETATO",
+        "id_ordine": "121195",
+        "nome_consumatrice": "ALESSANDRO",
+        "totale_ordine": "404.00"
+      }
+    ]
+  },
+  "exit_code": 1
+}

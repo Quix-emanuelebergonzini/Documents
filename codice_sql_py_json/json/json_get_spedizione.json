@@ -1,0 +1,82 @@
+{
+    "legal_entity_spedizione": {
+        "ragione_sociale": "MM HK Retail Limited",
+        "codice_gruppo": "T410"
+    },
+    "costo_trasporto_unitario": "",
+    "num_ordine": "N00000000124417",
+    "indirizzo_spedizione": {
+        "nazione": "HK",
+        "indirizzo": "VIA LEON BATTISTA ALBERTI",
+        "provincia": "MO",
+        "nominativo": "",
+        "nominativo_corriere": "TEST CHEN",
+        "citta": "Modena",
+        "cap": "42123",
+        "telefono": "0522122161"
+    },
+    "brand": "MR",
+    "id_spedizione": "S0000000000000089360",
+    "numero_vendita": "12",
+    "is_piazza": "False",
+    "corriere": "EXTERNAL",
+    "capi": [
+        {
+            "sku": "65010261020031",
+            "sku_ricodificato": ""
+        }
+    ],
+    "tipo_destinatario_spedizione": "CONSUMATRICE",
+    "data_bollettina_apertura": "20190329",
+    "divisa_costo_trasporto": "",
+    "num_bollettina_apertura": "12",
+    "soggetto_assegnatario": "PIATT_HK01",
+    "negozio_stacco_vendita": "1101013",
+    "scontrino": "12",
+    "codice_destinatario_spedizione": "HK_255",
+    "tot_capi": 1,
+    "anagrafica_cliente": {
+        "n_civico": "",
+        "nazione": "HK",
+        "indirizzo": "VIA LEON BATTISTA ALBERTI",
+        "provincia": "MO",
+        "guest": "False",
+        "nome": "TEST",
+        "cognome": "CHEN",
+        "cap": "42123",
+        "localita": "Modena"
+    },
+    "tipo_documento_vendita": "RICEVUTA",
+    "region": "EU",
+    "legal_entity_negozio_destinatario": {
+        "ragione_sociale": "MM HK Retail Limited",
+        "codice_gruppo": "T410"
+    },
+    "tipo_servizio_corriere": "",
+    "cliente": {
+        "cognome": "CHEN",
+        "id_corporate": "HK_255",
+        "email": "TEST_HK_CONSUMER@HK.COM",
+        "nome": "TEST"
+    },
+    "totale_costo_trasporto": "",
+    "spedizione_manuale": "False",
+    "nazione": "HK",
+    "data_vendita": "20190329",
+    "channel": "",
+    "cod_negozio": "100001",
+    "divisa": "HKD",
+    "data_ordine": "2019-03-29 16:48:52",
+    "stato": "ASSEGNATO",
+    "indirizzo_fatturazione": {
+        "nazione": "",
+        "indirizzo": "",
+        "provincia": "",
+        "nominativo": "",
+        "nominativo_corriere": "",
+        "citta": "",
+        "cap": "",
+        "telefono": ""
+    },
+    "catena_retail_negozio_destinatario": "MRNF"
+}

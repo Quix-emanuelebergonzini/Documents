@@ -1,0 +1,63 @@
+{
+  "raw": {
+    "data": {
+      "pagamenti": [
+        {
+          "importo_finale": 284,
+          "cod_operazione": "CONTANTI"
+        }
+      ],
+      "contabilita": [
+        {
+          "codice_movimento": "CONTABILITA_GIFT",
+          "importo_finale": 200,
+          "progressivo": 1
+        }
+      ],
+      "importo": 284,
+      "id_operazione": "1379",
+      "data_ora_operazione": "2019-04-08 09:19:27",
+      "cod_negozio": "0100514",
+      "divisa": "EUR",
+      "extra_data": {
+        "numero_documento": "19",
+        "data_documento": "20190408"
+      },
+      "operazione": "SALE",
+      "pk_consumer": "9042519",
+      "handle_duplicates": 0,
+      "capi": [
+        {
+          "tipo_prezzo": "S",
+          "variante": "001",
+          "taglia": "5",
+          "importo_finale": 42,
+          "modello": "1221515806",
+          "importo_iniziale": 42,
+          "sku": "12215158060015",
+          "nome": "ELOISA",
+          "classe": "22",
+          "progressivo": 1,
+          "annostag": "20151",
+          "tipologia_merce": "GARMENTS"
+        },
+        {
+          "tipo_prezzo": "S",
+          "variante": "001",
+          "taglia": "3",
+          "importo_finale": 42,
+          "modello": "1221515806",
+          "importo_iniziale": 42,
+          "sku": "12215158060013",
+          "nome": "ELOISA",
+          "classe": "22",
+          "progressivo": 2,
+          "annostag": "20151",
+          "tipologia_merce": "GARMENTS"
+        }
+      ]
+    }
+  },
+  "REQUEST_METHOD": "PATCH",
+  "PATH_INFO": "/v1/pos/fidelity/update"
+}
