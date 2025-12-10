@@ -1,0 +1,469 @@
+{
+  'zh': {
+    'sezione_10': {
+      'riga_1': '更多关于处理您个人数据的细节请访问 {brand_privacy_site} 。'
+    },
+    'sezione_9': {
+      'riga_1': '在任何时候，您可免费访问您的个人数据或者通过向 {brand_privacy_email} 或者如下列明的常规邮箱地址发送邮件来要求对您的个人数据进行更新、',
+      'riga_2': '修订或删除，或行使适',
+      'riga_3': '用的数据保护法下赋予的任何其他权利。您同样可以联系我们以拒绝将您的个人数据保存在我们的数据库中用于分析，或者要求我们不再出于营销目的联系您',
+      'riga_4': '（如果您想取消我们的营销沟通，您也可以使用“退订”工具。该等“退订”工具在我们的任何通信中都有涉及）。如果您认为我们未正确处理您的个人数',
+      'riga_5': '据，您同样有权电邮致 dpo@mmfg.it 以联系我们的数据保护官员及向意大利或者贵国监管机构提出申诉。',
+      'riga_6': '以上所有的目的，Max Mara Fashion Group Srl 为通用数据保护条例 (条例(欧盟) 2016/679)下的数据处理方(其注册地址为: Via Pietro Giannone, 10 - ',
+      'riga_7': '10122 Turin (Italy))。',
+      'riga_8': ''
+    },
+    'sezione_8': {
+      'riga_1': '我们可对汇总数据进行统计分析。该等收集的数据将被保存在一个集中且有保障的数据库中，用于实现数据收集目的或进一步处理以达到其他相关目的;在此',
+      'riga_2': '之后，与您档案相关的数据将被删除或永久匿名化。为了在全球范围内向您提供同样的个性化服务并向您更新我们资料，我们可通过我们关联公司、其他业务',
+      'riga_3': '合作伙伴运营我们的销售点，以及贵国或者海外(在贵国数据保护法允许的范围内)经销商以数据处理方的身份在我们指示下收集、使用和披露数据。因此，',
+      'riga_4': '销售点授权员工将可访问个人数据，同时基于您的消费地点，我们在贵国的网站的这些数据在信息保护法与贵国适用的信息保护法不同的国家也可被访',
+      'riga_5': '问。我们已采取措施来确保这些信息流通符合欧洲数据保护标准。我们客户数据库存储在意大利。对于来自贵国的客户数据，它会储存于贵国，在境内将由我',
+      'riga_6': '们位于意大利以及海外的客户关系经理以及市场营销团队进行管理，在贵国将由我们当地的客户关系经理以及市场营销团队进行管理。',
+      'riga_7': ''
+    },
+    'sezione_5': {
+      'riga_1': '我们意识到保护您个人数据的重要性且我们承诺向您提供个性化的服务并和您保持联系。出于该目的，我们将在获取您同意的情况下出于以下目的收集、使用',
+      'riga_2': '和披露您免费提供给我们的数据，并仅在征得您同意的情况下，用于下列目的:'
+    },
+    'sezione_4': {
+      'riga_1': '<u></u>'
+    },
+    'sezione_7': {
+      'riga_1': '根據您在購買或造訪我們網站(若適用)時所表達的偏好，針對您可能感興趣的產品與服務，向您寄發（透過郵件、電子郵件、簡訊、多媒體簡訊、電話和其他',
+      'riga_2': '數位通訊管道）相關的新聞通訊、活動邀請、調查與市場研究、市場行銷與廣告通訊、促銷、折扣及其他註冊客戶相關方案資訊。',
+      'riga_3': ''
+    },
+    'sezione_7_bis': {
+      'riga_1': '本人同意將華敦國際集團所蒐集而與我先前購物有關之個人資料移轉給 Max Mara Fashion Group，並依據Max Mara Fashion Group集團隱私政策隱私政策蒐',
+      'riga_2': '集、處理與利用。請參閱店內集團隱私政策'
+    },
+    'sezione_6': {
+      'riga_1': '分析您与我们的联系情况(比如，消费、使用客户服务以及其他我们可通过您与我们销售点工作人员互动参加我们的活动或者在销售点或我们的网站表达',
+      'riga_2': '的消费习惯、生活方式和/或偏好来获取的其他信息)，处理并组合收集的数据并单独或按群集对您进行分析以确定如何为您提供更好的服务。',
+      'riga_3': ''
+    },
+    'sezione_1': {
+      'riga_1': '我们希望更好地了解您以便使您了解我们的个性化产品和服务。如果您愿意，请通过填写本表格并选择同意按键来进行注册。请您仔细阅读本卡',
+      'riga_2': '片正面的我们的隐私政策。'
+    },
+    'sezione_3': {
+      'riga_1': '为了实现以下目的，我们可直接或在通过按我们指示的关联公司和/或合作公司的帮助下使用数据(如果你提供最少一种联系信息)，包括通过',
+      'riga_2': '未来的消费或联系(比如，参与活动、使用客户服务或者填写调查信息)可能收集到的信息:',
+      'riga_3': '(通过邮件、电子邮件、短信、彩信、电话和其他数字通信渠道)发送简讯、我们活动邀请函、市场调查与研究、市场营销和广告传播、',
+      'riga_4': '促销、打折以及根据您作为注册客户在购买或当访问我们的网站时所表达的喜好向您提供您可能感兴趣的产品和服务的其他信息。',
+      'riga_5': '',
+      'riga_6': '(通过邮件、电子邮件、短信、彩信、电话和其他数字通信渠道)向您发送非个性化的上述信息。'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>',
+      'hide': True
+    },
+    'language': 'zh',
+    'footer': 'Release2: 2018-May - 25'
+  },
+  'zh_tw': {
+    'sezione_10': {
+      'riga_1': ''
+    },
+    'sezione_9': {
+      'riga_1': '請求以電子郵件寄送到 {brand_privacy_email} ，或以實體郵件寄送到下方所載地址。您也可聯絡我們，表示您反對我們將您的個人資料保存',
+      'riga_2': '在我們的資料庫，並將其用於剖繪建檔目的，或請求我們停止為市場行銷目的而與您聯絡（若要取消訂閱我們的市場行銷通訊，您也可使用我們在所有通訊中',
+      'riga_3': '提供的「取消訂閱」機制）。若您認為我們並未以正確方式處理您的個人資料，您也有權聯絡我們的資料保護專員（電子郵件：dpo@mmfg.it），以及向義大利',
+      'riga_4': '或您的地區的主管機關提出申訴。,',
+      'riga_5': '為前述所有目的，Max Mara Fashion Group，註冊位址設 Via Pietro Giannone, 10 - 10122 Turin (Italy)，茲依歐盟《一般資料保護規章》（歐盟第 2016/679 號規',
+      'riga_6': '章）規定，擔任資料控管者。 欲進一步瞭解我們如何處理您的個人資料，您可參閱店內集團隱私政策。,',
+      'riga_7': ''
+    },
+    'sezione_8': {
+      'riga_1': '我們可能會對彙總資料進行統計分析。因而蒐集到的資料，將會為達到蒐集之特定目的，或為基於相容目的而進一步處理這些資料，於所涉必要期間內，保存',
+      'riga_2': '在集中式安全資料庫；在其後，您的剖繪建檔相關資料，將會刪除或做永久匿名處理。為在全世界向您提供前述個人化服務，並向您提供我們的最新資訊，我',
+      'riga_3': '們可能會委請我們的關聯公司，以及其他經營我們銷售點的業務合作夥伴及您所在地區或境外的當地銷售商，以資料處理者身分，依照我們指示蒐集、利用及',
+      'riga_4': '揭露所涉資料。因此，所涉個人資料將可由銷售點及您所在地區或購買所在網站(若適用)的經授權人員接近使用；因此，所涉資料可接近使用的地點，也可能位',
+      'riga_5': '在與您的地區有不同資料保護法律規定的地區。我們已採取相關措施，以確保這些傳輸符合歐洲資料保護標準。,',
+      'riga_6': '您可在任何時候免費查閱您的個人資料，或請求更新、更正或刪除您的個人資料，或行使相關資料保護法律所定的其他權利。若要行使這些權利，您可將您的',
+      'riga_7': ''
+    },
+    'sezione_5': {
+      'riga_1': '我們體認保護您個人資料的重要性，而且我們致力於向您提供個人化服務，並與您保持聯絡。基於此目標，我們將會為以下目的，且僅在您同意的情形下，對',
+      'riga_2': '您自願向我們提供的資料，進行特定的蒐集、利用及揭露：'
+    },
+    'sezione_4': {
+      'riga_1': '<u></u>'
+    },
+    'sezione_7': {
+      'riga_1': '根據您在購買或造訪我們網站(若適用)時所表達的偏好，針對您可能感興趣的產品與服務，向您寄發（透過郵件、電子郵件、簡訊、多媒體簡訊、電話和其他',
+      'riga_2': '數位通訊管道）相關的新聞通訊、活動邀請、調查與市場研究、市場行銷與廣告通訊、促銷、折扣及其他註冊客戶相關方案資訊。,',
+      'riga_3': ''
+    },
+    'sezione_6': {
+      'riga_1': '分析您與我們的接觸情形（例如：購買、客戶服務使用情形，以及我們透過您和我們銷售點人員的互動所取得的其他資訊；參加我們活動；您在銷售點內或',
+      'riga_2': '我們網站(若適用)上所表達的購買習慣、生活型態和／或偏好），處理與合併所蒐集的資料，以便單獨或以叢集方式對您進行剖繪建檔，藉以瞭解我們如何向您',
+      'riga_3': '提供更好的服務。,'
+    },
+    'sezione_1': {
+      'riga_1': '我們想要更認識您，以使您即時掌握我們的個人化產品與服務的最新資訊。您若希望，可以填寫此表單，並勾選同意選項，以成為註冊客戶。請',
+      'riga_2': '仔細閱讀我們在此資料卡背面所記載的隱私權聲明。,'
+    },
+    'sezione_3': {
+      'riga_1': '我們得為以下目的，以直接或藉由我們關聯公司和／或合作夥伴（他們是依我們指示辦理）的協助等方式，利用您的資料（若您已提供至少一個',
+      'riga_2': '類別的聯絡資料），包括您將來購買或與我們接觸時（例如：參加活動、使用客戶服務或填寫問卷調查）我們蒐集的資料： <br>',
+      'riga_3': '根據您在購買或造訪我們網站時所表達的偏好，針對您可能感興趣的產品與服務，向您寄發（透過郵件、電子郵件、簡訊、多媒體簡訊、',
+      'riga_4': '電話和其他數位通訊管道）相關的新聞通訊、活動邀請、調查與市場研究、市場行銷與廣告通訊、促銷、折扣及其他註冊客戶相關方案資訊',
+      'riga_5': '',
+      'riga_6': '向您寄發前述通訊內容（透過郵件、電子郵件、簡訊、多媒體簡訊、電話和其他數位通訊管道）而不對其進行個人化處理'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>',
+      'hide': True
+    },
+    'language': 'zh_tw',
+    'footer': 'Release4: 2023-May-30'
+  },
+  'fr': {
+    'sezione_10': {
+      'riga_1': 'Pour plus de détails quant au traitement de vos données personnelles, veuillez consulter {brand_privacy_site}'
+    },
+    'sezione_9': {
+      'riga_1': 'Vous pouvez, en tout temps et gratuitement, accéder à vos données personnelles ou requérir que vos données personnelles soient actualisées, modifiées ou effacées, ou exercer tout autre droit qui vous est conféré par ',
+      'riga_2': "la loi sur la protection des données en envoyant un courriel à {brand_privacy_email} ou par courrier postal à l'adresse mentionnée ci-dessous. Vous pouvez également nous contacter pour vous opposer à ce ",
+      'riga_3': 'que nous conservions vos données personnelles dans notre base de données et que nous les utilisions à des fins de profilage, ou pour nous demander de ne plus vous contacter à des fins publicitaires (pour vous ',
+      'riga_4': 'désinscrire de nos communications publicitaires, vous pouvez également cliquer sur le lien « me désinscrire » qui se trouve dans toutes nos communications). Vous avez également le droit ',
+      'riga_5': 'de contacter par e-mail notre Délégué à la Protection des Données à dpo@mmfg.it et de déposer une plainte auprès de ',
+      'riga_6': "l'autorité de surveillance en Italie ou dans votre pays si vous pensez que nous n'avons pas traité vos données personnelles correctement.",
+      'riga_7': '<i>Pour tout ce qui précède, Max Mara Fashion Group, dont le siège social est Via Pietro Giannone, 10 - 10122 Turin (Italie), agit en qualité de responsable du traitement conformément au Règlement Général sur la Protection </i>',
+      'riga_8': '<i>des Données (Règlement (UE) 2016/679).</i>'
+    },
+    'sezione_8': {
+      'riga_1': "Nous pouvons faire des analyses statistiques sur les données agrégées. Les données ainsi collectées seront stockées dans une base de données centralisée et sécurisée pour la durée nécessaire à l'accomplissement du but ",
+      'riga_2': 'spécifique visé par la collecte de ces données ou pour les traiter en relation avec des buts compatibles ; les données relatives à votre profil seront ensuite effacées ou anonymisées de façon permanente. ',
+      'riga_3': "Afin de vous fournir le même service personnalisé où que vous soyez dans le monde et de vous tenir informé à notre sujet, nous pouvons utiliser nos affiliés ainsi que d'autres partenaires commerciaux exploitant ",
+      'riga_4': "nos points de vente ainsi que des distributeurs locaux dans votre pays ou à l'étranger, agissant comme sous-traitants, afin de collecter, utiliser et divulguer les données selon nos instructions.",
+      'riga_5': "<b>Les données personnelles seront par conséquent accessibles aux employés autorisés des points de vente en ligne de votre pays et en fonction du lieu duquel vous procédez à l'achat :</b>",
+      'riga_6': 'les données peuvent par conséquent être également accessibles dans des pays où la loi sur la protection des données diffère de votre pays. Nous avons pris des mesures pour assurer que ces ',
+      'riga_7': 'communications sont opérées conformément aux standards européens en matière de protection des données.'
+    },
+    'sezione_5': {
+      'riga_1': "Nous sommes conscients de l'importance de protéger vos données personnelles et nous engageons à vous offrir des services personnalisés et à rester en contact avec vous. ",
+      'riga_2': 'À cette fin, nous collectons, utilisons et divulguons les données que vous êtes libre de nous donner, et uniquement avec votre accord, dans les buts suivants:'
+    },
+    'sezione_4': {
+      'riga_1': '<u>Avis de confidentialité</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'pour vous envoyer - par courrier, courriel, SMS, MMS, téléphone et tout autre moyen de communication électronique - des newsletter, des invitations à nos évènements, des sondages et des études de marché, ',
+      'riga_2': "des publicités, des promotions, des rabais ainsi que des informations relatives à d'autres offres pour les clients enregistrés concernant nos produits et services qui pourraient vous intéresser en fonction ",
+      'riga_3': 'de vos préférences lorsque vous effectuez un achat ou quand vous visitez nos sites internet.'
+    },
+    'sezione_6': {
+      'riga_1': 'pour analyser vos contacts avec nous (par exemple: achats, recours au service clients et tout autre information que nous pourrions obtenir par le biais de vos interactions avec le personnel de nos points de vente, ',
+      'riga_2': "participation à nos événements, vos habitudes d'achat, votre style de vie et/ou les préférences que vous avez exprimées dans nos points de vente ou sur nos sites internet), traiter et combiner les données vous ",
+      'riga_3': 'concernant ainsi collectées pour établir un profil individuel ou de groupe, afin de déterminer comment vous offrir un meilleur service.'
+    },
+    'sezione_1': {
+      'riga_1': "Nous souhaitons mieux vous connaître afin de pouvoir vous faire parvenir des recommandations personnalisées s'agissant de nos produits et services. Si vous le souhaitez, vous pouvez vous inscrire en remplissant ce ",
+      'riga_2': 'formulaire et en choisissant les options ci-dessous. Veuillez lire attentivement notre politique de confidentialité au verso de cette carte.'
+    },
+    'sezione_3': {
+      'riga_1': 'Nous pouvons utiliser vos données personnelles, dans le cas où vous fournissez au moins un type de donnée, y compris celles qui pourraient être collectées ultérieurement dans le contexte de vos futurs achats ou contacts ',
+      'riga_2': "avec nous (par exemple, participation à nos évènements, recours au service clients ou participation à nos sondages) directement ou avec l'aide de nos affiliés et/ou partenaires qui agissent sur nos instructions dans le but de:",
+      'riga_3': 'vous envoyer (par courrier, courriel, SMS, MMS, téléphone ou tout autre moyen de communication électronique) des newsletters, des invitations à nos évènements, des sondages, des études de marché, de la publicité, ',
+      'riga_4': "des promotions, des rabais ainsi que des informations relatives à d'autres offres pour les clients enregistrés concernant nos produits et services qui pourraient vous intéresser en fonction de vos préférences lorsque vous ",
+      'riga_5': 'effectuez un achat ou quand visitez notre site internet. ',
+      'riga_6': 'vous envoyer les communications susmentionnées (par courrier, courriel, SMS, MMS, téléphone et tout autre moyen de communication électronique) sans les personnaliser.'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>'
+    },
+    'language': 'fr',
+    'footer': 'Release2: 2018-May-25'
+  },
+  'en': {
+    'sezione_10': {
+      'riga_1': 'Further details on the processing of your personal data are available at {brand_privacy_site}'
+    },
+    'sezione_9': {
+      'riga_1': 'You may access your personal data or request that your personal data is updated, amended or deleted, or exercise any other rights under the applicable data protection law by sending an email to ',
+      'riga_2': '{brand_privacy_email} or regular mail at the address below, at any time and free of charge. You may also contact us to object to your personal data being kept in our data base and used for profiling purposes, or to ',
+      'riga_3': 'request that we no longer contact you for marketing purposes (to unsubscribe from our marketing communications, you can also use the "unsubscribe" tool that you will find in any of our communications).',
+      'riga_4': 'You also have the right to contact our Data Protection Officer emailing to dpo@mmfg.it and lodge a complaint with the supervisory authority in Italy or in your country ',
+      'riga_5': 'if you believe that we have not processed your personal data correctly.',
+      'riga_6': '',
+      'riga_7': '<i>For all the purposes above, Max Mara Fashion Group Srl, with registered address in Via Pietro Giannone, 10 - 10122 Turin (Italy) acts as data controller in accordance with the General Data Protection</i>',
+      'riga_8': '<i>Regulation (Regulation (EU) 2016/679).</i>'
+    },
+    'sezione_8': {
+      'riga_1': 'We may carry out statistical analysis on aggregated data. The data thereby collected will be kept in a centralised and secured database for the time necessary to achieve the specific purposes of collection or to further process ',
+      'riga_2': 'them for compatible purposes; afterwards, data related to your profile will be deleted or permanently anonymised. In order to provide you with the same personalised service worldwide and keep you updated about us, we may ',
+      'riga_3': 'use our affiliates as well as other business partners operating our points of sale and local distributors in your country or abroad, acting as data processors, to collect, use and disclose the data as instructed by us. ',
+      'riga_4': '',
+      'riga_5': '<b>The personal data will therefore be accessible to authorized staff of points of sale and of the websites of your country and based on where you purchase:</b>',
+      'riga_6': 'the data may therefore be accessible also in countries where the data protection legislation differs from the one applicable in your country. We have taken steps to ensure that these communications are carried out in compliance ',
+      'riga_7': 'with European data protection standards. '
+    },
+    'sezione_5': {
+      'riga_1': 'We recognise the importance of protecting your personal data and we are committed to offering you personalized services and keeping in touch with you. To this end, we will collect, use and disclose the data that you are free ',
+      'riga_2': 'to provide us, and only with your consent, for the following purposes:'
+    },
+    'sezione_4': {
+      'riga_1': '<u>Information notice</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'to send you - by mail, email, SMS, MMS, phone and other digital communication channels - newsletters, invitations to our events, surveys and market researches, marketing and advertising communications, promotions, ',
+      'riga_2': 'discounts and information on other initiatives for registered customers regarding our products and services that may be of interest to you, based on your preferences expressed during your purchases or when visiting ',
+      'riga_3': 'our websites.'
+    },
+    'sezione_6': {
+      'riga_1': 'to analyse your contacts with us (e.g. purchases, usage of the customer service and other pieces of information we may obtain through your interaction with the staff of our point of sales, participation at our events, your ',
+      'riga_2': 'purchasing habits, lifestyle and/or preferences expressed at sales points or on our websites), process and combine the collected data also for profiling you individually or by cluster, in order to understand how we can ',
+      'riga_3': 'provide you with a better service.'
+    },
+    'sezione_1': {
+      'riga_1': 'We would like to get to know you better in order to keep you updated about our personalised products and services. If you wish, you can register by filling in this form and selecting the consent options. ',
+      'riga_2': 'Please read carefully our privacy notice on the back of this card.'
+    },
+    'sezione_3': {
+      'riga_1': 'We may use your data (in the event that you provided at least one type of contact data), including those that may be collected in case of future purchases or contacts (participating at events, using customer service or filling in ',
+      'riga_2': 'surveys) directly or with the assistance of our affiliates and/or partners that act on our instructions for the purpose of:',
+      'riga_3': 'sending (by mail, email, SMS, MMS, phone and other digital communication channels) newsletters, invitations to our events, surveys and market researches, marketing and advertising communications, promotions, discounts ',
+      'riga_4': 'and information on other initiatives for registered customers regarding products and services that may be of interest to you based on your preferences expressed during your purchases or when visiting our websites',
+      'riga_5': '',
+      'riga_6': 'sending you the above communications (by mail, email, SMS, MMS, phone and other digital communication channels) without personalising them'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>'
+    },
+    'language': 'en',
+    'footer': 'Release2: 2018-May - 25'
+  },
+  'de': {
+    'sezione_10': {
+      'riga_1': 'Weitere Informationen über die Verarbeitung Ihrer personenbezogenen Daten finden Sie auf {brand_privacy_site}'
+    },
+    'sezione_9': {
+      'riga_1': 'Sie können jederzeit und kostenlos auf Ihre personenbezogenen Daten zugreifen oder verlangen, dass diese aktualisiert, geändert oder gelöscht werden, oder Sie können alle anderen Rechte gemäß dem gültigen ',
+      'riga_2': 'Datenschutzgesetz ausüben, indem Sie ein E-Mail an {brand_privacy_email} oder ein Schreiben auf dem Postweg an die nachstehende Adresse senden. Sie können uns auch kontaktieren, wenn Sie nicht wünschen, ',
+      'riga_3': 'dass Ihre personenbezogenen Daten in unserer Datenbank für Profiling-Zwecke gespeichert werden, oder wenn Sie nicht mehr wünschen, dass wir Sie für Marketingzwecke kontaktieren (Sie können sich auch mit ',
+      'riga_4': 'dem "Abmelde-Tool", das Sie in allen unseren Mitteilungen finden, vom Empfang unserer Werbesendungen abmelden). Sie haben auch das Recht, unseren Datenschutzbeauftragten unter dpo@mmfg.it zu kontaktieren ',
+      'riga_5': 'und eine Beschwerde bei der Aufsichtsbehörde in Italien oder in Ihrem Heimatland einzubringen, wenn Sie glauben, dass wir Ihre personenbezogenen Daten nicht korrekt verarbeitet haben.',
+      'riga_6': '<i>Für die vorstehenden Zwecke ist die Max Mara Fashion Group, mit dem Geschäftssitz in Via Pietro Giannone, 10 - 10122 Turin (Italien), der Datenverantwortliche gemäß der Datenschutz-Grundverordnung</i>',
+      'riga_7': '<i>(Verordnung (EU) 2016/679).</i>'
+    },
+    'sezione_8': {
+      'riga_1': 'Wir können statistische Analysen für die aggregierten Daten durchführen. Die dabei erfassten Daten werden bis zur Erreichung der Zweckbestimmung der Datenerhebung oder bis zur weiteren Verarbeitung für damit ',
+      'riga_2': 'kompatible Zwecke in einer zentralen und gesicherten Datenbank gespeichert; danach werden die personenbezogene Daten Ihres Profils gelöscht oder dauerhaft anonymisiert. Um Ihnen weltweit einen einheitlichen ',
+      'riga_3': 'personalisierten Service zu bieten und Sie mit aktuellen News zu versorgen, haben unsere Beteiligungsgesellschaften und Geschäftspartner, die unsere Verkaufsstellen betreiben, sowie lokale Vertriebshändler ',
+      'riga_4': 'in Ihrem Heimatland den Auftrag, als Datenverarbeiter Daten gemäß unseren Anweisungen zu erfassen, zu verwenden und weiterzugeben. ',
+      'riga_5': '<b>Daher haben befugte MitarbeiterInnen der Verkaufsstellen und der Websites in Ihrem Land und dort wo Sie einkaufen Zugriff auf Ihre personenbezogenen Daten:</b>',
+      'riga_6': 'd.h. es kann auch in Ländern auf die Daten zugegriffen werden, deren Datenschutzgesetz sich von dem in Ihrem Land unterscheidet. Wir haben Maßnahmen ergriffen, um sicherzustellen, dass die Übertragung der ',
+      'riga_7': 'Daten in Übereinstimmung mit den europäischen Datenschutzstandards erfolgt.'
+    },
+    'sezione_5': {
+      'riga_1': 'Es ist uns ein Anliegen, Ihnen personalisierte Dienste anzubieten und mit Ihnen in Kontakt zu bleiben, wobei der Schutz Ihrer personenbezogenen Daten für uns oberste Priorität hat ',
+      'riga_2': 'In diesem Zusammenhang werden wir die von Ihnen freiwillig und mit Ihrer ausdrücklichen Zustimmung bereitgestellten Informationen für folgende Zwecke nutzen:'
+    },
+    'sezione_4': {
+      'riga_1': '<u>Datenschutzerklärung</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'Um Ihnen per Postsendung, E-Mail, SMS, MMS, Telefon oder über andere digitale Kommunikationskanäle Newsletter, Einladungen zu unseren Veranstaltungen, Umfragen und Marktstudien, Marketing- und ',
+      'riga_2': 'Werbeunterlagen, Werbeaktionen, Rabattaktionen sowie Informationen über andere Kampagnen für Stammkunden für unsere Produkte und Dienstleistungen zu senden, die Sie aufgrund der von Ihnen bei Ihren Einkäufen ',
+      'riga_3': 'oder Besuchen auf unseren Websites gezeigten Vorlieben interessieren könnten.'
+    },
+    'sezione_6': {
+      'riga_1': 'Um Ihre Kontakte mit uns zu analysieren (z.B. Einkäufe, Nutzung des Kundendienstes und andere Informationen, die wir durch Ihre Kommunikation mit den MitarbeiterInnen unserer Verkaufsstellen, Ihre Teilnahme ',
+      'riga_2': 'an unseren Veranstaltungen, Ihre in unseren Verkaufsstellen oder auf unseren Websites gezeigten Einkaufsgewohnheiten, Lifestyle und/oder Vorlieben), um die erfassten Daten zusammenzuführen und zu verarbeiten ',
+      'riga_3': 'und um damit unter anderem auch ein Einzelprofil oder ein Clusterprofil von Ihnen zu erstellen, damit wir Ihnen einen besseren Service bieten können.'
+    },
+    'sezione_1': {
+      'riga_1': 'Wir möchten Sie besser kennenlernen, damit Sie von uns aktuelle News über unsere Produkte und Services erhalten, die Sie auch interessieren. Durch Ausfüllen dieses Formulars und Ankreuzen der Zustimmungsoptionen ',
+      'riga_2': 'können Sie sich registrieren. Lesen Sie bitte die Datenschutzerklärung auf der Rückseite sorgfältig durch.'
+    },
+    'sezione_3': {
+      'riga_1': 'Wir können Ihre Daten (falls Sie mindestens eine Art von Kontaktdaten angeben), darunter auch alle in Zukunft im Rahmen von zukunftigen Einkaufe oder Kontakte gesammelten Daten (z.B. Teilnahme an Veranstaltungen ',
+      'riga_2': 'oder Umfragen, Nutzung des Kundendienstes), direkt oder über unsere Beteiligungsgesellschaften und/oder über die auf unsere Anweisungen handelnden Partner verwenden, um:',
+      'riga_3': 'Ihnen Newsletter, Einladungen zu unseren Veranstaltungen, Umfragen und Marktstudien, Marketing- und Werbematerial, Werbeaktionen, Rabattaktionen und Informationen über andere Kampagnen für Stammkunden ',
+      'riga_4': 'in Zusammenhang mit unseren Produkten und Dienstleistungen (per Postsendung, E-Mail, SMS, MMS, Telefon oder über andere digitale Kommunikationskanäle) zu senden, die aufgrund der von Ihnen bei Ihren ',
+      'riga_5': 'Einkäufen oder Besuchen auf unseren Websites gezeigten Vorlieben für Sie von Interesse sein könnten.',
+      'riga_6': 'Ihnen die vorstehenden Informationen (per Postsendung, E-Mail, SMS, MMS, Telefon oder über andere digitale Kommunikationskanäle) ohne Personalisierung zu senden.'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>'
+    },
+    'language': 'de',
+    'footer': 'Release2: 2018-May-25'
+  },
+  'it': {
+    'sezione_10': {
+      'riga_1': 'Ulteriori dettagli sulle modalità di trattamento dei dati personali sono disponibili sul sito {brand_privacy_site}'
+    },
+    'sezione_9': {
+      'riga_1': "In qualunque momento, Lei potrà accedere gratuitamente ai Suoi dati personali o richiederne l'aggiornamento, la modifica o la cancellazione, ovvero esercitare qualunque altro diritto previsto dalla normativa vigente in materia ",
+      'riga_2': "di protezione dei dati personali, inviando un'email a {brand_privacy_email} oppure spedendo per posta ordinaria una lettera all'indirizzo di seguito indicato. Potrà inoltre contattarci per opporsi all'archiviazione dei ",
+      'riga_3': "Suoi dati personali nella nostra banca dati e al loro utilizzo per finalità di profilazione, ovvero per richiedere di non ricevere più comunicazioni commerciali (per cancellare l'iscrizione alle comunicazioni commerciali, è possibile ",
+      'riga_4': 'utilizzare anche lo strumento "cancella iscrizione" presente all\'interno delle stesse). Qualora ritenga poi che il trattamento dei Suoi dati personali non sia avvenuto secondo le modalità corrette, ',
+      'riga_5': "potrà rivolgersi al Responsabile della Protezione dei Dati inviando un'email a dpo@mmfg.it, e avrà altresì il diritto di presentare una denuncia presso l'autorità di vigilanza italiana.",
+      'riga_6': '<i>Per tutte le finalità di cui sopra, Max Mara Fashion Group Srl, con sede legale in Via Pietro Giannone, 10 - 10122 Torino (Italia) agisce in qualità di titolare del trattamento ai sensi del Regolamento generale sulla protezione </i>',
+      'riga_7': '<i>dei dati (Regolamento (UE) 2016/679).</i>'
+    },
+    'sezione_8': {
+      'riga_1': 'Su dati aggregati potrebbero essere effettuate analisi statistiche. I dati così raccolti saranno conservati in una banca dati centralizzata e messa in sicurezza per il tempo necessario a realizzare le specifiche finalità di raccolta ',
+      'riga_2': 'ovvero di ulteriore trattamento degli stessi per finalità compatibile; successivamente, i dati relativi al Suo profilo saranno definitivamente cancellati o anonimizzati. Al fine di fornirLe gli stessi servizi personalizzati in tutto ',
+      'riga_3': "il mondo e tenerLa ggiornata sul nostro conto, potremmo avvalerci di imprese collegate, nonché di altri partner commerciali che gestiscono i nostri punti vendita e di distributori locali nel Suo paese o all'estero, che agiranno in ",
+      'riga_4': 'qualità di responsabili del trattamento, raccogliendo, utilizzando e divulgando i dati secondo le nostre istruzioni.',
+      'riga_5': "<b>I dati personali saranno quindi accessibili al personale autorizzato dei punti vendita e dei nostri siti web del Suo paese, a seconda del luogo in cui viene effettuato l'acquisto:</b>",
+      'riga_6': 'i dati potranno essere pertanto accessibili anche in paesi in cui la normativa ulla privacy è diversa da quella vigente nel Suo paese. Al fine di garantire che tali comunicazioni avvengano conformemente agli standard europei in ',
+      'riga_7': 'materia di protezione dei dati personali, abbiamo adottato specifiche misure. '
+    },
+    'sezione_5': {
+      'riga_1': "Noi riconosciamo l'importanza di proteggere i Suoi dati personali e ci impegniamo a offrirLe servizi personalizzati e a restare in contatto con Lei. A tale scopo, raccoglieremo, utilizzeremo e comunicheremo i dati che Lei è libero ",
+      'riga_2': 'di fornirci, ed esclusivamente con il suo consenso, per le seguenti finalità:'
+    },
+    'sezione_4': {
+      'riga_1': '<u>Informativa sul trattamento dei dati personali.</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'InviarLe - via posta, email, SMS, MMS, telefono e altri canali di comunicazione digitali - newsletter, inviti a eventi, sondaggi e ricerche di mercato, comunicazioni commerciali e pubblicitarie, promozioni, sconti e informazioni ',
+      'riga_2': "su altre iniziative riguardanti i nostri prodotti e servizi che possano essere di Suo interesse in base alle preferenze espresse durante l'acquisto o visitando i nostri siti web.",
+      'riga_3': ''
+    },
+    'sezione_6': {
+      'riga_1': 'Analizzare i Suoi contatti con noi (ad esempio, acquisti, utilizzo del servizio clienti e altre informazioni che possiamo ottenere attraverso la Sua interazione con il personale dei punti vendita, partecipazione a nostri eventi,',
+      'riga_2': 'abitudini di acquisto, stile di vita e/o preferenze espresse nei punti vendita oppure sui nostri siti web, elaborare e incrociare i dati raccolti anche per la profilazione individuale o per gruppi, in modo da capire come offrirLe ',
+      'riga_3': 'un servizio migliore.'
+    },
+    'sezione_1': {
+      'riga_1': 'Al fine di tenerLa aggiornata sui nostri prodotti e servizi personalizzati, vorremmo conoscerLa meglio. Qualora lo desideri, potrà registrarsi compilando la presente cartolina e selezionando la Sua opzione di consenso. ',
+      'riga_2': "La preghiamo di leggere attentamente l'informativa sulla privacy riportata sul retro della presente cartolina."
+    },
+    'sezione_3': {
+      'riga_1': 'Potremmo utilizzare i Suoi dati (con almeno un dato di contatto fornito), inclusi quelli che saranno acquisiti nel corso di eventuali futuri acquisti e contatti (ad esempio nel caso di partecipazione a eventi, fruizione di servizi ',
+      'riga_2': "di customer service o sondaggi) direttamente oppure con l'assistenza di imprese collegate e/o nostri partner che agiscono seguendo le nostre istruzioni, allo scopo di:",
+      'riga_3': 'inviare (via posta, email, SMS, MMS, telefono e altri canali di comunicazione digitali) newsletter, inviti a eventi, sondaggi e ricerche di mercato, comunicazioni commerciali e pubblicitarie, promozioni, sconti e',
+      'riga_4': "informazioni su altre iniziative riguardanti i nostri prodotti e servizi che possano essere di Suo interesse, in base alle preferenze espresse durante l'acquisto o visitando i nostri siti web.",
+      'riga_5': '',
+      'riga_6': 'inviarLe le suddette comunicazioni (via posta, email, SMS, MMS, telefono e altri canali di comunicazione digitali) senza personalizzarle.'
+    },
+    'sezione_2': {
+      'riga_1': '<b>La preghiamo di fornire almeno un dato di contatto</b>'
+    },
+    'language': 'it',
+    'footer': 'Release2: 2018-Maggio-25'
+  },
+  'ja': {
+    'sezione_10': {
+      'riga_1': 'お客様の個人データの処理に関して、更なる詳細は {brand_privacy_site} をご覧ください。'
+    },
+    'sezione_9': {
+      'riga_1': 'お客様は、いつでもかつ無料で、 {brand_privacy_email} に電子メールを送り又は下記に掲げる住所に郵便を送ることにより、お客様の個人データにアクセスし、',
+      'riga_2': 'お客様の個人データが更新、修正若しくは削除されるよう要望し、又は適用されるデータ保護法に基づく他の権利を行使することができます。また、お客様は個人',
+      'riga_3': 'データが当社のデータベースに保管されプロファイリング目的で使用されることに対して異議を申し立てるため、又は当社がマーケティング目的でお客様に連絡を',
+      'riga_4': '取らないよう要望するために（当社のマーケティングコミュニケーションを解除するためには、当社のコミュニケーションにおける「解除」ツールを使用すること',
+      'riga_5': 'もできます。）、当社と連絡を取ることができます。またお客様は、当社がお客様の個人データを正しく処理しなかったと考える場合には、dpo@mmfg.it に電子メ',
+      'riga_6': 'ールを送信することにより当社のデータ保護担当者に連絡をし、イタリア又はお客様の国における監督当局に苦情を申し立てる権利も有します。',
+      'riga_7': '上記のあらゆる事項のために、Via Pietro Giannone, 10 - 10122 Turin (Italy)に所在地を有するMax Mara Fashion Group Srl,は、EU一般データ保護規則(GDPR) (規則 2016/679)に基',
+      'riga_8': 'づき、データコントローラーとして行動いたします。'
+    },
+    'sezione_8': {
+      'riga_1': '当社は集計データについて統計的分析を行う場合があります。このように収集されたデータは、収集の具体的な目的を達成するため、又は適合する目的のために更',
+      'riga_2': 'に処理されるために、集中化された安全なデータベースに当面保管されます。その後、お客様のプロファイルに関するデータは、削除され又は恒久的に匿名化され',
+      'riga_3': 'ます。世界中でお客様に個人に適正化された同じサービスを提供し、当社について最新の情報を提供し続けるために、当社は、関連会社、並びに当社のセールスポ',
+      'riga_4': 'イントを運営する他のビジネスパートナー及びお客様の国若しくは海外における現地の販売店を使用して、当社の指示に従いかつデータ処理者として行動してデー',
+      'riga_5': 'タを収集し、使用し、開示する場合があります。よって、個人データは、セールスポイント並びにお客様の国及びお客様の購入場所のサイトの認められた',
+      'riga_6': 'スタッフによりアクセスされることが可能となります。よって、データは、お客様に適用されるデータ保護法とは異なるデータ保護法を有する国においてもア',
+      'riga_7': 'クセスされることが可能となる場合があります。当社は、これらのコミュニケーションが、欧州データ保護基準に適合して行われることを確保するための措置を講 じています。'
+    },
+    'sezione_5': {
+      'riga_1': '当社は、お客様の個人データを保護することの重要性を認識しており、お客様に個人向けのサービスを提供し、お客様との連絡を維持したいと考えております。こ',
+      'riga_2': 'のために当社は、お客様が当社に任意に提供するデータを、お客様の同意をもってのみ、以下の目的のために収集し、使用し、開示いたします。'
+    },
+    'sezione_4': {
+      'riga_1': '<u>情報通知</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'ニュースレター、当社のイベントの招待状、調査、市場研究、マーケティング及び宣伝のコミュニケーション、プロモーション、割引並びにお客様が購入時又は',
+      'riga_2': '当社のサイトにアクセスする時に示した選好に基づきお客様が関心を有す可能性のある当社の製品及びサービスに関する登録済み顧客のためのイニシャティブに関',
+      'riga_3': 'する情報を、郵便、電子メール、SMS、MMS、電話その他デジタルなコミュニケーションチャネルにより、お客様に送付すること。'
+    },
+    'sezione_6': {
+      'riga_1': 'お客様の当社との連絡（購入、顧客サービスの利用、その他お客様による当社のセールスポイントのスタッフとのやりとりを通して当社が取得しうる情報、当社',
+      'riga_2': 'のイベントへの参加、購入習慣、ライフスタイル、及び/又はセールスポイント若しくは当社のサイトにおいて示した選考等。）を分析し、お客様を個人的又はクラ',
+      'riga_3': 'スターによりプロファイリングするためにも収集されたデータを処理し組み合わせ、お客様により良いサービスを提供する方法を探ること。'
+    },
+    'sezione_1': {
+      'riga_1': '当社は、個人向けの製品及びサービスに係る最新の情報をお客様に提供するため、お客様についてより良く知ることを願っております。ご希望の場合',
+      'riga_2': 'には、このフォームに記入し、同意オプションを選択することにより、登録することが可能です。このカードの裏面に表示されている当社のプライバ シーポリシーを十分にお読みください。'
+    },
+    'sezione_3': {
+      'riga_1': '当社は、（お客様が、連絡先情報の少なくとも1 つをご提供頂いた場合）以下の目的のために、直接、又は当社の指示に基づき行動する当社の関連会 社及び/若しくはパートナーの支援を得て、',
+      'riga_2': 'お客様のデータ（将来の購入又はお客様との間の連絡（イベントの参加、顧客サービスの利用又は調査へ の記入）において収集されるデータを含みます。）を利用する場合があります。',
+      'riga_3': 'お客様の購入、又は当社のサイトにアクセスする際にお客様が示されたご選択に基づきお客様がご関心を有する可能性のある製品及びサービ',
+      'riga_4': 'スに関するニュースレター、イベントへの招待、調査、市場研究、マーケティング及び宣伝のコミュニケーション、プロモーション、割引、',
+      'riga_5': 'その他イニシャティブに関する情報を（郵便、電子メール、SMS、MMS、電話、その他デジタルなコミュニケーションチャネルにより）登録 済のお客様に送付すること。',
+      'riga_6': '個人向けのものとされていない、上記のコミュニケーションを（郵便、電子メール、SMS、MMS、電話、その他デジタルなコミュニケーショ ンチャネルにより）お客様に送付すること。'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>'
+    },
+    'language': 'ja',
+    'footer': 'Release2: 2018-May - 25'
+  },
+  'es': {
+    'sezione_10': {
+      'riga_1': 'Para mayor información sobre el tratamiento de sus datos personales visite {brand_privacy_site}'
+    },
+    'sezione_9': {
+      'riga_1': 'Usted podrá, en cualquier momento y sin coste alguno, acceder a sus datos personales o solicitar que los mismos sean actualizados, modificados o eliminados, o ejercitar cualesquiera otros derechos al amparo de la ',
+      'riga_2': 'legislación sobre protección de datos aplicable mediante el envío de un correo electrónico a {brand_privacy_email} por correo ordinario a la dirección indicada más adelante. También podrá contactar con nosotros ',
+      'riga_3': 'para oponerse a que sus datos personales se conserven en nuestra base de datos y sean utilizados a efectos de establecimiento de perfiles, o para solicitar que cesen nuestras comunicaciones con usted con fines de ',
+      'riga_4': 'marketing (para darse de baja de nuestras comunicaciones de marketing también puede utilizar la herramienta "cancelar la suscripción" que encontrará en cualquiera de nuestras comunicaciones). Tendrá derecho, asimismo, ',
+      'riga_5': 'a contactar con nuesto Delegado de Protección de Datos en el correo electrónico dpo@mmfg.it y a presentar una reclamación ante la autoridad supervisora en Italia o en su país ',
+      'riga_6': 'si entiende que no hemos realizado el tratamiento de sus datos personales correctamente.',
+      'riga_7': '<i>Por todo lo anteriormente indicado, Max Mara Fashion Group, con domicilio social en Via Pietro Giannone, 10 - 10122 Turín (Italia) actúa como responsable del tratamiento de datos al amparo del Reglamento General de </i>',
+      'riga_8': '<i>Protección de Datos (Reglamento (UE) 2016/679).</i>'
+    },
+    'sezione_8': {
+      'riga_1': 'Podremos llevar a cabo análisis estadísticos sobre datos en conjunto. Los datos de este modo recogidos serán mantenidos en una base de datos centralizada y segura durante el tiempo necesario para lograr el objetivo ',
+      'riga_2': 'concreto de recogida o tratamiento posterior de los mismos a efectos compatibles; posteriormente, los datos relativos a su perfil serán eliminados o convertidos en datos anónimos permanentemente. Para prestarle a usted el ',
+      'riga_3': 'mismo servicio personalizado en todo el mundo y mantenerle actualizado sobre nosotros, podremos utilizar a nuestras sociedades vinculadas y a otros socios comerciales que operen nuestros puntos de venta, así como a ',
+      'riga_4': 'distribuidores locales en su país o en el extranjero, actuando como encargados del tratamiento de datos, para recoger, utilizar y revelar los datos conforme a nuestras instrucciones.',
+      'riga_5': '<b>Por lo tanto, el personal autorizado de los puntos de venta y de nuestros sitios web de su país, en función del lugar en que haya realizado su compra, podrá acceder a los datos personales:</b>',
+      'riga_6': 'por ello, se podrá acceder también a los datos en países en los que la legislación sobre privacidad sea diferente a la aplicable en su país. Hemos adoptado medidas para garantizar que estas comunicaciones se realicen de ',
+      'riga_7': 'conformidad con los principios europeos sobre protección de datos. '
+    },
+    'sezione_5': {
+      'riga_1': 'Reconocemos la importancia de proteger sus datos personales y tenemos el compromiso de ofrecerle servicios personalizados, así como de permanecer en contacto con usted. ',
+      'riga_2': 'A tal fin, recogeremos, utilizaremos y revelaremos los datos que usted nos proporcione libremente, y exclusivamente con su consentimiento, a los siguiente efectos:'
+    },
+    'sezione_4': {
+      'riga_1': '<u>Aviso de Privacidad</u>'
+    },
+    'sezione_7': {
+      'riga_1': 'Para remitirle - por correo, correo electrónico, SMS, MMS, teléfono y otros canales digitales de comunicación - boletines informativos, invitaciones a nuestros eventos, encuestas e investigaciones de mercado, ',
+      'riga_2': 'comunicaciones de marketing y publicidad, promociones, descuentos e información sobre otras iniciativas para clientes inscritos relativas a nuestros productos y servicios que puedan ser de su interés en función de sus ',
+      'riga_3': 'preferencias expresadas durante sus compras o cuando visite nuestros sitios web. '
+    },
+    'sezione_6': {
+      'riga_1': 'Para analizar sus contactos con nosotros (p. ej., compras, uso del servicio de atención al cliente y otros datos que podamos obtener a través de su interacción con el personal de nuestro punto de ventas, de su ',
+      'riga_2': 'participación en nuestros eventos, de sus hábitos de compra, estilo de vida y/o preferencias, expresados en los puntos de venta o en nuestros sitios web), tratar y combinar los datos recogidos para el establecimiento ',
+      'riga_3': 'de un perfil suyo, individualmente o en grupo, con el fin de determinar cómo prestarle un mejor servicio.'
+    },
+    'sezione_1': {
+      'riga_1': 'Deseamos conocerle mejor para mantenerle actualizado sobre nuestros productos y servicios personalizados. Si lo desea, puede inscribirse rellenando este formulario y eligiendo las opciones de consentimiento. ',
+      'riga_2': 'Por favor, lea cuidadosamente nuestra notificación de privacidad en el reverso de esta tarjeta.'
+    },
+    'sezione_3': {
+      'riga_1': 'Podremos utilizar sus datos, en caso de que haya indicado al menos un dato de contacto, incluidos aquéllos que puedan ser recogidos en el futuro p. ej., información sobre compras u otros contactos (participación en eventos, ',
+      'riga_2': 'uso del servicio de atención al cliente o participación en encuestas) directamente o con la asistencia de nuestras sociedades vinculadas y/o socios que actúen bajo nuestras instrucciones, a los efectos de:',
+      'riga_3': 'Enviar (por correo, correo electrónico, SMS, MMS, teléfono y otros canales digitales de comunicación) boletines informativos, invitaciones a nuestros eventos, encuestas e investigaciones de mercado, comunicaciones de ',
+      'riga_4': 'marketing y publicidad, promociones, descuentos e información sobre otras iniciativas para clientes inscritos relativas a nuestros productos y servicios que puedan ser de su interés en función de sus preferencias ',
+      'riga_5': 'expresadas durante sus compras o cuando visite nuestros sitios web. ',
+      'riga_6': 'Enviarle las comunicaciones anteriores (por correo, correo electrónico, SMS, MMS, teléfono y otros canales digitales de comunicación) sin personalizarlas'
+    },
+    'sezione_2': {
+      'riga_1': '<b>&nbsp;</b>'
+    },
+    'language': 'es',
+    'footer': 'Release2: 2018-May- 25'
+  }
+}
