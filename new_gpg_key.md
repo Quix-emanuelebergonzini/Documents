@@ -1,0 +1,76 @@
+Last login: Fri Dec 13 09:19:04 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+
+MacBook-Pro-24-22:~ emanuele.bergonzini$ chsh -s /bin/zs
+Changing shell for emanuele.bergonzini.
+Password for emanuele.bergonzini: 
+chsh: Credentials could not be verified, user name or password is invalid.  Credentials could not be verified, user name or password is invalid.
+
+MacBook-Pro-24-22:~ emanuele.bergonzini$ gpg2 --gen-key gpg
+gpg (GnuPG) 2.4.7; Copyright (C) 2024 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: directory '/Users/emanuele.bergonzini/.gnupg' created
+usage: gpg [options] --generate-key
+MacBook-Pro-24-22:~ emanuele.bergonzini$ gpg --full-generate-key
+gpg (GnuPG) 2.4.7; Copyright (C) 2024 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (9) ECC (sign and encrypt) *default*
+  (10) ECC (sign only)
+  (14) Existing key from card
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 
+Requested keysize is 3072 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 
+Key does not expire at all
+Is this correct? (y/N) 
+Key is valid for? (0) 
+Key does not expire at all
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Emanuele Bergonzini
+Email address: emanuele.bergonznini@quix.it
+Comment: 
+You selected this USER-ID:
+    "Emanuele Bergonzini <emanuele.bergonznini@quix.it>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /Users/emanuele.bergonzini/.gnupg/trustdb.gpg: trustdb created
+gpg: directory '/Users/emanuele.bergonzini/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/Users/emanuele.bergonzini/.gnupg/openpgp-revocs.d/DCDB171E422C4590C39B79E19B34255E8020CE99.rev'
+public and secret key created and signed.
+
+pub   rsa3072 2024-12-13 [SC]
+      DCDB171E.....
+uid                      Emanuele Bergonzini <emanuele.bergonznini@quix.it>
+sub   rsa3072 2024-12-13 [E]
+
+MacBook-Pro-24-22:~ emanuele.bergonzini$ 
