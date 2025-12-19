@@ -115,7 +115,21 @@ def main():
 
 	landscape = config["landscape"].upper()
 
-	comando = f'python3 /Users/emanuele.bergonzini/Documents/Documents/scripts/utility/unidb.py -o -c "{landscape}:{ambiente}" -q "SELECT pcb.cod_installazione, pcs.negozio, pcs.chiave, pcs.valore FROM pos_config_bundle pcb JOIN pos_config_store pcs ON pcb.valore = pcs.negozio AND pcs.chiave IN (\'MMFG_WS_HOST\', \'STORE_SIGN\', \'COUNTRY_CODE\', \'STORE_CHANNEL\', \'B2E_ENABLED\', \'AVAILABLE_BRANDS\', \'BRANDS_CATALOGO\', \'GUI_LANGUAGE\', \'PRINT_LANGUAGE\') where pcb.tipologia_istanza = \'POSWEB_OFFLINE\' order by pcb.cod_installazione;"'
+	key_search = ['STORE_SIGN', 'COUNTRY_CODE', 'STORE_CHANNEL', 'B2E_ENABLED', 'AVAILABLE_BRANDS', 'BRANDS_CATALOGO',
+				  'GUI_LANGUAGE', 'PRINT_LANGUAGE']
+	print("Desideri cercare qualche parametro specifico?")
+	filtro = input("Inserire il filtro di ricerca (lasciare vuoto per nessuno): ")
+	if filtro:
+		split_filtro = filtro.split(',')
+		if len(split_filtro) > 1:
+			key_search_add = []
+			for f in split_filtro:
+				key_search.append(f.strip().upper())
+		else:
+			key_search.append(filtro.upper())
+	key_search = ', '.join([f"'{k}'" for k in key_search])
+
+	comando = f'python3 /Users/emanuele.bergonzini/Documents/Documents/scripts/utility/unidb.py -o -c "{landscape}:{ambiente}" -q "SELECT pcb.cod_installazione, pcs.negozio, pcs.chiave, pcs.valore FROM pos_config_bundle pcb JOIN pos_config_store pcs ON pcb.valore = pcs.negozio AND pcs.chiave IN ({key_search}) where pcb.tipologia_istanza = \'POSWEB_OFFLINE\' order by pcb.cod_installazione;"'
 	# print(comando)
 	result = subprocess.run(comando, shell=True, capture_output=True, text=True)
 	stdout = result.stdout
